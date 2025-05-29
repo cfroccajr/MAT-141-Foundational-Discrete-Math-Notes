@@ -1,0 +1,48 @@
+\begin{tikzpicture}[
+    every node/.style={
+        draw,xshift=0.5cm,yshift=0.48cm,
+        % opacity=0.3,text opacity=1,
+        font={\bfseries},inner sep=3pt,
+        text width=10pt,align=center,
+        color=black,ultra thick,
+        rounded corners
+    },
+    scale=1.6,transform shape
+]
+% Grid and Labels
+    \draw[step=1cm] (0,0) grid (10,10);
+    \foreach \x in {0,...,9}{
+        \node[draw=none] at (\x,-1) {\x};
+        \node[draw=none] at (-1,\x) {\x};
+    }
+% Consonants
+    \node[regular polygon,regular polygon sides=5,ball color=red!50] at (1,1) {t};
+    \node[regular polygon,regular polygon sides=7,ball color=blue!40] at (2,7) {v};
+    \node[regular polygon,regular polygon sides=7,ball color=green!60] at (8,3) {d};
+    \node[regular polygon,regular polygon sides=5,ball color=red!50] at (5,9) {h};
+    \node[regular polygon,regular polygon sides=5,ball color=blue!40] at (5,4) {k};
+    \node[regular polygon,regular polygon sides=7,ball color=green!60] at (3,0) {n};
+    \node[regular polygon,regular polygon sides=5,ball color=red!50] at (8,8) {p};
+% Vowels
+    \node[regular polygon,regular polygon sides=5,ball color=blue!40] at (2,3) {a};
+    \node[regular polygon,regular polygon sides=7,ball color=red!50] at (0,9) {e};
+    \node[regular polygon,regular polygon sides=7,ball color=blue!40] at (1,4) {i};
+    \node[regular polygon,regular polygon sides=5,ball color=red!50] at (6,1) {o};
+    \node[regular polygon,regular polygon sides=5,ball color=blue!40] at (3,8) {u};
+    \node[regular polygon,regular polygon sides=7,ball color=red!50] at (6,5) {y};    
+% figures
+\begin{scope}[every node/.style={draw=none,inner sep=0pt,text width=1cm,xshift=0.6cm,yshift=0.5cm}]
+% Zombies
+    \node at (6,8) {\includegraphics[height=0.7cm,width=0.55cm]{images/zombie.png}\,\rotatebox{90}{\scriptsize Shane}};
+    \node at (2,5) {\includegraphics[height=0.7cm,width=0.55cm]{images/zombie.png}\,\rotatebox{90}{\scriptsize Merle}};
+    \node at (0,2) {\includegraphics[height=0.7cm,width=0.55cm]{images/zombie.png}\,\rotatebox{90}{\scriptsize Sasha}};
+% Stickfigures
+    \node at (8,1) {\includegraphics[height=0.7cm]{images/stickfigure.png}\,\rotatebox{90}{\scriptsize Carol}};    
+    \node at (4,6) {\includegraphics[height=0.7cm]{images/stickfigure.png}\,\rotatebox{90}{\scriptsize Negan}};    
+    \node at (7,4) {\includegraphics[height=0.7cm]{images/stickfigure.png}\,\rotatebox{90}{\scriptsize Maggie}};
+% Brains
+    \node at (9,5) {\includegraphics[height=0.5cm]{images/brain.png}\,\rotatebox{90}{\scriptsize Lori}};    
+    \node at (9,2) {\includegraphics[height=0.5cm]{images/brain.png}\,\rotatebox{90}{\scriptsize Glenn}};    
+    \node at (9,8) {\includegraphics[height=0.5cm]{images/brain.png}\,\rotatebox{90}{\scriptsize Carl}};    
+\end{scope}
+\end{tikzpicture}

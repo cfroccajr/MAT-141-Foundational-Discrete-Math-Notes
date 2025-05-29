@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=0.9,transform shape]
+\foreach \p/\x in {GRU/0,GR/4,GU/8,G/12}{
+    \pic[scale=0.45,transform shape] at (\x,0) {\p};
+    \draw (\x-1.5,-0.75) -- ++(3,0);
+    \node at (\x-1.2,3.5) {(\then)};
+    \stepcounter{n};
+}
+\foreach \p/\x in {RU/0,R/4,U/8,None/12}{
+    \pic[scale=0.45,transform shape] at (\x,-5) {\p};
+    \draw (\x-1.5,-5.75) -- ++(3,0);
+    \node at (\x-1.2,-1.5) {(\then)};
+    \stepcounter{n};
+}
+\end{tikzpicture}

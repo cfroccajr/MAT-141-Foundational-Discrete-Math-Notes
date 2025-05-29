@@ -1,0 +1,78 @@
+\documentclass[12pt,twoside]{book}
+\usepackage{imakeidx}
+\input{tex/header}
+\input{tex/color_thm_head}
+
+% Additional Packages and Libraries
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usetikzlibrary{shapes}
+\usetikzlibrary{decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,decorations.text}
+\makeindex[columns=3,intoc,columnseprule]
+\input{images/GRU_Image_Sets}
+
+% Externalization Commands and Packages
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz/]
+% input command code based on 
+% https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
+% modified so that the tikz files are in the tikz folder where the exertanlized
+% pictures are kept.
+\newcommand{\inputtikz}[1]{%
+  \tikzsetnextfilename{#1}%
+  \input{tikz/#1.tikz}%
+}
+
+% Page Formattiing
+\geometry{inner=1in,outer=0.5in,top=1in,bottom=0.75in}
+\renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+\renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+
+% New Commands
+
+\newcommand{\answerbox}[1][1in]{
+    % \begin{tcolorbox}[colframe=tertiaryaccent,colback=white,height=20pt,hbox,on line]
+    %     \phantom{#1}
+    % \end{tcolorbox}
+    \phantom{\rule{0pt}{20pt}}\rule{#1}{0.2pt}
+}
+
+% Other Document Information
+
+    \title{Foundational Discrete Math Notes}
+    \author{Charles Rocca}
+    % \date{2-10-2020}
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter{Symbolic Logic and Predicates}
+    \input{chapters/logic/logic_chapter}
+\cleardoublepage
+
+\chapter{Sequences and Sums}
+
+\chapter{Sets, Relations, and Functions}
+
+\chapter{Combinatorics}
+
+\chapter{Graphs and Trees}
+
+
+\appendix
+
+\chapter{Logic Reference Table}
+
+\chapter{Sets Reference Table}
+
+\printindex
+
+\end{document}

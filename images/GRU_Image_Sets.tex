@@ -1,0 +1,84 @@
+\tikzset{
+    GRU/.pic={
+        \draw[accent,line width=7,opacity=0.5,decorate,decoration={random steps},rounded corners] (-3,0.25) -- (3,0.25);
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=north] at (2,6) {\includegraphics[height=3cm]{images/rain.png}};
+        \node[anchor=south] at (sf.east) {\includegraphics[height=2.5cm]{images/Umbrella-3-Clip-Art.png}};
+    }
+}
+
+\tikzset{
+    GR/.pic={
+        \draw[accent,line width=7,opacity=0.5,decorate,decoration={random steps},rounded corners] (-3,0.25) -- (3,0.25);
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=north] at (2,6) {\includegraphics[height=3cm]{images/rain.png}};
+    }
+}
+
+\tikzset{
+    GU/.pic={
+        \draw[accent,line width=7,opacity=0.5,decorate,decoration={random steps},rounded corners] (-3,0.25) -- (3,0.25);
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=south] at (sf.east) {\includegraphics[height=2.5cm]{images/Umbrella-3-Clip-Art.png}};
+    }
+}
+
+\tikzset{
+    RU/.pic={
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=north] at (2,6) {\includegraphics[height=3cm]{images/rain.png}};
+        \node[anchor=south] at (sf.east) {\includegraphics[height=2.5cm]{images/Umbrella-3-Clip-Art.png}};
+    }
+}
+
+\tikzset{
+    G/.pic={
+        \draw[accent,line width=7,opacity=0.5,decorate,decoration={random steps},rounded corners] (-3,0.25) -- (3,0.25);
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+    }
+}
+
+\tikzset{
+    R/.pic={
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=north] at (2,6) {\includegraphics[height=3cm]{images/rain.png}};
+    }
+}
+
+\tikzset{
+    U/.pic={
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=south] at (sf.east) {\includegraphics[height=2.5cm]{images/Umbrella-3-Clip-Art.png}};
+    }
+}
+
+\tikzset{
+    None/.pic={
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+    }
+}
+
+\tikzset{
+    PlaneU/.pic={
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[anchor=south] at (sf.east) {\includegraphics[height=2.5cm]{images/Umbrella-3-Clip-Art.png}};
+        \node[xscale=-1,rotate=-30] at (2,4.5) {\includegraphics[width=3cm]{images/zombie_girl_plane.png}};
+    }
+}
+
+\tikzset{
+    Plane/.pic={
+        \node[anchor=south] (sf) at (-2,0) {\includegraphics[height=3cm]{images/stickfigure.png}};
+        \node[anchor=south] at (0,0) {\includegraphics[width=6cm,height=0.5cm]{images/grass.png}};
+        \node[xscale=-1,rotate=-30] at (2,4.5) {\includegraphics[width=3cm]{images/zombie_girl_plane.png}};
+    }
+}
