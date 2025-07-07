@@ -1,0 +1,273 @@
+
+\begin{note}[Sum Formulas]
+\index{sum!consecutive integers}\index{sum!arithmetic}\index{sum!squares}
+\index{sum!cubes}\index{sum!consecutive odd integers}\index{sum!consecutive even integers}
+\index{sum!geometric}
+Here are some common summation formulas.
+\begin{itemize}
+    \item Consecutive integers:
+        \begin{equation}\sum_{i=1}^n i=\frac{n(n+1)}{2}\label{eq:consecutive}\end{equation}
+    \item General Arithmetic Sum:
+        \begin{equation}\sum_{i=1}^n a\cdot i+b=n\cdot b+a\left(\frac{n(n+1)}{2}\right)\label{eq:arithmetic}\end{equation}        
+    \item Consecutive squares:
+        \begin{equation}\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}\label{eq:square}\end{equation}
+    \item Consecutive cubes:
+        \begin{equation}\sum_{i=1}^n i^3=\frac{n^2(n+1)^2}{4}\label{eq:cube}\end{equation}
+    \item Consecutive odds:
+        \begin{equation}\sum_{i=1}^n (2i-1)=n^2\label{eq:odd}\end{equation}
+    \item Consecutive evens:
+        \begin{equation}\sum_{i=1}^n i=n(n+1)\label{eq:even}\end{equation}
+    \item Geometric Sum:
+        \begin{equation}\sum_{i=0}^n a\cdot r^i = a\left(\frac{r^{n+1}-1}{r-1}\right)\label{eq:geometric}\end{equation}
+\end{itemize}
+\end{note}
+
+\clearpage
+
+\begin{exposition}\label{exp:usingformulas} Once we have a formula for a type of summation we can use it to find other sums.
+For example lets find the following sum in a couple different ways.
+    \[\sum_{i=5}^{31} i = 5+6+7+\cdots+30+31\]
+
+Solution 1 (Re-Indexing):\index{re-indexing}
+\begin{align*}
+    \sum_{i=5}^{31} i 
+        &= 5+6+\cdots+30+31\\[15pt]
+        &= (1+4)+(2+4)+\cdots+(26+4)+(27+4)\\[15pt]
+        &= \sum_{j=1}^{27} (j+4) && \text{let}\ j=i-4\\[15pt]
+        &=27\cdot 4+ \frac{27\cdot28}{2} && \text{equation \ref{eq:arithmetic} p.\pageref{eq:arithmetic}}\\[15pt]
+        &=108+378\\[15pt]
+        &=486
+\end{align*}
+
+Solution 2 (Adding Zero):
+\begin{align*}
+    \sum_{i=5}^{31} i 
+        &= 5+6+\cdots+30+31\\[15pt]
+        &= (\textcolor{secondaryaccent}{1+2+3+4+}5+6+\cdots+30+31)-\textcolor{secondaryaccent}{(1+2+3+4)}\\[15pt]
+        &= \left(\sum_{i=1}^{31} i\right)-\left(\sum_{i=1}^{4} i\right) &&\text{sum notation}\\[15pt]
+        &=\left(\frac{31\cdot 32}{2}\right)-\left(\frac{4\cdot 5}{2}\right) &&\text{equation \ref{eq:consecutive} p.\pageref{eq:consecutive}}\\[15pt]
+        &=496-10\\[15pt]
+        &=486
+\end{align*}
+\end{exposition}
+
+\clearpage
+
+\begin{practiceprob}
+Use the techniques in Exposition \ref{exp:usingformulas} and equation \ref{eq:cube}, p.\pageref{eq:cube}, to find the sum of:
+    \[\sum_{i=17}^{236} i^3 = 17^3+18^3+19^3+\cdots+235^3+236^3\]
+
+Solution 1 (Re-Indexing):
+\begin{align*}
+    \sum_{i=17}^{236} i^3 &= 17^3+18^3+19^3+\cdots+235^3+236^3\hspace{0.33\textwidth}\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=
+\end{align*}\vspace{20pt}
+
+Solution 2 (Adding Zero):
+\begin{align*}
+    \sum_{i=17}^{236} i^3 &= 17^3+18^3+\cdots+235^3+236^3\hspace{0.33\textwidth}\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=
+\end{align*}\vspace{20pt}
+
+\end{practiceprob}
+
+\clearpage
+
+
+\begin{practiceprob}
+Use the techniques in Exposition \ref{exp:usingformulas} and equation \ref{eq:geometric}, p.\pageref{eq:geometric}, to find the sum of:
+    \[\sum_{i=10}^{106} \left(\frac{3}{7}\right)^i = 
+        \left(\frac{3}{7}\right)^{10}+\left(\frac{3}{7}\right)^{11}+\cdots+\left(\frac{3}{7}\right)^{106}\]
+
+Solution 1 (Re-Indexing):
+\begin{align*}
+    \sum_{i=10}^{106} \left(\frac{3}{7}\right)^i 
+        &= \left(\frac{3}{7}\right)^{10}+\left(\frac{3}{7}\right)^{11}+\cdots+\left(\frac{3}{7}\right)^{106}\hspace{0.33\textwidth}\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=
+\end{align*}\vspace{20pt}
+
+Solution 2 (Adding Zero):
+\begin{align*}
+    \sum_{i=10}^{106} \left(\frac{3}{7}\right)^i 
+        &= \left(\frac{3}{7}\right)^{10}+\left(\frac{3}{7}\right)^{11}+\cdots+\left(\frac{3}{7}\right)^{106}\hspace{0.33\textwidth}\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=\\[25pt]
+        &=
+\end{align*}\vspace{20pt}
+
+\end{practiceprob}
+
+\clearpage
+
+\begin{exposition}[Iteration Algorithm]\index{iteration algorithm}\label{exp:iteration}
+    Given \(a_0=b\), \[a_n=c\cdot a_{n-1}+d,\] and an expression with \(a_k\):
+    \begin{enumerate}
+        \item While \(k>0\):
+        \begin{enumerate}
+            \item Replace \(a_k\) with \((c\cdot a_{k-1}+d)\)
+            \item Collect like terms
+            \item Decrement \(k\)
+        \end{enumerate}
+        \item When \(k=0\) replace \(a_0\) with \(b\)
+        \item Simplify final expression with appropriate formula
+        \item Generalize
+    \end{enumerate}
+
+    Apply \emph{Iteration} to \(a_0=2\), \(a_n=a_{n-1}+2\), starting at \(a_3\ (k=3)\):
+    \addtolength{\jot}{3pt}
+    \begin{align*}
+        a_3 &= (a_2+2) && \text{apply steps 1a - 1bc}\\
+            &= ((a_1+2)+2) && \text{apply step 1a}\\
+            &= (a_1+2\cdot 2) && \text{apply step 1b \& 1c}\\
+            &= ((a_0+2)+2\cdot 2) && \text{apply step 1a}\\
+            &= (a_0+3\cdot 2) && \text{apply step 1b \& 1c}\\
+            &= (2+3\cdot 2) && \text{apply step 2}\\
+            &= 4\cdot (2) && \text{apply step 3}\\
+        a_n &= (n+1)\cdot(2) && \text{apply step 4}
+    \end{align*}
+\begin{note*}
+    The objective of this example and those that follow is to demonstrate an ability to understand and apply a specific \emph{algorithm}, not just to get an answer.  In fact, as we shall see, for these basic recursive sequences (first order linear recurrence relations \index{first order linear recurrence relations}) the solution is essentially the same every time.  In contrast, algorithms play a crucial role in mathematics and computer science.   
+\end{note*}
+\end{exposition}
+
+\begin{defn}[Algorithm]\index{algorithm}
+    An \emph{algorithm} is a specific set of instructions for carrying out a procedure or solving a problem, usually with the requirement that the procedure terminate at some point. Specific algorithms sometimes also go by the name method, procedure, or technique. The word ``algorithm'' is a distortion of al-Khw\=arizm\=i, a Persian mathematician who wrote an influential treatise about algebraic methods. The process of applying an algorithm to an input to obtain an output is called a computation. \cite{mathworldalg}
+\end{defn}
+
+
+\begin{exposition}
+Apply the iteration algorithm (exposition \ref{exp:iteration}, p. \pageref{exp:iteration}) to the recusance relation defined by \(a_0=4\) and \(a_n=6\cdot a_{n-1} +4\).
+\addtolength{\jot}{20pt}
+    \begin{align*}
+        a_4 &= \textcolor{secondaryaccent}{(6\cdot a_3 +4)} && \text{step 1a:}\ a_k=6\cdot a_{k-1}+4\\
+            &= 6\cdot \textcolor{secondaryaccent}{(6\cdot a_2+4)} +4 && \text{step 1a:}\ a_k=6\cdot a_{k-1}+4\\
+            &= 6^2\cdot a_2 +6\cdot 4 +4 && \text{step 1b \& 1c}\\
+            &= 6^2\cdot \textcolor{secondaryaccent}{(6\cdot a_1+4)} +6\cdot 4 +4 && \text{step 1a:}\ a_k=6\cdot a_{k-1}+4\\
+            &= 6^3\cdot a_1+ 6^2\cdot 4 +6\cdot 4 +4&& \text{step 1b \& 1c}\\
+            &= 6^3\cdot \textcolor{secondaryaccent}{(6\cdot a_0+4)}+6^2\cdot 4 +6\cdot 4 +4 && \text{step 1a:}\ a_k=6\cdot a_{k-1}+4\\
+            &= 6^4\cdot a_0 +6^3\cdot 4+ 6^2\cdot 4 +6\cdot 4 +4&& \text{step 1b \& 1c}\\
+            &= 6^4\cdot \textcolor{secondaryaccent}{4} +6^3\cdot 4+ 6^2\cdot 4 +6\cdot 4 +4 && \text{step 2:}\ \textcolor{secondaryaccent}{a_0=4}\\
+            &=\sum_{i=0}^4 4\cdot 6^i = 4\left(\frac{6^5-1}{6-1}\right) && \text{step 3 and formula \ref{eq:geometric} p.\pageref{eq:geometric}}\\
+        \textcolor{secondaryaccent}{a_k} 
+            &\textcolor{secondaryaccent}{=\sum_{i=0}^k 4\cdot 6^i = 4\left(\frac{6^{k+1}-1}{6-1}\right)} && \textcolor{secondaryaccent}{\text{step 4}}
+    \end{align*}
+\begin{note*}
+    If you look at the work above you see that we never replaced something like \(6^2\cdot 4\) with \(144\); arithmetic can be your enemy when looking for patterns.  Collect similar terms/factors, but try to not do so much arithmetic that you lose the pattern.  This takes practice.
+\end{note*}
+\end{exposition}
+
+
+\clearpage
+
+\begin{practiceprob} Apply the iteration algorithm (exposition \ref{exp:iteration}, p. \pageref{exp:iteration}) to the recusance relation defined by \(b_0=5\) and \(b_n=3\cdot b_{n-1} +5\) to show that \[b_n=5\left(\frac{3^{n+1}-1}{3-1}\right).\]
+Remember to always replace \(b_n\) with \(3\cdot b_{n-1} +5\) if \(k\neq 0\) and 5 if it does.
+\addtolength{\jot}{50pt}
+    \begin{align*}
+        b_4 &= \\
+            &= \\
+            &= \\
+            &= \\
+            &= \\
+            &= \\
+            &= \\
+        b_n &= \hspace*{0.8\textwidth}
+    \end{align*}\vspace{10pt}
+\end{practiceprob}
+
+\clearpage
+
+\begin{practiceprob} Apply the iteration algorithm (exposition \ref{exp:iteration}, p. \pageref{exp:iteration}) to the recusance relation defined by \(c_0=2\) and \(c_n=-2\cdot c_{n-1} +2\) to show that \[c_n=2\left(\frac{(-2)^{n+1}-1}{-2-1}\right).\]
+Remember to always replace \(c_n\) with \(-2\cdot c_{n-1} +2\) if \(k\neq 0\) and 2 if it does.
+\addtolength{\jot}{50pt}
+    \begin{align*}
+        c_4 &= \\
+            &= \\
+            &= \\
+            &= \\
+            &= \\
+            &= \\
+            &= \\
+        c_n &= \hspace*{0.8\textwidth}
+    \end{align*}\vspace{10pt}
+\end{practiceprob}
+
+\clearpage
+
+\begin{exposition} If we try the iteration algorithm with \(F_1=1\), \(F_1=1\) and \(F_n=F_{n-1}+F_{n-2}\) we get the following:
+    \begin{align*}
+        F_5 &=F_4+F_3 && F_n=F_{n-1}+F_{n-2}\\
+            &=(F_3+F_2)+(F_2+F_1) && F_n=F_{n-1}+F_{n-2}\\
+            &=F_3+2\cdot F_2+F_1\\
+            &=(F_2+F_1)+2\cdot (F_1+F_0)+F_1 && F_n=F_{n-1}+F_{n-2}\\
+            &=F_2+4\cdot F_1+2\cdot F_0\\
+            &=(F_1+F_0)+4\cdot F_1+2\cdot F_0 && F_n=F_{n-1}+F_{n-2}\\
+            &=5\cdot F_1+3\cdot F_0.
+    \end{align*}
+    But \(F_4=5\) and \(F_3=3\) so this doesn't really tell us anything.
+\end{exposition}
+
+\begin{defn}[Second Oder Linear Recurrence Relation]\index{recurrence relation}\index{second order recurrence relation}\index{first order recurrence relation}
+    Since the next term in the sequence depends on two prior terms, sequences like the Fibonacci sequence are called \emph{\underline{second order} linear recurrence relations}.  Where as the other recursive sequences we looked at were \emph{\underline{first order} linear recurrence relations} since the next term only depended on the one previous term.
+\end{defn}
+
+\begin{thm}[Distinct Roots Version]\label{thm:distinct_roots}
+Given a second order linear recurrence relation with \(r_0\), \(r_1\), and \(r_n=A\cdot r_{n-1}+B\cdot r_{n-2}\), if the roots of the \emph{characteristic polynomial},\index{characteristic polynomial}
+    \[x^2-Ax-B=0,\]
+are distinct values \(s_0\) and \(s_1\), then \(r_n=C\cdot s_0^n + D\cdot s_1^n\) for appropriate values of \(C\) and \(D\).
+\end{thm}
+
+\begin{exposition}
+In order to apply theorem \ref{thm:distinct_roots} to the Fibonacci Sequence in which \(F_0=1\), \(F_1=1\) and \(F_n=F_{n-1}+F_{n-2}\), we first find the characteristic polynomial.  Since \(F_n=F_{n-1}+F_{n-2}\), \(A=B=1\) and so we need the roots of \(x^2-x-1\) which are
+    \[x=\frac{1\pm\sqrt{5}}{2}\] and by theorem \ref{thm:distinct_roots}
+    \[F_n=C\left(\frac{1+\sqrt{5}}{2}\right)^n+D\left(\frac{1-\sqrt{5}}{2}\right)^n,\]
+for some \(C\) and \(D\).  We can use \(F_0\) and \(F_1\) to set up a system of two equations and two unknowns in order to solve for \(C\) and \(D\),
+    \begin{align*}
+        F_0&=C+D=1\ \text{and}\\
+        F_1&=C\left(\frac{1+\sqrt{5}}{2}\right)+D\left(\frac{1-\sqrt{5}}{2}\right)=1.
+    \end{align*}
+Using these we get
+    \[C=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)\ \text{and}\ D=-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right).\]
+Therefore the closed formula for the Fibonacci sequence is
+    \[F_n=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)^{n+1}-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right)^{n+1}\]
+\end{exposition}
+
+\begin{note}[Golden Ratio]
+    The value \[\phi=\frac{1+\sqrt{5}}{2}\] is called the \emph{golden ratio}\index{golden ratio} and appears in many places in mathematics, art, and nature.  It was studied by the ancient Greeks as the solution to the expression \(a/b=b/(a-b)\).  We can understand its relation to the Fibonacci sequence by looking at the limit
+        \[L=\lim_{n\rightarrow\infty}\frac{F_{n+1}}{F_n}.\]
+    For large values of \(n\), 
+        \[L\approx\frac{F_{n+1}}{F_n}=\frac{F_n+F_{n-1}}{F_n}=1+\frac{F_{n-1}}{F_n}\approx 1+\frac{1}{L}.\]
+    But then, \(L=1+1/L\) or \(L^2-L-1=0\), which, as before. gives \[L=\frac{1\pm\sqrt{5}}{2}.\]
+    Finally, this line of thinking gives us rough justification for the characteristic polynomial in theorem \ref{thm:distinct_roots}.
+\end{note}
+
+
+\clearpage
+
+\begin{practiceprob}
+Use theorem \ref{thm:distinct_roots} and the characteristic polynomial to find a closed formula for \[G_0=2,\ G_1=3,\ \text{and}\ G_n=4\cdot G_{n-1}+5\cdot G_{n-2}.\]
+\vspace{0.85\textheight}
+\end{practiceprob}
+
+\clearpage
+
+\begin{thm}[Single Root Version]\label{thm:single_root}
+Given \(r_0\), \(r_1\), and \(r_n=A\cdot r_{n-1}+B\cdot r_{n-2}\), if the only root of
+    \[x^2-Ax-B=0,\]
+is the value \(s_0\), then \(r_n=C\cdot s_0^n + D\cdot n\cdot s_0^n\) for appropriate values of \(C\) and \(D\).
+\end{thm}
+
+
+\begin{practiceprob}
+Using theorem \ref{thm:single_root} and the characteristic polynomial find a closed formula for \[H_0=5,\ H_1=4,\ \text{and}\ H_n=4\cdot H_{n-1}-4\cdot H_{n-2}.\]
+\vspace{0.73\textheight}
+\end{practiceprob}

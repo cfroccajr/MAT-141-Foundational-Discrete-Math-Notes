@@ -1,15 +1,16 @@
 \begin{defn}[Predicates]
     A \emph{predicate}\index{predicate} is a statement containing a finite number of variables. The predicate becomes true or false based on the value of the variables.
 \end{defn}
-\begin{expository}[sidebyside]{Sample Predicates}
+\begin{exposition}[Sample Predicates]
 Find values for the variables which make the predicates true or false.
+\begin{sides}
     \begin{itemize}
     \setlength{\itemsep}{18pt}
         \item \(P(x): x\in\bbZ \wedge x>5\)
         \item \(Q(x): x\in\bbR \wedge x>5\)
         \item \(G(a,b):  a>b\)
         \item \(\forall a,b\in\bbZ: G(a,b) \rightarrow G(a^3,b^3)\)
-        \item \(S(n,m): n^2>m\)\vspace{2\baselineskip}
+        \item \(S(n,m): n^2>m\)
     \end{itemize}
 \tcblower
     \begin{itemize}
@@ -20,10 +21,12 @@ Find values for the variables which make the predicates true or false.
         \item \(\forall a,b\in R: G(a,b)\leftrightarrow S(a,b)\)
         \item \(\forall n\in\bbN\ \exists a,b,c\in\bbZ: a^n+b^n=c^n\)
     \end{itemize}
-\end{expository}
+\end{sides}    
+\end{exposition}
 
-\begin{practice}[sidebyside]{Shapes, Colors, and Zombies, Oh My!!}
+\begin{practiceprob}[Shapes, Colors, and Zombies, Oh My!!]
 Use figure \ref{fig:Tarski} on page \pageref{fig:Tarski} to identify when these predicates are true or false.
+\begin{sides}
     \begin{itemize}
     \setlength{\itemsep}{18pt}
         \item \(C(x):\) \(x\) is a consonant
@@ -31,7 +34,7 @@ Use figure \ref{fig:Tarski} on page \pageref{fig:Tarski} to identify when these 
         \item \(Z(x):\) \(x\) is a zombie
         \item \(S(x):\) \(x\) is a stick figure
         \item \(N(x):\) \(x\) is a brain
-        \item \(R(x):\) \(x\) is \textcolor{red!60!black}{\bfseries\em red}\vspace{2\baselineskip}
+        \item \(R(x):\) \(x\) is \textcolor{red!60!black}{\bfseries\em red}
     \end{itemize}
     \tcblower
     \begin{itemize}
@@ -43,20 +46,22 @@ Use figure \ref{fig:Tarski} on page \pageref{fig:Tarski} to identify when these 
         \item \(W(x,y):\) \(x\) is in the same row as \(y\)
         \item \(L(x,y):\) \(x\) is in the same column as \(y\)
     \end{itemize}
-\end{practice}
+\end{sides}
+\end{practiceprob}
 
 \clearpage
 
 \begin{figure}[H]
     \centering
-    \input{images/tarski_world}
+    % \inputtikz{tarski_world}
+    \includegraphics[alt={Ten by ten grid with various shapes letters and figures},width=0.9\linewidth]{images/created/tarski_world.png}
     \caption{Tarski's World}
     \label{fig:Tarski}
 \end{figure}
 
 \clearpage
 
-\begin{expository}{Truth Sets}
+\begin{exposition}[Truth Sets]
 
 Given a predicate, the \emph{truth set}\index{truth set} for that predicate is the collection of all elements where it is true.  For example for \(V(x): x\ \text{is a vowel}\), the truth set is 
     \[T_V=\left\{a,e,i,o,u,y\right\}\] and for \(P(x): x\ \text{is a pentagon}\) the truth set is \[T_P=\left\{t,a,u,h,k,o,p\right\}.\] 
@@ -66,20 +71,8 @@ are all true if we pick the right value of \(x\).
 
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[scale=1.75,transform shape]
-    % Sets
-        \draw[rounded corners=5pt] (-2.5,-2.5) rectangle (4.5,2.5);
-        \draw (0,0) circle (2cm);
-        \draw (2,0) circle (2cm);
-    % Labels
-        \node at (0,1.5) {\large \(T_V\)};
-        \node at (2,1.5) {\large \(T_P\)};
-    % Elements
-        \node at (-1,0) {e,i,y};
-        \node at (1,0) {a,o,u};
-        \node at (3,0) {t,h,k,p};
-        \node[anchor=south west] at (-2.5,-2.5) {v,n,d};
-    \end{tikzpicture}
+    % \inputtikz{truth_set_venn}
+    \includegraphics[alt={Venn diagram of two truth sets},width=0.75\linewidth]{images/created/truth_set_venn.png}
     \caption{Venn Diagram of \(T_V\) and \(T_P\)}
     \label{fig:VP_Venn}
 \end{figure}
@@ -92,11 +85,11 @@ are all true if we pick the right value of \(x\).
 The predicates like \[W(x,y):\, x\ \text{is in the same row as}\ y\]
 would have the truth set
 \[T_W=\left\{(e,h),(h,e),(u,p),(p,u),(i,k),(k,i),(a,d),(d,a),(t,o),(o,t)\right\}.\]
-\end{expository}
+\end{exposition}
 
 \clearpage
 
-\begin{practice}{Truth Zombies}
+\begin{practiceprob}[Truth Zombies]
 Using figure \ref{fig:Tarski}, fill in the \emph{truth set} for each of the predicates.
 \begin{enumerate}
     \item The truth set for \(G(x)\) is \[T_G=\left\{\phantom{\rule{0.8\textwidth}{20pt}}\right\}\]
@@ -107,23 +100,16 @@ Using figure \ref{fig:Tarski}, fill in the \emph{truth set} for each of the pred
 \end{enumerate}
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[scale=1.5,transform shape]
-    % Sets
-        \draw[rounded corners=5pt] (-2.5,-2.5) rectangle (4.5,2.5);
-        \draw (0,0) circle (2cm);
-        \draw (2,0) circle (2cm);
-    % Labels
-        \node at (0,1.5) {\large \(T_G\)};
-        \node at (2,1.5) {\large \(T_H\)};
-    \end{tikzpicture}
+    % \inputtikz{empty_truth_venn}
+    \includegraphics[alt={Blank venn diagram for two truth sets},width=0.75\linewidth]{images/created/empty_truth_venn.png}
     \caption{Venn Diagram of \(T_G\) and \(T_H\)}
     \label{fig:GH_Venn}
 \end{figure}
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{expository}{Quantified Predicates}
+\begin{exposition}[Quantified Predicates]
 % Examples
 Recall \(\exists\) is the \emph{existential quantifier}\index{existential quantifier} and \(\forall\) the \emph{universal quantifier}\index{universal quantifier}.  Now, if we write 
     \[\exists x: V(x)\wedge P(x)\]
@@ -155,11 +141,11 @@ which we read as
 \begin{center}
     \textit{``some letter shares a column with every consonant.''}
 \end{center} Which of the previous two statements is true and which is false?  How do we know?\vspace{3\baselineskip}
-\end{expository}
+\end{exposition}
 
 \clearpage
 
-\begin{practice}{Tarski's Zombies}
+\begin{practiceprob}[Tarski's Zombies]
 % Exercises
 Referring to figure \ref{fig:Tarski}, which of the following predicates are true and which are false?  Try to write each in plain English and negate the false predicates.
 \begin{enumerate}
@@ -178,5 +164,5 @@ Finally, look at figure \ref{fig:Tarski} and construct three quantified statemen
     \item Truth:
     \item Lie:\vspace{35pt}
 \end{itemize}
-\end{practice}
+\end{practiceprob}
 

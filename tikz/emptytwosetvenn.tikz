@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.9]
+% Images
+    \draw[rounded corners=5pt] (0,0) rectangle (6,4);            
+    \filldraw[fill opacity=0.25,fill=blue] (2,2) circle (1.5);
+    \filldraw[fill opacity=0.25,fill=red] (4,2) circle (1.5); 
+    \draw (2,2) circle (1.5);
+% Labels and Entries
+    \node at (2,3) {\(A\)};
+    \node at (4,3) {\(B\)};
+    \node[anchor=north west] at (0,4) {\(\mathscr{U}\)};
+\end{tikzpicture}

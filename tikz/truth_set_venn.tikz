@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=1.75,transform shape]
+% Sets
+    \draw[rounded corners=5pt] (-2.5,-2.5) rectangle (4.5,2.5);
+    \draw (0,0) circle (2cm);
+    \draw (2,0) circle (2cm);
+% Labels
+    \node at (0,1.5) {\large \(T_V\)};
+    \node at (2,1.5) {\large \(T_P\)};
+% Elements
+    \node at (-1,0) {e,i,y};
+    \node at (1,0) {a,o,u};
+    \node at (3,0) {t,h,k,p};
+    \node[anchor=south west] at (-2.5,-2.5) {v,n,d};
+\end{tikzpicture}

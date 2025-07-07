@@ -1,0 +1,7 @@
+\begin{tikzpicture}
+    \foreach \p/\x in {GR/0,G/4,R/8,None/12}{
+        \pic[scale=0.5,transform shape] at (\x,0) {\p};
+        \node at (\x-1,2.5) {(\then)};
+        \stepcounter{n};
+    }
+\end{tikzpicture}

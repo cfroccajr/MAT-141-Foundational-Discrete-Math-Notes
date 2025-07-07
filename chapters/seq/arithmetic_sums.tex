@@ -1,0 +1,95 @@
+% Arithmetic Sum, Basic
+
+\begin{exposition}[Arithmetic Sum]\label{exp:arithmetic}\index{arithmetic sum}
+Let's look at the \emph{arithmetic sum}:
+    \[S_n=\sum_{i=1}^n i=1+2+3+\cdots+n\]
+    \begin{itemize}
+        \item \(S_1=\)
+        \item \(S_2=\)
+        \item \(S_3=\)
+        \item \(S_4=\)
+    \end{itemize}
+    
+    For \(n=100\) what happens when we add the \(100^{th}\) sum to its self in reverse order? 
+    \begin{align*}
+        S_{100}&=1+2+3+\cdots+98+99+100\\
+        S_{100}&=100+99+98+\cdots+3+2+1\\[15pt]
+        2\cdot S_{100}&=\\[15pt]
+        S_{100}&=
+    \end{align*}
+    
+    For \(n=k\) what happens when we add the \(k^{th}\) sum to its self in reverse order? 
+    \begin{align*}
+        S_{k}&=1+2+3+\cdots+(k-2)+(k-1)+k\\
+        S_{k}&=k+(k-1)+(k-2)+\cdots+3+2+1\\[15pt]
+        2\cdot S_{k}&= \\[15pt]
+        S_{k}&=
+    \end{align*}
+
+\begin{figure}[H]
+    \centering
+    % \inputtikz{arithmetic_sum}
+    \includegraphics[alt={Visual representation of an arithmetic sum.},width=0.85\linewidth]{images/created/arithmetic_sum.png}
+    \caption{Visualizing an Arithmetic Sum}
+    \label{fig:arithmetic_sum}
+\end{figure}
+\end{exposition}
+
+% Arithmetic Sum Definition
+
+\begin{defn}[Arithmetic Sum]\index{arithmetic sum}
+    An \emph{arithmetic sum} is a summation of the form
+    \[\sum_{i=1}^n ai+b\]
+    which has the propery that consecutive terms have a constant difference, \(a\).
+\end{defn}
+
+% Arithmetic Sum, with multiplier
+\begin{practiceprob} Now consider \(S_n=\sum_{i=1}^n 2\cdot i\):
+    \begin{align*}
+        S_n&=\sum_{i=1}^n 2\cdot i=2+4+6+\cdots+2n\\[20pt]
+        S_5&=
+    \end{align*}
+    
+    For \(n=k\) use the same strategy as above in Exposition \ref{exp:arithmetic} to find a formula for the sum:
+    \begin{align*}
+        S_{k}&=2+4+6+\cdots+2(k-2)+2(k-1)+2k\\
+        S_{k}&=2k+2(k-1)+2(k-2)+\cdots+6+4+2\\[20pt]
+        2\cdot S_{k}&=\\[20pt]
+        % S_{k}&=\\[15pt]
+        S_{k}&=
+    \end{align*}
+\end{practiceprob}
+
+% Arithmetic Sum, with additive term
+\begin{practiceprob} Consider \(S_n=\sum_{i=1}^n i+3\):
+    \begin{align*}
+        S_n&=\sum_{i=1}^n i+3 = 4+5+6+\cdots+(n+3)=\sum_{j=4}^{n+3} j\\[20pt]
+        S_5&=
+    \end{align*}
+
+For \(n=k\) use the same strategy as above in Exposition \ref{exp:arithmetic} to find a formula for the sum:
+    \begin{align*}
+        S_{k}&=4+5+6+\cdots+(k+1)+2(k+2)+(k+3)\\
+        S_{k}&=(k+3)+(k+2)+(k+1)+\cdots+6+5+4\\[20pt]
+        2\cdot S_{k}&=\\[20pt]
+        % S_{k}&=\\[15pt]
+        S_{k}&=
+    \end{align*}
+\end{practiceprob}
+
+\clearpage
+
+% Arithmetic Sum, General
+\begin{exposition}[General Arithmetic Sum]\label{exp:gen_arith}\index{arithmetic sum} Finally consider the general arithmetic summation \[S_n=\sum_{i=1}^n ai+b=(a+b)+(2a+b)+(3a+b)+\cdots+(n\cdot a+b).\]
+
+For \(n=k\) we can again use the same strategy as Exposition \ref{exp:arithmetic} to find a formula for this sum.
+    \begin{align*}
+        S_{k}&=(a+b)+(2a+b)+(3a+b)+\cdots+(k\cdot a+b)\\
+        S_{k}&=(k\cdot a+b)+\cdots+(3a+b)+(2a+b)+(a+b)\\[30pt]
+        2\cdot S_{k}&= \\[30pt]
+        S_{k}&=\\[30pt]
+        S_{k}&=
+    \end{align*}
+    \vspace{\baselineskip}
+\end{exposition}
+

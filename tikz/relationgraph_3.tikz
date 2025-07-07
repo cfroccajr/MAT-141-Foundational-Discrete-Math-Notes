@@ -1,0 +1,12 @@
+\begin{tikzpicture}[scale=0.8,transform shape]
+% Vertices
+    \node (O) at (0,0) {\(O\)};
+    \node (A) [above left = of O] {\(A\)};
+    \node (B) [above right = of O] {\(B\)};
+    \node (C) [above right = of A] {\(C\)};
+% Edges
+    \path[<->] (O) edge (A) edge (C) edge (B);
+    \path[<->] (C) edge (A) edge (B);
+    \draw[white,line width=5pt] (A) -- (B);
+    \path[<->] (A) edge (B);
+\end{tikzpicture}

@@ -11,98 +11,92 @@
     \end{itemize}
 \end{defn}
 
-\begin{practice}[label=rainstatements]{Statements and Their Negations}
-    Fill in the negation of each statement.
-    \setlength{\columnsep}{0pt}
-    \begin{multicols}{2}
+
+\begin{practiceprob}[Statements and Their Negations]\label{rainstatements}
+    Fill in the negation for the statements: \(R\equiv\) ``It is raining.''; \(G\equiv\) ``The grass is wet.''; and \(U\equiv\) ``I have an umbrella.''
         \begin{itemize}
-            \item \(R\equiv\) ``It is raining.''
-            \item \(G\equiv\) ``The grass is wet.''
-            \item \(U\equiv\) ``I have an umbrella.''
+            \item \(\sim R\equiv\) \vspace{\baselineskip}
+            \item \(\sim G\equiv\) \vspace{\baselineskip}
+            \item \(\sim U\equiv\) \vspace{\baselineskip}
         \end{itemize}
-    \end{multicols}\vspace{0.5\baselineskip}
-        \begin{itemize}
-            \item \(\sim R\equiv\) \hrulefill\vspace{\baselineskip}
-            \item \(\sim G\equiv\) \hrulefill\vspace{\baselineskip}
-            \item \(\sim U\equiv\) \hrulefill\vspace{\baselineskip}
-        \end{itemize}
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
 \newcounter{n}
 \setcounter{n}{1}
-\begin{practice}[label=mainimages]{Visualizing Truth Values}
+\begin{practiceprob}[Visualizing Truth Values]\label{mainimages}
     For each picture indicate all the statements from practice problem \ref{rainstatements} that apply to it by writing the appropriate letter or its negation.
     \begin{center}
         % \inputtikz{grass_zombies}
-        \includegraphics[]{tikz/grass_zombies.pdf}
+        \includegraphics[alt={Eight images with different configurations of a stick figure with out without rain or an umbrella or wet grass.},width=0.85\linewidth]{images/created/grass_zombies.png}
     \end{center}
-\end{practice}
+\end{practiceprob}
 
 
 
-\begin{practice}{Relating Statements to Sets}
+\begin{practiceprob}[Relating Statements to Sets]
     For each region of the Venn Diagram, write down which picture from practice problem \ref{mainimages} belongs in that region.
     \begin{center}
         % \inputtikz{venn_zombies}
-        \includegraphics{tikz/venn_zombies.pdf}        
+        \includegraphics[alt={Blank Venn diagram for organizing the previous images into three overlapping sets.},width=0.65\linewidth]{images/created/venn_zombies.png}        
     \end{center}    
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{practice}{Combinations and Modifications of Statements}
+\begin{practiceprob}[Combinations and Modifications of Statements]
     For each combination of statements, indicate which set of pictures from practice problem \ref{mainimages} make the statement true.
     \begin{multicols}{2}
     \begin{enumerate}
     \setlength{\itemsep}{10pt}
-        \item \(U\wedge G\): \rule{\textwidth/4}{0.2pt}
-        \item \(\sim(U\wedge G)\): \rule{\textwidth/4}{0.2pt}
-        \item \(\sim U\wedge \sim G\): \rule{\textwidth/4}{0.2pt}
-        \item \(U\vee G\): \rule{\textwidth/4}{0.2pt}
-        \item \(\sim(U\vee G)\): \rule{\textwidth/4}{0.2pt}
-        \item \(\sim U \vee \sim G\): \rule{\textwidth/4}{0.2pt}
+        \item \(U\wedge G\): 
+        \item \(\sim(U\wedge G)\): 
+        \item \(\sim U\wedge \sim G\): 
+        \item \(U\vee G\): 
+        \item \(\sim(U\vee G)\): 
+        \item \(\sim U \vee \sim G\): 
     \end{enumerate}   
     \end{multicols}
-\end{practice}
+\end{practiceprob}
 
-\begin{practice}{Negate Compound Statements}
+\begin{practiceprob}[Negate Compound Statements]
     \setlength{\extrarowheight}{10pt}
     Using \(U\equiv\) ``I have an umbrella.'' and \(G\equiv\) ``The grass is wet.'' fill in the \emph{truth table} below.  You can refer to the previous practice problems and the images above to help you.
     \begin{center}
-    \begin{tabular}{*{4}{|c}*{5}{|>{\centering}m{0.125\textwidth}}|}\hline
+    \begin{tabular}{*{4}{c}*{5}{>{\centering}m{0.125\textwidth}}}
         \(U\) & \(G\) & \(\sim U\) & \(\sim G\) & \(U\wedge G\) & \(U\vee G\) & \(\sim (U\wedge G)\) & \(\sim (U\vee G)\) & \(U \wedge \sim G\) \tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline        
+        \(T\)&\(T\)&&&&&&&\tabularnewline\hline
+        \(T\)&\(F\)&&&&&&&\tabularnewline\hline
+        \(F\)&\(T\)&&&&&&&\tabularnewline\hline
+        \(F\)&\(F\)&&&&&&&\tabularnewline\hline        
     \end{tabular}
     \end{center}
-\end{practice}
+\end{practiceprob}
 
 
 
 \begin{defn}[Tautology and Contradiction]
-    A \emph{tautology}\index{tautology} is a statement that is always true and a \emph{contradiction}\index{contradiction} is a statement that is always false.  For example, \underline{\em in the figures in practice box \ref{mainimages}}, ``the grass is green'' is a tautology since it is always true, ``there is a zombie'' is a contradiction since it is always false.
+    A \emph{tautology}\index{tautology} is a statement that is always true and a \emph{contradiction}\index{contradiction} is a statement that is always false.  For example, \underline{\em in the figures in practice problem \ref{mainimages}}, ``the grass is green'' is a tautology since it is always true, ``there is a zombie'' is a contradiction since it is always false.
 \end{defn}
 
-\begin{practice}{True or False}
+\begin{practiceprob}[True or False]
     For which pictures in practice problem \ref{mainimages} are the following sentences true?
     \begin{enumerate}
     \setlength{\itemsep}{10pt}
-        \item ``The grass is green.'' \hrulefill
-        \item ``There is a zombie.'' \hrulefill
-        \item ``The grass is green'' \(\vee\) ``I have an umbrella.'' \hrulefill
-        % \item ``The grass is green'' \(\wedge\) ``I have an umbrella.'' \hrulefill
-        % \item ``There is a zombie'' \(\vee\) ``I have an umbrella.'' \hrulefill
-        \item ``There is a zombie'' \(\wedge\) ``I have an umbrella.'' \hrulefill
-        \item ``There is a zombie'' \(\vee\) ``the grass is green.'' \hrulefill
-        \item ``There is a zombie'' \(\wedge\) ``the grass is green.'' \hrulefill
+        \item ``The grass is green.'' 
+        \item ``There is a zombie.'' 
+        \item ``The grass is green'' \(\vee\) ``I have an umbrella.'' 
+        % \item ``The grass is green'' \(\wedge\) ``I have an umbrella.'' 
+        % \item ``There is a zombie'' \(\vee\) ``I have an umbrella.'' 
+        \item ``There is a zombie'' \(\wedge\) ``I have an umbrella.'' 
+        \item ``There is a zombie'' \(\vee\) ``the grass is green.'' 
+        \item ``There is a zombie'' \(\wedge\) ``the grass is green.'' 
     \end{enumerate}    
-\end{practice}
+\end{practiceprob}
 
-\begin{expository}{Some ``Basic'' Logical Rules with \(\sim,\ \wedge,\ \&\ \vee\)}
+\begin{exposition}{Some ``Basic'' Logical Rules}
+So far we have identified the following ways to put together statements using \(\wedge\), \(\vee\), and \(\sim\):
 \begin{itemize}
     \setlength{\itemsep}{25pt}
     \begin{multicols}{2}
@@ -157,4 +151,4 @@
 \index{laws!identity}
 \index{laws!inverse}
 \index{laws!domination}
-\end{expository}
+\end{exposition}

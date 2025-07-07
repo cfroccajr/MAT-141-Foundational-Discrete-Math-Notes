@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=0.9]
+% Rectangles
+    \draw (0,0) rectangle (2.5,5);
+    \filldraw[color=black,fill=secondaryaccent,opacity=0.5] 
+        (0,0) rectangle (2.5,2.5) node[pos=0.5,opacity=1]{\large \(\frac{1}{1}\)};
+    \filldraw[color=black,fill=secondaryaccent!66!white,opacity=0.5] 
+        (0,2.5) rectangle (1.25,5) node[pos=0.5,opacity=1]{\large \(\frac{1}{2}\)};
+    \filldraw[color=black,fill=secondaryaccent!44!white,opacity=0.5]
+        (1.25,2.5) rectangle ++(1.25,1.25) node[pos=0.5,opacity=1]{\large \(\frac{1}{4}\)};
+    \filldraw[color=black,fill=secondaryaccent!30!white,opacity=0.5]
+        (1.25,3.75) rectangle ++(0.625,1.25) node[pos=0.5,opacity=1]{\(\frac{1}{8}\)};
+    \filldraw[color=black,fill=secondaryaccent!20!white,opacity=0.5]
+        (1.875,3.75) rectangle ++(0.625,0.625) node[pos=0.5,opacity=1]{\small \(\frac{1}{16}\)};
+% Labels
+    \draw[decorate,decoration={brace,amplitude=10pt}] (2.5,5) -- (2.5,0)
+        node[pos=0.5,right,xshift=10pt]{2};
+    \draw[decorate,decoration={brace,amplitude=10pt}] (2.5,0) -- (0,0)
+        node[pos=0.5,below,yshift=-10pt]{1};
+\end{tikzpicture}

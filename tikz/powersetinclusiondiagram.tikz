@@ -1,0 +1,38 @@
+\begin{tikzpicture}[every edge/.style={draw,doublestruck},xscale=0.6,yscale=0.95]
+    \node (B) at (0,0) {\(B=\left\{2,3,5,7\right\}\)};
+% sets of three elements
+    \node (B2) at (-2.25,-2) {\(\left\{2,3,7\right\}\)};
+    \node (B3) at (2.25,-2) {\(\left\{2,5,7\right\}\)};
+    \node (B1) [left = of B2] {\(\left\{2,3,5\right\}\)};
+    \node (B4) [right = of B3] {\(\left\{3,5,7\right\}\)};
+% sets of two elements
+    \node (B7) at (-2.25,-4) {\(\left\{2,7\right\}\)};
+    \node (B8) at (2.25,-4) {\(\left\{3,5\right\}\)};
+    \node (B6) [left = of B7] {\(\left\{2,5\right\}\)};
+    \node (B5) [left = of B6] {\(\left\{2,3\right\}\)};
+    \node (B9) [right = of B8] {\(\left\{3,7\right\}\)};
+    \node (B10) [right = of B9] {\(\left\{5,7\right\}\)};
+% sets of one element
+    \node (B12) at (-2.25,-6) {\(\left\{3\right\}\)};
+    \node (B13) at (2.25,-6) {\(\left\{5\right\}\)};
+    \node (B11) [left = of B12] {\(\left\{2\right\}\)};
+    \node (B14) [right = of B13] {\(\left\{7\right\}\)};
+% empty Set
+    \node (B15) at (0,-8) {\(\emptyset\)};
+% paths
+    \path (B) edge (B1) edge (B2) edge (B3) edge (B4);
+    \path (B1) edge (B5) edge (B6) edge (B8);
+    \path (B2) edge (B5) edge (B7) edge (B9);
+    \path (B3) edge (B6) edge (B7) edge (B10);
+    \path (B4) edge (B8) edge (B9) edge (B10);
+    \path (B5) edge (B11) edge (B12);
+    \path (B6) edge (B11) edge (B13);
+    \path (B7) edge (B11) edge (B14);
+    \path (B8) edge (B12) edge (B13);
+    \path (B9) edge (B12) edge (B14);
+    \path (B10) edge (B13) edge (B14);
+    \path (B11) edge (B15);
+    \path (B12) edge (B15);
+    \path (B13) edge (B15);
+    \path (B14) edge (B15);
+\end{tikzpicture}

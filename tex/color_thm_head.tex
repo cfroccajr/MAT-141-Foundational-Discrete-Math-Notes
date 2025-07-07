@@ -8,7 +8,7 @@
 \tcbuselibrary{breakable}
 \tcbset{
     thmstyle/.style={
-       breakable,
+       % breakable,
        colframe=tertiaryaccent,
        colback=white,
        opacityback=1,
@@ -26,6 +26,7 @@
     \tcolorboxenvironment{axiom}{thmstyle}
     \tcolorboxenvironment{claim}{thmstyle}
     \tcolorboxenvironment{conj}{thmstyle}
+    \tcolorboxenvironment{note}{thmstyle}
     \tcolorboxenvironment{proof}{% `proof' from `amsthm'
         blanker,breakable,left=5mm,right=5mm,
         before skip=10pt,after skip=10pt,

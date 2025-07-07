@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=0.8,transform shape]
+% Axes
+    \draw[thin] (0,-3) grid (7,3);
+    \draw[thin,step=0.5,dashed] (0,-3) grid (7,3);
+    \draw[->,color=secondaryaccent,line width=2pt] (0,0) -- (7,0);
+    \draw[->,color=secondaryaccent,line width=2pt] (0,-3) -- (0,3);
+% Label
+    % \node at (3,1) {\(a_n=1/2^n\)};
+\end{tikzpicture}

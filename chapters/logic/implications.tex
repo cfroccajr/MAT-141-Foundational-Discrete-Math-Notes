@@ -1,57 +1,52 @@
 
 
 \begin{defn}[Implications/Conditional Statements]
-    A \emph{conditional statement}, or {\em implication}, is a compound statement of the form {\em ``if \(P\), then \(Q\).''}  The first statement, \(P\), is called the {\em hypothesis} or {\em premise} and the second is the {\em conclusion}.  Conditionals can also be read {\em ``\(P\) implies \(Q\),''} {\em ``\(P\) only if \(Q\),''}, {\em ``\(Q\), if \(P\).''}  Notationally, we write ``if \(P\), then \(Q\)'' as \(P\rightarrow Q\).
+    A \emph{conditional statement}, or \emph{implication}, is a compound statement of the form {\em ``if \(P\), then \(Q\).''}  The first statement, \(P\), is called the {\em hypothesis} or {\em premise} and the second is the {\em conclusion}.  Conditionals can also be read {\em ``\(P\) implies \(Q\),''} {\em ``\(P\) only if \(Q\),''}, {\em ``\(Q\), if \(P\).''}  Notationally, we write ``if \(P\), then \(Q\)'' as \(P\rightarrow Q\).
 \end{defn}
 
 \setcounter{n}{1}
-\begin{practice}[label=GRimages]{When are Implications False}
+\begin{practiceprob}[When are Implications False]\label{GRimages}
 \setlength{\extrarowheight}{10pt}
     Looking at the following images, 
     \begin{center}
-        \begin{tikzpicture}
-            \foreach \p/\x in {GR/0,G/4,R/8,None/12}{
-                \pic[scale=0.5,transform shape] at (\x,0) {\p};
-                \node at (\x-1,2.5) {(\then)};
-                \stepcounter{n};
-            }
-        \end{tikzpicture}
+        % \inputtikz{rainy_grass}
+        \includegraphics[alt={Four figures with or without rain or wet grass},width=0.85\linewidth]{images/created/rainy_grass.png}
     \end{center}
-    for which images is the statement 
-        \begin{center}\emph{``If it is raining, then the grass is wet'' (\(R\rightarrow G\))}\end{center}
-    false?\vspace{\baselineskip}\newline\hspace*{0pt}\hrulefill\vspace{\baselineskip}\newline
-    Why is it false in those cases?\hrulefill\vspace{0.75\baselineskip}\newline  
-    \hspace*{0pt}\hrulefill\vspace{\baselineskip}\newline
-    In what situations must it then be true?\hrulefill\vspace{\baselineskip}\newline
-    \hspace*{0pt}\hrulefill\vspace{\baselineskip}\newline
+    \begin{enumerate}
+        \setlength{\itemsep}{3\baselineskip}
+        \item For which images is the statement \emph{``If it is raining, then the grass is wet'' (\(R\rightarrow G\))} false?
+        \item Why is it false in those cases?
+        \item In what situations must it then be true?
+    \end{enumerate}\vspace{2\baselineskip}
     Use the same sort of reasoning to try and fill in the following \emph{truth table}\index{truth table}.
     \begin{center}
-    \begin{tabular}{*{4}{|c}*{5}{|>{\centering}m{0.125\textwidth}}|}\hline
+    \setlength{\extrarowheight}{15pt}
+    \begin{tabular}{*{4}{c}*{5}{>{\centering}m{0.125\textwidth}}}
         \(R\) & \(G\) & \(\sim R\) & \(\sim G\) & \(R\rightarrow G\) & \(G\rightarrow R\) & \(\sim R\rightarrow \sim G\) & \(\sim G\rightarrow \sim R\) & \(R\wedge \sim G\) \tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline
-        &&&&&&&&\tabularnewline\hline        
+        \(T\)&\(T\)&&&&&&&\tabularnewline\hline
+        \(T\)&\(F\)&&&&&&&\tabularnewline\hline
+        \(F\)&\(T\)&&&&&&&\tabularnewline\hline
+        \(F\)&\(F\)&&&&&&&
     \end{tabular}
     \end{center}
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{practice}{True or False: The Return}
-    In practice problem \ref{GRimages} for which images are these true?
+\begin{practiceprob}[True or False: The Return]
+    In practice problem \ref{GRimages}, for which images are these true?
     \begin{enumerate}
-    \setlength{\itemsep}{10pt}
-        \item If ``there is a zombie,'' then ``the grass is wet.'' \hrulefill
-        \item If ``there is a zombie,'' then ``it is raining.'' \hrulefill
-        \item If ``it is raining,'' then ``the grass is green.'' \hrulefill
-        \item If ``the grass is wet,'' then ``the grass is green.'' \hrulefill
+    \setlength{\itemsep}{\baselineskip}
+        \item If ``there is a zombie,'' then ``the grass is wet.''
+        \item If ``there is a zombie,'' then ``it is raining.'' 
+        \item If ``it is raining,'' then ``the grass is green.'' 
+        \item If ``the grass is wet,'' then ``the grass is green.'' \vspace{\baselineskip}
     \end{enumerate}
-\end{practice}
+\end{practiceprob}
 
 
 
-\begin{expository}{Conditionals and Their Relations}
+\begin{exposition}[Conditionals and Their Relations]
     Starting with a conditional \(P \rightarrow Q\) we can write the following:
     \begin{multicols}{2}
         \begin{enumerate}
@@ -66,22 +61,15 @@
     and \(\sim (P\rightarrow Q) \equiv (P \wedge \sim Q)\).
     
     Further we can say \(P\rightarrow t\) and \(c\rightarrow Q\) are \emph{vacuously true}\index{vacuously true} because their negations are always false:
-        \[\sim (P\rightarrow t) \equiv (P \wedge c) \equiv c\]
-    and
-        \[\sim (c\rightarrow Q) \equiv (c \wedge \sim Q) \equiv c.\]
-\end{expository}
+        \[\sim (P\rightarrow t) \equiv (P \wedge c) \equiv c\ \text{and}\ \sim (c\rightarrow Q) \equiv (c \wedge \sim Q) \equiv c.\]
+\end{exposition}
 
 \setcounter{n}{1}
-\begin{practice}{Making Arguments}
+\begin{practiceprob}[Making Arguments]
     If we assume it is true that ``If I carry an umbrella, then zombies dive bomb me,'' then which pictures should we look at? \answerbox
     \begin{center}
-        \begin{tikzpicture}
-            \foreach \p/\x in {PlaneU/0,U/4,Plane/8,None/12}{
-                \pic[scale=0.5,transform shape] at (\x,0) {\p};
-                \node at (\x-1,2.5) {(\then)};
-                \stepcounter{n};
-            }
-        \end{tikzpicture}
+        % \inputtikz{dive_bomb}
+        \includegraphics[alt={Four images with or without an umbrella or a zombie in a plane},width=0.85\linewidth]{images/created/dive_bomb.png}
     \end{center}
     What if we also assume that it is true that ``I am carrying an umbrella,''
     which picture(s) do we look at then \answerbox, are there zombies dive bombing me \answerbox?\vspace{\baselineskip}
@@ -89,11 +77,11 @@
     \noindent%
     What if we also assume that it is true that ``zombies dive bomb me,'' which picture(s) do we look at then \answerbox, am I carrying an umbrella \answerbox?
     
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{expository}{More Rules and Arguments}
+\begin{exposition}[More Rules and Arguments]
     Given statements \(P\) and \(Q\) the following are some common valid and invalid argument forms.
     \vspace{\baselineskip}
 
@@ -161,4 +149,4 @@
             \end{array}
         \] 
     \end{tabular}
-\end{expository}
+\end{exposition}

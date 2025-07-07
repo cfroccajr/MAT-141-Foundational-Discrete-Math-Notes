@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1.5,transform shape]
+% Sets
+    \draw[rounded corners=5pt] (-2.5,-2.5) rectangle (4.5,2.5);
+    \draw (0,0) circle (2cm);
+    \draw (2,0) circle (2cm);
+% Labels
+    \node at (0,1.5) {\large \(T_G\)};
+    \node at (2,1.5) {\large \(T_H\)};
+\end{tikzpicture}

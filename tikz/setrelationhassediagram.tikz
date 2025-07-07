@@ -1,0 +1,18 @@
+\begin{tikzpicture}[every edge/.style={draw,doublestruck},scale=1.25,transform shape]
+% Vertices
+    \node (O) at (0,0) {\(\emptyset\)};
+    \node (A) [above left = of O] {\(\left\{a\right\}\)};
+    \node (B) [above = of O] {\(\left\{b\right\}\)};
+    \node (C) [above right = of O] {\(\left\{c\right\}\)};
+    \node (AB) [above = of A] {\(\left\{a,b\right\}\)};
+    \node (AC) [above = of B] {\(\left\{a,c\right\}\)};
+    \node (BC) [above = of C] {\(\left\{b,c\right\}\)};
+    \node (ABC) [above = of AC] {\(\left\{a,b,c\right\}\)};
+% Edges
+    \draw[doublestruck] (O) -- (A) -- (AB) -- (ABC);
+    \draw[doublestruck] (O) -- (B) -- (AB) -- (ABC);
+    \draw[doublestruck] (O) -- (B) -- (BC) -- (ABC);
+    \draw[doublestruck] (O) -- (C) -- (BC);
+    \draw[doublestruck] (A) -- (AC) -- (C);
+    \draw[doublestruck] (AC) -- (ABC);
+\end{tikzpicture}

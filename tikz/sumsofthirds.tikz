@@ -1,0 +1,22 @@
+\tikzset{
+    third/.pic={
+        \draw[fill=secondaryaccent!20] (0,0) rectangle (3,3);
+        \draw[fill=accent!50] (0,2) rectangle (3,3);
+        \draw[dashed] (0,1) -- (3,1);
+        \draw[dashed] (0,2) -- (3,2);    
+    }
+}
+
+\begin{tikzpicture}[scale=0.66,transform shape]
+    \pic[xscale=3,yscale=3,rotate=180] at (6,6) {third};
+    \pic[xscale=3,yscale=1,rotate=90] at (6,0) {third};
+    \pic[xscale=1,yscale=1,rotate=0] at (0,0) {third};
+    \pic[xscale=1,yscale=1/3,rotate=-90] at (0,2) {third};
+    \pic[xscale=1/3,yscale=1/3,rotate=-180] at (2,2) {third};
+    \pic[xscale=1/3,yscale=1/9,rotate=-270] at (2,4/3) {third};
+    \pic[xscale=1/9,yscale=1/9] at (4/3,4/3) {third};
+    \pic[xscale=1/9,yscale=1/27,rotate=-90] at (4/3,14/9) {third};
+    % \node at (0,0) {test};
+    % xscale_{n}=yscale_{n-1}
+    % yscale_{n}=???
+\end{tikzpicture}

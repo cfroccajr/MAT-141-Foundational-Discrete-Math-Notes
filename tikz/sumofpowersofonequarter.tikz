@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=2]
+% Larger Triangle
+    \draw (-1,0) -- (1,0) -- ++(120:2) -- cycle;
+% Smaller Triangles
+    \def\s{0}
+    \def\l{1}
+    \foreach \t in {0,...,5}{
+        \pgfmathparse{100*(2/3)^\t}\let\colour=\pgfmathresult;
+        \filldraw[
+            color=black,fill=secondaryaccent!\colour!white,
+            opacity=0.5
+        ] (0,\s) -- ++(60:\l) -- ++(180:\l) -- cycle;
+        \pgfmathparse{\s+\l*sqrt(3)/2};
+        \xdef\s{\pgfmathresult};
+        \pgfmathparse{\l/2};
+        \xdef\l{\pgfmathresult};
+    }
+\end{tikzpicture}

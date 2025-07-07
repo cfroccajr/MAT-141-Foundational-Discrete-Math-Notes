@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.9,transform shape]
+    \draw[dashed] (16,0) -- (18,0);
+    \draw[dashed] (16,1) -- (18,1);
+    \draw[decorate,decoration={random steps,segment length=2pt,amplitude=2pt},dashed](18,0) -- (18,1);
+    \foreach \i in {0,...,3}{
+        \pgfmathparse{int(2^(\i))}\let\j=\pgfmathresult;
+        \pgfmathparse{int(2^(\i+1))}\let\k=\pgfmathresult;
+        \pgfmathparse{100*(2/3)^\i}\let\colour=\pgfmathresult;
+        \draw[fill=secondaryaccent!\colour!white,opacity=0.5] (\j,0) rectangle (\k,1) node[pos=0.5,opacity=1]{\j}; 
+    };
+\end{tikzpicture}

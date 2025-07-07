@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+% Axes
+    \draw[thin] (0,-3) grid (7,3);
+    \draw[thin,step=0.5,dashed] (0,-3) grid (7,3);
+    \draw[->,color=secondaryaccent,line width=2pt] (0,0) -- (7,0);
+    \draw[->,color=secondaryaccent,line width=2pt] (0,-3) -- (0,3);
+% Sequence
+    \foreach \i in {0,...,5}{
+        \pgfmathparse{2*1/2^\i}\let\a=\pgfmathresult;
+        \shade[ball color=tertiaryaccent] (\i,\a) circle (4pt);
+    }
+% Label
+    % \node at (3,1) {\(a_n=1/2^n\)};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=0.7,transform shape]
+% Vertices
+    \node (O) at (0,0) {\(O\)};
+    \node (A) [above left = of O] {\(A\)};
+    \node (B) [above right = of O] {\(B\)};
+    \node (C) [above right = of A] {\(C\)};
+% Edges
+    \path[<->] (O) edge[loop below] (O) edge (C) edge (B);
+    % \path[->] (O) edge (A);
+    \path[] (A) edge[loop left] (A);
+    \path (B) edge[loop right] (B);
+    \path[->] (C) edge[loop above] (C) edge (A);
+\end{tikzpicture}

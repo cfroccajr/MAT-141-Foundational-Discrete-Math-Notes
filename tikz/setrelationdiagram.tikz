@@ -1,0 +1,20 @@
+\begin{tikzpicture}[bend angle=20,every loop/.style={looseness=4},scale=1.25,transform shape]
+% Vertices
+    \node (O) at (0,0) {\(\emptyset\)};
+    \node (A) [above left = of O] {\(\left\{a\right\}\)};
+    \node (B) [above = of O] {\(\left\{b\right\}\)};
+    \node (C) [above right = of O] {\(\left\{c\right\}\)};
+    \node (AB) [above = of A] {\(\left\{a,b\right\}\)};
+    \node (AC) [above = of B] {\(\left\{a,c\right\}\)};
+    \node (BC) [above = of C] {\(\left\{b,c\right\}\)};
+    \node (ABC) [above = of AC] {\(\left\{a,b,c\right\}\)};
+% Edges
+    \path[->] (O) edge (A) edge (B) edge (C) edge (AB) edge[bend left] (AC) edge (BC) edge[bend right] (ABC) edge[loop right] (O) ;
+    \path[->] (A) edge (AB) edge (AC) edge[bend left] (ABC) edge[loop left] (A);
+    \path[->] (B) edge (AB) edge (BC) edge[bend right] (ABC) edge[loop above] (B);
+    \path[->] (C) edge (AC) edge (BC) edge[bend right] (ABC) edge[loop right] (C);
+    \path[->] (AB) edge[bend left] (ABC) edge[loop left] (AB);
+    \path[->] (AC) edge (ABC) edge[loop left] (AC);
+    \path[->] (BC) edge (ABC) edge[loop right] (BC);
+    \path[->] (ABC) edge[loop right] (ABC);
+\end{tikzpicture}
