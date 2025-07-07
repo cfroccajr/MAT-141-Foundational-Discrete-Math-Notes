@@ -1,0 +1,14 @@
+\begin{tikzpicture}[scale=1.1,transform shape]
+% Vertices
+    \foreach \ang in {0,60,...,300}{
+        \node (V\ang) at (\ang:1.25) {\(v_{\ang}\)} 
+            edge [out=-15+\ang,in=15+\ang,loop] ();
+        % \draw[->] (V\ang) to[out=-15+\ang,in=270+\ang] (\ang:2)
+        %     to[out=90+\ang,in=15+\ang] (V\ang);
+        % \path (V\ang) [out=-15+\ang,in=15+\ang,loop] (V\ang);
+    }
+% Edges
+    \path[<->] (V0) edge[bend right] (V60) edge[bend left] (V300);
+    \path[<->] (V300) edge[bend left] (V60);
+    \path[<->] (V240) edge[bend left] (V180);
+\end{tikzpicture}

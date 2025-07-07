@@ -5,8 +5,9 @@
     \node (B) [above right = of O] {\(B\)};
     \node (C) [above right = of A] {\(C\)};
 % Edges
-    \path[->] (O) edge[loop below] (O);
-    \path[] (A) edge[loop left] (A);
+    \path[<->] (O) edge (A) edge (C) edge (B) edge[loop below] (O);;
+    \path[<->] (C) edge (A) edge (B) edge[loop above] (C);
+    \draw[white,line width=5pt] (A) -- (B);
+    \path[<->] (A) edge (B) edge[loop left] (A);
     \path (B) edge[loop right] (B);
-    \path[->] (C) edge[loop above] (C);
 \end{tikzpicture}
