@@ -1,0 +1,14 @@
+\begin{tikzpicture}[node distance=0.5,scale=0.8]
+% Sets
+    \draw (0,0) ellipse (1cm and 3cm);
+    \foreach \n in {1,...,10}{
+        \node at (0,2.75-\n/2) {\n};
+    }
+    \draw (4,0) ellipse (1cm and 3cm);
+    \node at (4,1.25) {0};
+    \node at (4,-1.25) {1};
+% Function
+% Labels
+    \node[anchor=south] at (0,3) {\(Domain\)};
+    \node[anchor=south] at (4,3) {\(Codomain\)};
+\end{tikzpicture}

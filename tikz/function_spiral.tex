@@ -1,0 +1,27 @@
+\begin{tikzpicture}[
+        every node/.style={
+            fill=white,rectangle,inner sep=2pt,
+            fill opacity=0.9,text opacity=1,rounded corners=5pt,rounded corners=5pt,
+            font=\footnotesize
+        },
+        scale=1
+    ]
+% Axes
+    \draw[step=0.5,gray,dashed,thin,opacity=0.5] (-4,-4) grid (4,4);
+    \draw[gray,opacity=0.5] (-4,-4) grid (4,4);
+    \draw[->,ultra thick] (-4,0) -- (4,0) node[anchor=west] {\(x\)};
+    \draw[->,ultra thick] (0,-4) -- (0,4) node[anchor=south] {\(y\)};
+% Labels
+\foreach\x in {-3,-2,-1,1,2,3}{
+    \node[anchor=north,yshift=-2pt] at (\x,0) {\x};
+    \node[anchor=east,xshift=-2pt] at (0,\x) {\x};
+}
+% Function
+    \draw[variable=\t,domain=0:1200,->,samples=200,ultra thick,secondaryaccent] plot({\t/360*cos(\t)},{\t/360*sin(\t)});
+% function labels
+    \coordinate (s) at (60:1140/360);
+    \coordinate (sx) at (0:{1140/360*cos(60)});
+    \draw[accent,dashed,thick] (0,0) -- (s) -- (sx);
+    \shade[ball color=accent] (s) circle (3pt) node[anchor=south west,xshift=2pt] {\(s=(x,y)\)};
+    \draw[dashed,accent,thick] (0:0.5) arc (0:60:0.5) node[pos=0.5,anchor=south west]{\(t\)};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[yscale=1]
+% sets
+    \draw (0,0) ellipse (0.5cm and 2cm);
+    \draw (2.5,0) ellipse (0.5cm and 2cm);
+    \draw (5,0) ellipse (0.5cm and 2cm);
+    \foreach \y/\a/\b/\c in {0/1/a/d,1/2/b/e,2/3/c/f}{
+        \node (\a) at (0,1-\y) {\(\a\)}; 
+        \node (\b) at (2.5,1-\y) {\(\b\)}; 
+        \node (\c) at (5,1-\y) {\(\c\)}; 
+    }
+% function
+    \foreach \a/\b in {1/a,2/c,3/b}{
+        \draw[line width=3pt, white] (\a) -- (\b);            
+        \draw[->,thick] (\a) -- (\b);
+    }
+    \foreach \b/\c in {a/d,b/f,c/e}{
+        \draw[line width=3pt, white] (\b) -- (\c);            
+        \draw[->,thick] (\b) -- (\c);
+    }
+% labels
+    \node[anchor=south west] at (-1,2.5) {Example 4:};
+    \node at (1.25,2) {\(f\)};
+    \node at (3.75,2) {\(g\)};
+\end{tikzpicture}

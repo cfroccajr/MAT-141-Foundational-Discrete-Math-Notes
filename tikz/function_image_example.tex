@@ -1,0 +1,29 @@
+\begin{tikzpicture}[node distance=0.5cm]
+% Sets
+    \draw (0,-2.25) ellipse (1cm and 2.25cm);
+    \node (a) at (0,-0.75) {\(a\)};
+    \node (b) [below=of a] {\(b\)};
+    \node (c) [below=of b] {\(c\)};
+    \node (d) [below=of c] {\(d\)};
+    \draw (4,-2.75) ellipse (1cm and 3cm);
+    \node (1) at (4,-0.5) {\(1\)};
+    \node (2) [below=of 1] {\(2\)};
+    \node (3) [below=of 2] {\(3\)};
+    \node (4) [below=of 3] {\(4\)};
+    \node (5) [below=of 4] {\(5\)};
+% Function
+\foreach \x/\y in {a/3,b/4,c/2,d/5}{
+    \draw[line width=3pt,background] (\x) -- (\y);
+    \draw[->,thick] (\x) -- (\y);
+}
+% Labels
+    \node at (0,1) {\(Domain\)};
+    \node at (4,1) {\(Codomain\)};
+    \draw[
+        decorate,decoration={brace,amplitude=10pt},
+        secondaryaccent,ultra thick
+    ] (4.25,-1.125) -- (4.25,-5) 
+        node[
+            anchor=south,pos=0.35,right,sloped,yshift=20pt,fill=white,rounded corners
+        ]{\(Range\)};
+\end{tikzpicture}
