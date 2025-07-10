@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=0.9]
+% Cricles
+    \draw[fill=accent,opacity=0.25,ultra thick] (0,0) circle (2cm);
+    \draw[fill=secondaryaccent,opacity=0.25,ultra thick] (2,0) circle (2cm);
+    \draw[fill=green!60!black,opacity=0.25,ultra thick] (-60:2) circle (2cm);
+% Labels
+    \node[anchor=south east] at (120:1) {\large \(A\)};
+    \node[anchor=south west] at ($(2,0)+(60:1)$) {\large \(B\)};
+    \node[anchor=north] at ($(-60:2)+(-90:1)$) {\large \(C\)};
+    \draw[<-,ultra thick,accent] (-1,0) -- +(-3,0) node[anchor=east] {Included Once};
+    \draw[<-,ultra thick,accent] (-0.25,-1.25) -- +(-3,0) node[anchor=east] {Included Twice};
+    \draw[<-,ultra thick,accent] (-30:1) -- +(4,0) node[anchor=west] {Included Three Times};
+\end{tikzpicture}

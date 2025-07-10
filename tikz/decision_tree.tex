@@ -1,0 +1,39 @@
+\begin{tikzpicture}[
+    node distance = 1cm and 3cm,on grid,
+    every draw/.style={ultra thick},
+    scale=0.9,
+    transform shape
+]
+% Nodes
+    \node (S) at (0,0) {Start};
+    % Bread
+    \node (A1) [above right=of S] {Any: 12};
+    \node (N1) [below right=of S] {None: 1};
+    % Protein
+    \node (A2) [above right=of A1] {Any: 16};
+    \node (N2) [below right=of A1] {None: 1};
+    % Cheese
+    \node (A3) [above right=of A2] {Any: 7};
+    \node (N3) [right=of A2] {None: 1};
+    \node (A4) [right=of N2] {Any: 7};
+    \node (N4) [below right=of N2] {None: 1};
+% Paths
+    \path (S) edge (A1) edge (N1);
+    \path (A1) edge (A2) edge (N2);
+    \path (A2) edge (A3) edge (N3);
+    \path (N2) edge (A4) edge (N4);
+% Labels
+    \node (B) [below =of N1] {Bread};
+    \node (P) [right = of B] {Protein};
+    \node (C) [right = of P] {Cheese};
+    \node (C1) [right =of A3] {\(12\times 16\times 7=1344\)};
+    \node (C2) [right =of N3] {\(12\times 16\times 1=192\)};
+    \node (C3) [right =of A4] {\(12\times 1\times 7=84\)};
+    \node (C4) [right =of N4] {\(12\times 1\times 1=12\)};
+    \draw[decorate,decoration={brace,amplitude=10pt}] (14,3) -- (14,-1)
+        node[pos=0.5,right,anchor=south,sloped,yshift=12pt]{\(1344+192+84+12=1632\)};
+    \draw[->,secondaryaccent] (0,4) -- (15,4)
+        node[pos=0.5,above]{\bfseries Multiplication Principle (independent events)};
+    \draw[->,secondaryaccent] (15.5,4) -- (15.5,-2)
+        node[pos=0.5,above,sloped,text width=110pt,align=center]{\bfseries Addition Principle (disjoint events)};
+\end{tikzpicture}

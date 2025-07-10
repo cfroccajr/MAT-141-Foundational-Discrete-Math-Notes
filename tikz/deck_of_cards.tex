@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.4,transform shape]
+    \def\x{0};
+    \def\y{0};
+    \foreach \s in {\(\redheart\),\(\spadesuit\),\(\reddiamond\),\(\clubsuit\)}{
+        % \node[anchor=east,scale=2.5] at (-1,\y+2) {\s}; 
+        \foreach \r in {2,...,10,J,K,Q,A}{
+            % \node[anchor=north,scale=2.5] at (\x+1.5,-12) {\r};
+            \pic at (\x,\y) {card={\r}{\s}};
+            \xdef\x{\x+3};
+        }
+        \xdef\x{0};
+        \xdef\y{\y-4};
+    }
+    \draw[decorate,decoration={brace},thick] (0,4) -- (39,4) node[pos=0.5,above,anchor=south,scale=3]{\bfseries Ranks};
+    \draw[decorate,decoration={brace},thick] (39,4) -- (39,-12) node[pos=0.5,left,sloped,anchor=south,scale=3]{\bfseries Suits};
+\end{tikzpicture}
