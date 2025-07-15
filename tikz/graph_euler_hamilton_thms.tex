@@ -1,0 +1,20 @@
+\begin{tikzpicture}[xscale = 1.125,yscale=1.4]%,transform shape]
+    \graph[
+        tree layout,
+        grow'=right,
+        edges={edges,rounded corners},
+        nodes={vertex},
+        sibling distance = 4cm,
+        level distance = 4cm
+    ]{
+        A--{B};
+        A--[out=130,in=230,loop,looseness=15]A,
+        % D--{E};
+        D --[bend angle=45,bend left,secondaryaccent,dashed] A;
+        E--B;
+        E--[bend left] C,
+        B -- D;
+        C -- {B,F--G--E};
+        C --[bend left] E;
+    };
+\end{tikzpicture}    

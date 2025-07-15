@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=1.33]
+    \graph[binary tree layout,%grow right,
+        nodes={vertex},edges={edges},
+        level distance = 1.3cm,
+        sibling distance =2.75cm,
+    ]{
+        a--{d,f},
+        b--{e,f},
+        c--{d,e,f},
+    };
+\end{tikzpicture}

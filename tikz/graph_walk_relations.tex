@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1,transform shape]
+% Nodes
+    \node (w) at (0,0) {\emph{Walk}};
+    \node (t) [left=of w] {\emph{Trail}};
+    \node (cw) [right=of w] {Closed Walk};
+    \node (et) [below=of t] {\emph{Euler Trail}};
+    \node (p) [left=of et] {Path};
+    \node (c) [right=of et] {\emph{Circuit}};
+    \node (sc) [right=of c] {\emph{Simple Circuit}};
+    \node (ec) [below=of et] {\emph{Euler Circuit}};
+    \node (hc) [below=of sc] {\emph{Hamilton Circuit}};
+% Paths
+    \path[<-,thick] (w) edge (t) edge (cw);
+    \path[<-,thick] (t) edge (et) edge (p) edge (c);
+    \path[<-,thick] (cw) edge (c);
+    \path[<-,thick] (c) edge (ec) edge (sc);
+    \path[<-,thick] (et) edge (ec);
+    \path[<-,thick] (sc) edge (hc);
+\end{tikzpicture}

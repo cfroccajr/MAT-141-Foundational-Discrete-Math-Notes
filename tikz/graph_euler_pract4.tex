@@ -1,0 +1,23 @@
+\begin{tikzpicture}[scale=0.8,transform shape]
+    \graph[
+        binary tree layout,
+        % grow'=right,
+        edges={edges,rounded corners,bend angle=15,},
+        nodes={vertex},
+        sibling distance = 2cm,
+        level distance = 4cm,
+    ]{
+        a -- {b,c},
+        a --[out=45,in=135,loop] a,
+        b -- {c,e,f},
+        c --[bend left] d,
+        c -- {f,g},
+        d -- {g,h},
+        d --[bend right] a,
+        a --[bend right] d,
+        d --[bend left] c,
+        e -- f,
+        g -- h,
+        f -- g,
+    };
+\end{tikzpicture}

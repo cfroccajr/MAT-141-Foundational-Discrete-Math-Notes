@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+    \graph[
+        tree layout,
+        % grow'=right,
+        edges={edges,rounded corners,bend angle=15,},
+        nodes={vertex},
+        sibling distance = 2cm,
+        level distance = 3cm,
+    ]{
+        a -- {b,d},
+        b -- {c,d,e},
+        c -- {g},
+        d -- {c,g,h},
+        e -- f,
+        % g -- h,
+        f -- {g,h},
+    };
+\end{tikzpicture}

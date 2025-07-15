@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+    \graph[branch right,grow down,nodes={SolidVertex,empty nodes},edges={edges}]{
+        subgraph I_nm [n=3,m=2];
+        V 1 -- {W 1, W 2};
+        V 2 -- {W 1};
+        V 3 -- {W 2};
+    };
+\end{tikzpicture}

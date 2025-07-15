@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+    \graph[branch right,grow down,nodes={SolidVertex,empty nodes},edges={edges,every loop/.style={->}}] 
+    {
+        a->{b,c};
+        c->d->a;
+        b->{c};
+        b->[loop left] b
+    };
+\end{tikzpicture}

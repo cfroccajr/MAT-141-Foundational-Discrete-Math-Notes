@@ -1,0 +1,178 @@
+\begin{defn}[Basic Tree]
+A \emph{tree} is a \textit{connected} graph with no circuits.
+\begin{center}
+    \begin{tikzpicture}
+        \graph[ 
+            tree layout,
+            nodes={vertex},
+            edges={edges},
+            level distance=45pt,
+            sibling distance=0.25cm
+        ]
+        {
+            a -- {b,c};
+            b -- {e,f,d};
+            c -- {g,h,i};
+            d -- {j,k};
+            i -- {l,m,n};
+        };
+    % Labels
+        \draw[shorten <=10pt,thick,<-] (0,0) -- +(2,0) 
+            node[anchor=west,font=\bfseries,color=secondaryaccent,fill=white] {Root};
+        \draw[shorten <=10pt,thick,<-] (0,0) -- +(0,1) 
+            node[anchor=south,font=\bfseries,color=secondaryaccent,fill=white] {Parent/Ancestor};
+        \draw[shorten <=10pt,thick,<-] (-1.5,-1.5) -- +(0,1) 
+            node[anchor=south,font=\bfseries,color=secondaryaccent,fill=white] {Child};
+        \draw[shorten <=15pt,thick,<-] (0,-5) -- +(0,-1) 
+            node[anchor=north,font=\bfseries,color=secondaryaccent,fill=white] {Descendant};
+        \draw[shorten <=10pt,thick,<-] (1.5,-1.5) -- +(2,0) 
+            node[anchor=west,font=\bfseries,color=secondaryaccent,fill=white] {Internal Vertex};
+        \draw[shorten <=10pt,thick,<-] (3.5,-4.75) -- +(1,0) 
+            node[anchor=west,font=\bfseries,color=secondaryaccent,fill=white,text width=1.5in] {Leaf or Terminal Vertex};
+        \draw[decorate,decoration={brace, amplitude=5pt},ultra thick] (-3.5,-5) -- (-3.5,0.5)
+            node[pos=0.5,left,anchor=east,xshift=-10pt,font=\bfseries,color=secondaryaccent,fill=white] {Height};
+    % Helper Grid
+        % \draw[gray,thin] (-5,-4) grid (5,1);
+        % \draw[gray,thin,dashed,step=0.5] (-5,-5) grid (5,1);
+        % \foreach \i in {-5,...,5}{
+        %     \node at (\i,-2){\i};
+        %     \node at (\i,-1){\i};
+        %     \node at (\i,0){\i};
+        %     \node at (\i,-3){\i};
+        % };
+    \end{tikzpicture}
+\end{center}
+\end{defn}
+
+\begin{thm}
+    Every tree has a vertex of degree 1.
+\end{thm}
+
+\begin{thm}
+    A tree with \(n\) vertices has \(n-1\) edges.
+\end{thm}
+
+\begin{defn}[Binary Trees]
+\hspace*{1in}
+\begin{itemize}
+    \item A \emph{binary tree} is a tree in which each parent has\newline \framebox{\phantom{\huge at most two children.}}
+    \item A \emph{full binary tree} is a tree in which each parent has\newline \framebox{\phantom{\huge exactly two children.}}
+    % \item A \emph{complete binary tree} is a \framebox{\phantom{\Large full binary tree.}} in which all children\newline \framebox{\phantom{\Large are at the same height.}}
+\end{itemize}
+\begin{center}
+    \begin{tikzpicture}
+        \graph[ 
+            binary tree layout,
+            nodes={vertex},
+            edges={edges},
+            level distance=25pt,
+            sibling distance=1.5cm
+        ]
+        {
+            a -- {b,c};
+            b -- {d,e};
+            c -- {f};
+            d -- {i,j};
+        };
+        \graph[ 
+            binary tree layout,
+            nodes={vertex},
+            edges={edges},
+            level distance=25pt,
+            sibling distance=1.5cm
+        ]
+        {
+            a[desired at={(7,0)}] -- {b,c};
+            b -- {d,e};
+            c -- {f,g};
+            d -- {i,j};
+            g -- {k,l};
+        };
+        % \graph[ 
+        %     tree layout,
+        %     nodes={vertex},
+        %     edges={edges},
+        %     level distance=50pt,
+        %     sibling distance=0.25cm
+        % ]
+        % {
+        %     a[desired at={(11,0)}] -- {b,c};
+        %     b -- {d,e};
+        %     c -- {f,g};
+        %     d -- {i,j};
+        %     g -- {k,l};
+        %     e -- {m,n};
+        %     f -- {o,p};
+        % };
+    % Labels
+        \node[anchor=north] at (0,-4) {\emph{Binary Tree}};
+        \node[anchor=north] at (7,-4) {\emph{Full Binary Tree}};
+        % \node[anchor=north] at (11,-6) {\emph{Complete Binary Tree}};
+    % Helper Grid
+        % \draw[gray,thin] (-3,-4) grid (15,1);
+        % \draw[gray,thin,dashed,step=0.5] (-3,-4) grid (15,1);
+        % \foreach \i in {-3,...,15}{
+        %     \node at (\i,-2){\i};
+        %     \node at (\i,-1){\i};
+        %     \node at (\i,0){\i};
+        %     \node at (\i,-3){\i};
+        % };
+    \end{tikzpicture}
+\end{center}
+\end{defn}
+
+\clearpage
+
+\begin{thm}
+    Given a full binary tree with \(k\) internal vertices, there are \(n=2k+1\) vertices all together and so \(k+1\) leaves.
+    \begin{center}
+        \begin{tikzpicture}
+        \graph[ 
+            binary tree layout,
+            nodes={vertex,color=white},
+            edges={edges},
+            level distance=1cm,
+            sibling distance=2.5cm
+        ]
+        {
+            a[ball color=accent]--{
+                b[ball color=secondaryaccent]--{
+                    d[ball color=secondaryaccent]--{
+                        i[ball color=tertiaryaccent],
+                        j[ball color=tertiaryaccent]
+                    },
+                    e[ball color=tertiaryaccent]
+                },
+                c[ball color=secondaryaccent]--{
+                    f[ball color=secondaryaccent]--{
+                        k[ball color=tertiaryaccent],
+                        l[ball color=tertiaryaccent]
+                    },
+                    g[ball color=secondaryaccent]--{
+                        m[ball color=tertiaryaccent],
+                        n[ball color=tertiaryaccent]
+                    }
+                }
+            }
+        };
+        \end{tikzpicture}
+    \end{center}
+\end{thm}
+
+\begin{thm}
+    Given a binary tree of height \(h\) with \(t\) leaves, \emph{\(t\leq 2^h\)} or equivalently \emph{\(\log_2(t)\leq h\)}.
+    Equality occurs in full binary trees in which all leaves are the same height.
+\end{thm}
+
+\begin{practice}{Vertices, Edges, and Graphs}
+Label each of the following as true for false and include reasons:
+\begin{enumerate}
+    \setlength\itemsep{3\baselineskip}
+    \item The total degree of a tree is equal to \(2n-2\) for some \(n\).
+    \item There exists a connected graph with 7 vertices and 7 edges.
+    \item There exists a tree with 7 vertices and 7 edges.
+    \item There exists a tree with 7 vertices and 6 edges.
+    \item A graph with 7 vertices and 6 edges is a tree.
+    \item A connected graph with 10 vertices and total degree 18 is a tree.\vspace{3\baselineskip}
+\end{enumerate}
+\end{practice}

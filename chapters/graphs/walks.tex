@@ -1,0 +1,93 @@
+\begin{defn}[Walks and their Kin] In graph theory we frequently study movement in a graph, for that we need the following definitions.
+\begin{sides}[lefthand width=0.4\linewidth]
+\begin{center}
+    \inputtikz{graph_walk_types}
+\end{center}    
+
+\tcblower
+
+\begin{itemize}
+    \item \emph{Walk:} Finite sequence of vertices and edges.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Trail:} A walk with no repeated edges.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Euler Trail:} A trail that traverses every edge.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Circuit:} A non-trivial closed trail.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Euler Circuit:} Circuit that traverses every edge.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Simple Circuit:} Circuit that only repeats the first/last vertex.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Hamilton Circuit:} A simple circuit that includes every vertex.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+\end{itemize}
+\end{sides}
+\begin{figure}[H]
+    \centering
+    \inputtikz{graph_walk_relations}
+    % \includegraphics[width=0.5\linewidth]{}
+    \caption{Hierarchy of Walks in a Graph}
+    \label{fig:walk-types}
+\end{figure}
+\end{defn}
+
+\clearpage
+
+\begin{practiceprob}
+Try and determine if the graph below has an:
+\begin{itemize}
+    \item \emph{Euler Trail:} A trail that traverses every edge.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Euler Circuit:} Circuit that traverses every edge.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Hamilton Circuit:} A simple circuit that includes every vertex.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+\end{itemize}
+
+\begin{center}
+    \inputtikz{graph_euler_pract1}
+\end{center}
+\end{practiceprob}
+
+\begin{practiceprob}
+Try and determine if the graph below has an:
+\begin{itemize}
+    \item \emph{Euler Trail:} A trail that traverses every edge.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Euler Circuit:} Circuit that traverses every edge.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+    \item \emph{Hamilton Circuit:} A simple circuit that includes every vertex.\vspace{0.7\baselineskip}\newline\rule{0.8\linewidth}{0.2pt}
+\end{itemize}
+
+\begin{center}
+    \inputtikz{graph_euler_pract2}
+\end{center}
+\end{practiceprob}
+
+\begin{thm}
+    A connected graph \(G\) will have an \emph{Euler circuit} if all of its vertices are of even degree and only an \emph{Euler trail} if it has exactly two vertices of odd degree.
+\end{thm}
+
+\begin{thm}[Subgraphs and Hamilton Circuits]
+    If a connected graph \(G\) has a \emph{Hamilton circuit}, then \(G\) has a \emph{subgraph} with the following properties:
+    \begin{enumerate}
+        \item \(H\) contains every vertex of \(G\).
+        \item \(H\) is connected.
+        \item \(H\) has an equal number of vertices and edges.
+        \item Every vertex in \(H\) has degree 2.
+    \end{enumerate}
+\end{thm}
+
+\begin{figure}[H]
+    \centering
+    \inputtikz{graph_euler_hamilton_thms}
+    % \includegraphics[width=0.5\linewidth]{}
+    \caption{Euler and Hamilton Circuits}
+    \label{fig:euler-hamilton-graph}
+\end{figure}
+
+\begin{practiceprob}
+Again try to find any Euler or Hamilton Circuits.
+
+\input{tikz/graph_euler_pract3}
+\end{practiceprob}
+
+\begin{practiceprob}
+Again try to find any Euler or Hamilton Circuits.
+
+\input{tikz/graph_euler_pract4}
+\end{practiceprob}
+
+
+
+
+

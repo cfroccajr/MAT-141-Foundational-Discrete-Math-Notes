@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=0.85,transform shape]
+    \graph[
+        binary tree layout,
+        grow'=right,
+        edges={edges,rounded corners},
+        nodes={vertex},
+        sibling distance = 2cm,
+        level distance = 1.5cm
+    ]{
+        C[desired at={(0,0)}]--{E};
+        C--[in=0,out=45,loop]C;
+        A[desired at={(-1,0)}]--{B,C};
+        B--{C,D};
+        D--[bend right] E;
+        % E -- A;
+    };
+\end{tikzpicture}

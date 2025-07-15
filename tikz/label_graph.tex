@@ -1,0 +1,34 @@
+\begin{tikzpicture}[scale=1,transform shape]
+% Bounding Box
+    % \clip[draw,rounded corners] (-4,-3.5) rectangle (4.5,3);
+% Vertices
+    \node[vertex] (a) at (0,0) {\(A\)};
+    \node[vertex] (b) [below left = of a] {\(B\)};            
+    \node[vertex] (c) [right = of a] {\(C\)};
+    \node[vertex] (d) [right = of b] {\(D\)};
+    \node[vertex] (e) [right = of d] {\(E\)};
+% Edges
+    \path[edges] (a) 
+        edge[bend left] node[right] {\(e_1\)} (b) 
+        edge[bend right] node[right] {\(e_2\)} (b) 
+        edge node[above] {\(e_3\)} (c);
+    \path[edges,bend angle=60] (b)
+        edge node[below] {\(e_4\)} (d)
+        edge[bend right] node[below] {\(e_5\)} (e);
+    \path[edges] (d)
+        edge node[below] {\(e_6\)} (e);
+    \path[edges,every loop/.style={-}] (c) edge[loop right] node[right] {\(e_7\)} (c);
+% Labels
+    \draw[<-] (-1.4,-0.75) -- (-1.3,1) node[anchor=south] {\rule{1in}{0.5pt}};
+    \draw[<-,shorten <= 2pt] (-0.4,-1) -- (-1.1,1);
+    \draw[<-] (2.7,0.2) -- (2.4,1) node[anchor=south] {\rule{1in}{0.5pt}};
+    \draw[<-] (0.3,0.4) -- (0.5,2) node[anchor=south west] {\rule{1in}{0.5pt}};
+    \draw[<-] (-0.5,-2.75) -- (-1,-3.75) node[anchor=north west] {\rule{1in}{0.5pt}};
+% Helper Grid
+    % \draw[gray,dashed] (-5,-4) grid (5,3);
+    % \draw[gray,dotted,step=0.5,thin] (-5,-4) grid (5,3);
+    % \foreach \i in {-4,...,3}{
+    %     \node[red] at (0,\i) {\i};
+    %     \node[red] at (\i,0) {\i};
+    % };
+\end{tikzpicture}

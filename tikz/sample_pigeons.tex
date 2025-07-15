@@ -1,0 +1,13 @@
+\begin{tikzpicture}[scale=0.75]
+% diagram
+    \foreach \y in {1,...,4}{%1->1 4->11
+        \shade[ball color=accent] (10/3*\y-7/3,-5) circle (3pt) node[anchor=west] (y\y) {\y};
+    }
+    \foreach \x in {1,...,11}{
+        \shade[ball color=accent] (\x,0) circle (3pt) node[anchor=west] (x\x) {\x};
+        \pgfmathparse{int(mod(7*\x,4)+1)}\let\y=\pgfmathresult;
+        \draw[line width=3pt,white] (x\x) to[out=-90,in=90] (y\y);
+        \draw[thick,->,dashed] (x\x) to[out=-90,in=90] (y\y);
+    }
+    \node[anchor=west] at (4,-6) {\(|f^{-1}(4)|=|\{1,5,9\}|=3\)};
+\end{tikzpicture}

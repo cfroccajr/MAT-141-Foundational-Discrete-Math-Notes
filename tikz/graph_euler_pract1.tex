@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=0.85,transform shape]
+    \graph[
+        layered layout,
+        % grow'=right,
+        edges={edges,rounded corners},
+        nodes={vertex},
+        sibling distance = 1.5cm,
+        level distance = 1.5cm
+    ]{
+        A--{B,C,D,E};
+        B--C;
+        C--[bend right]E;
+        E--[bend right]C;
+        D--E;
+        D--[out=200,in=250,loop]D;
+    };
+\end{tikzpicture}

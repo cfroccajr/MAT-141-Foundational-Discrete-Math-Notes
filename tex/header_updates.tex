@@ -1,3 +1,9 @@
+\usetikzlibrary{graphs.standard,graphs,graphdrawing,trees,quotes}
+\usegdlibrary{trees,layered,force,circular}
+% \usetikzlibrary{decorations.pathmorphing}
+\usepackage{blkarray}
+\usepackage{mathtools}
+
 \usetikzlibrary{decorations.pathmorphing}
 
 \tcbset{
@@ -97,6 +103,33 @@
         postaction={draw,frontline},backline
     }
 }
+
+
+\tikzset{
+    vertex/.style={
+        shade,
+        ball color=white,
+        circle,
+        line width=1
+    }
+}
+\tikzset{
+    SolidVertex/.style={
+        shade,shading=ball,
+        circle,
+        ball color=black!80!white,
+        minimum size=3pt
+    }
+}
+\tikzset{
+    edges/.style={
+        line width=1.5,
+        every loop/.style={-},
+        shorten <= 1.5pt,
+        shorten >= 1.5pt,
+    }
+}
+
 
 % postaction={draw,line width=0.35mm,red,dash pattern=on 3pt off 5pt,dash phase=4pt,thick},
 %         blue,dash pattern= on 3pt off 5pt,thick,rounded corners}}

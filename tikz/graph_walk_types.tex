@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \graph[
+        layered layout,
+        edges={edges,rounded corners},
+        edge quotes = {fill=white,inner sep=1pt},
+        % edge quotes center,
+        nodes={vertex},
+        sibling distance = 1.5cm,
+        level distance = 2cm
+    ]{
+        A--["\(e_1\)"]C,
+        A--["\(e_2\)"]B,
+        A--[pos=-1,"\(e_3\)"]D,
+        D--["\(e_4\)"]{E};
+        E--[pos=0,"\(e_5\)"]A;
+        B -- [bend left,pos=0.4,"\(e_6\)"] D;
+        B -- [bend right,"\(e_7\)"] D;
+        C --["\(e_8\)"] B;
+        E --[loop left,"\(e_9\)"] E;
+    };
+\end{tikzpicture}
