@@ -1,0 +1,41 @@
+\begin{tikzpicture}[yscale=0.8]
+    \graph[ 
+        binary tree layout,
+        nodes={vertex},
+        edges={edges},
+        level distance=25pt,
+        sibling distance=1.5cm
+    ]
+    {
+        a -- {b,c};
+        b -- {d,e};
+        c -- {f};
+        d -- {i,j};
+    };
+    \graph[ 
+        binary tree layout,
+        nodes={vertex},
+        edges={edges},
+        level distance=25pt,
+        sibling distance=1.5cm
+    ]
+    {
+        a[desired at={(7,0)}] -- {b,c};
+        b -- {d,e};
+        c -- {f,g};
+        d -- {i,j};
+        g -- {k,l};
+    };
+% Labels
+    \node[anchor=north] at (0,-4) {\emph{Binary Tree}};
+    \node[anchor=north] at (7,-4) {\emph{Full Binary Tree}};
+% Helper Grid
+    % \draw[gray,thin] (-3,-4) grid (15,1);
+    % \draw[gray,thin,dashed,step=0.5] (-3,-4) grid (15,1);
+    % \foreach \i in {-3,...,15}{
+    %     \node at (\i,-2){\i};
+    %     \node at (\i,-1){\i};
+    %     \node at (\i,0){\i};
+    %     \node at (\i,-3){\i};
+    % };
+\end{tikzpicture}

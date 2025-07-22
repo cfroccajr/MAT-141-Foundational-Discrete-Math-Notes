@@ -1,0 +1,140 @@
+\setlength{\extrarowheight}{5pt}
+
+\subsection*{TAUTOLOGIES: \footnote{Originally created by Vasily C. Cateforis for Set Theory and Logic at SUNY Postdam based on the text {\em Set Theory with Applications} by Lin \& Lin}
+}
+
+\noindent
+Let $p$, $q$, $r$, and $s$ be arbitrary statements, let $t$ be a tautology, and let $c$ be a contradiction, then:\vspace{10pt}
+
+\noindent
+\begin{tabular}{rlll}%{rp{\linewidth/20*9}p{\linewidth/10*3}p{\linewidth/10*2}}
+&Tautology & Name & Abbreviation\\ \hline
+0. & $p\rightarrow q \equiv \sim(p\land \sim q)$ & Conditional Law & (Def. $\rightarrow$)\\
+1. & $p\Rightarrow p\lor q$ & Law of Addition & (Add.)\\
+2. & (a) $p\land q\Rightarrow p$ & Laws of Simplification & (Simp.)\\
+    & (b) $p\land q\Rightarrow q$ &&\\
+3. & $(p\lor q)\land \sim p \Rightarrow q$ & Disjunctive Syllogism & (D.S.)\\
+4. & $\sim (\sim p)\equiv p$ & Law of Double Negation & (D.N.)\\
+5. & (a) $p\land q \equiv q\land p$ & Commutative Laws & (Com.)\\
+	&(b) $p\lor q \equiv q\lor p$ & &\\
+6.	&(a) $p\land p \equiv p$ & Laws of Idempotency & (Idemp.)\\
+	&(b) $p\lor p \equiv p$&&\\
+7. & $(p\rightarrow q)\equiv (\sim q\rightarrow\sim p)$ & Contrapositive Law & (Contrap.)\\
+8.	&(a) $\sim (p\land q)\equiv \sim p \lor \sim q$ & DeMorgan's Laws & (DeM.)\\
+	&(b) $\sim (p\lor q)\equiv \sim p \land \sim q$ &&\\
+9.	&(a) $(p\land q)\land r\equiv p\land (q\land r)$ &	Associative Laws & (Assoc.)\\
+	&(b) $(p\lor q)\lor r\equiv p\lor (q\lor r)$ &&\\
+10.	&(a) $p\land(q\lor r)\equiv (p\land q)\lor(p\land r)$ & Distributive Laws & (Dist.)\\
+	&(b) $p\lor(q\land r)\equiv (p\lor q)\land(p\lor r)$ &&\\
+11. &$(p\rightarrow q)\land (q\rightarrow r)\Rightarrow (p\rightarrow r)$ & Transitive Law & (Trans.) %\\
+\end{tabular}
+
+\clearpage
+
+\begin{tabular}{rlll}
+&Tautology & Name & Abbreviation\\ \hline
+12.	&(a) $(p\rightarrow q)\land (r\rightarrow s)\Rightarrow (p\lor r\rightarrow q\lor s)$ & Constructive Dilemmas & (C.D.) \\
+	&(b) $(p\rightarrow q)\land (r\rightarrow s)\Rightarrow (p\land r\rightarrow q\land s)$  && \\
+13.	&(a) $(p\rightarrow q)\land (r\rightarrow s)\Rightarrow (\sim q\lor \sim s\rightarrow \sim p\lor \sim r)$ & Destructive Dilemmas & (D.D.) \\
+	&(b) $(p\rightarrow q)\land (r\rightarrow s)\Rightarrow (\sim q\land \sim s\rightarrow \sim p\land \sim r)$  && \\
+14.	&(a) $(p\rightarrow q) \land p \Rightarrow q$ & Modus Ponens &(M.P.) \\
+	&(b) $(p\rightarrow q) \land \sim q \Rightarrow \sim p$ & Modus Tollens &(M.T.) \\
+	&(c) $(p\rightarrow q)\Leftrightarrow (p\land \sim q\rightarrow c)$ & Reductio ad absurdum & (R.A.)\\
+15.	&(a) $(p\land t)\Leftrightarrow p$ & Identity Laws & (I.L.)\\
+	&(b) $(p\lor c)\Leftrightarrow p$ &&\\
+16.	&(a) $(p\lor t)\Leftrightarrow t$ & Domination Laws & (D.L.)\\
+	&(b) $(p\land c)\Leftrightarrow c$ &&\\
+17.	&(a) $p\lor\sim p\rightarrow t$ & Inverse Laws & (Inv.) \\
+	&(b) $p\land\sim p=c$ &&\\
+18.	&(a) $p\lor(p\land q)\Leftrightarrow p$& Absorption Laws & (A.L.)\\
+	&(b) $p\land(p\lor q)\Leftrightarrow p$&&\\
+19.	&(a) $c \Rightarrow p$ &&\\
+	&(b) $p\Rightarrow t$ &&\\
+20. & $p$ and $q$ $\Rightarrow$ $p\land q$ & Conjunctive inference & (Conj.)\\
+21. & $(p\land q\rightarrow r)\equiv (p\rightarrow(q\rightarrow r))$ & Exportation Law& (Exp.)
+\end{tabular}
+
+\subsection*{Further Notes:}
+
+\noindent
+\begin{enumerate}
+\setcounter{enumi}{21}
+	\item $p$ is sufficient for $q$ $\equiv$ $p\rightarrow q\ \equiv\ p,$ only if $q$.
+	\item $p$ is necessary for $q$ $\equiv$ $q\rightarrow p\ \equiv\ p,$ if $q$.
+	\item $p$ is necessary and sufficient for $q$ $\equiv$ $p\leftrightarrow q\ \equiv\ p,$ if and only if $q$.
+	\item Quantifier Negation (QN): \(\forall\equiv\ for\ all\) and \(\exists\equiv\ there\ exists\)
+\begin{itemize}
+	\item[(a)] $\sim \left[\left(\forall x\right)\left(p(x)\right)\right]\equiv\left(\exists x\right)\left(\sim p(x)\right)$
+	\item[(b)] $\sim \left[\left(\exists x\right)\left(p(x)\right)\right]\equiv\left(\forall x\right)\left(\sim p(x)\right)$
+\end{itemize}
+	\item Principle of Mathematical Induction (PMI): If $P(n)$ is a statement about or involving the natural number $n$ such that
+\begin{itemize}
+	\item[(1)] $P(1)$ is true, and
+	\item[(2)] $P(k)\Rightarrow P(k+1)$ for all natural numbers $k$, then
+\end{itemize}
+$P(n)$ is true for all natural numbers $n$.
+
+\clearpage
+
+\noindent
+	\item Four basic truth tables:
+
+\begin{multicols}{4}
+\begin{enumerate}
+	\item[(a)] Negation\\[5pt]
+	$\begin{array}{c|c}
+		p & \sim p \\ \hline
+		T & F \\
+		F & T \\
+	\end{array}$\vspace{20pt}
+	\item[(b)] Conjunction\\[5pt]
+	$\begin{array}{c|c|c}
+		p & q & p\land q \\ \hline
+		T & T & T\\
+		T & F & F\\
+		F & T & F\\
+		F & F & F\\
+	\end{array}$
+	\item[(c)] Disjunction\\[5pt]
+	$\begin{array}{c|c|c}
+		p & q & p\lor q \\ \hline
+		T & T & T\\
+		T & F & T\\
+		F & T & T\\
+		F & F & F\\
+	\end{array}$
+	\item[(d)] Conditional\\[5pt]
+	$\begin{array}{c|c|c}
+		p & q & p\rightarrow q \\ \hline
+		T & T & T\\
+		T & F & F\\
+		F & T & T\\
+		F & F & T\\
+	\end{array}$
+\end{enumerate}
+\end{multicols}
+
+\noindent
+	\item Converse Error \((P\rightarrow Q) \wedge Q \not\Rightarrow P\):
+\[ 
+	\begin{array}{c|c|c}
+			p & q & p\rightarrow q \\ \hline 
+			\rowcolor{gray!50!white} T & T & T\\ 
+			T & F & F\\
+			\rowcolor{gray!50!white} F & T & T\\
+			F & F & T\\
+	\end{array}
+\]
+
+\noindent
+	\item Inverse Error \((P\rightarrow Q) \wedge \sim P \not\Rightarrow \sim Q\):
+\[ 
+	\begin{array}{c|c|c}
+			p & q & p\rightarrow q \\ \hline 
+			T & T & T\\ 
+			T & F & F\\
+			\rowcolor{gray!50!white} F & T & T\\
+			\rowcolor{gray!50!white} F & F & T\\
+	\end{array}
+\]
+\end{enumerate}

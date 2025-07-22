@@ -1,0 +1,40 @@
+\begin{tikzpicture}[yscale=0.9,xscale=1.1]
+    \graph[ 
+        tree layout,
+        nodes={vertex},
+        edges={edges},
+        level distance=45pt,
+        sibling distance=0.25cm
+    ]
+    {
+        a -- {b,c};
+        b -- {e,f,d};
+        c -- {g,h,i};
+        d -- {j,k};
+        i -- {l,m,n};
+    };
+% Labels
+    \draw[shorten <=10pt,thick,<-] (0,0) -- +(2,0) 
+        node[anchor=west,font=\bfseries,color=secondaryaccent,fill=white] {Root};
+    \draw[shorten <=10pt,thick,<-] (0,0) -- +(0,1) 
+        node[anchor=south,font=\bfseries,color=secondaryaccent,fill=white] {Parent/Ancestor};
+    \draw[shorten <=10pt,thick,<-] (-1.5,-1.5) -- +(0,1) 
+        node[anchor=south,font=\bfseries,color=secondaryaccent,fill=white] {Child};
+    \draw[shorten <=15pt,thick,<-] (0,-5) -- +(0,-1) 
+        node[anchor=north,font=\bfseries,color=secondaryaccent,fill=white] {Descendant};
+    \draw[shorten <=10pt,thick,<-] (1.5,-1.5) -- +(2,0) 
+        node[anchor=west,font=\bfseries,color=secondaryaccent,fill=white] {Internal Vertex};
+    \draw[shorten <=10pt,thick,<-] (3.5,-4.75) -- +(1,0) 
+        node[anchor=west,font=\bfseries,color=secondaryaccent,fill=white,text width=1.5in] {Leaf or Terminal Vertex};
+    \draw[decorate,decoration={brace, amplitude=5pt},ultra thick] (-3.5,-5) -- (-3.5,0.5)
+        node[pos=0.5,left,anchor=east,xshift=-10pt,font=\bfseries,color=secondaryaccent,fill=white] {Height};
+% Helper Grid
+    % \draw[gray,thin] (-5,-4) grid (5,1);
+    % \draw[gray,thin,dashed,step=0.5] (-5,-5) grid (5,1);
+    % \foreach \i in {-5,...,5}{
+    %     \node at (\i,-2){\i};
+    %     \node at (\i,-1){\i};
+    %     \node at (\i,0){\i};
+    %     \node at (\i,-3){\i};
+    % };
+\end{tikzpicture}

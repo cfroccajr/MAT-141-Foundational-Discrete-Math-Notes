@@ -1,0 +1,30 @@
+\begin{tikzpicture}[yscale=0.9]
+\graph[ 
+    binary tree layout,
+    nodes={vertex,color=white},
+    edges={edges},
+    level distance=1cm,
+    sibling distance=2.5cm
+]
+{
+    a[ball color=accent]--{
+        b[ball color=secondaryaccent]--{
+            d[ball color=secondaryaccent]--{
+                i[ball color=tertiaryaccent],
+                j[ball color=tertiaryaccent]
+            },
+            e[ball color=tertiaryaccent]
+        },
+        c[ball color=secondaryaccent]--{
+            f[ball color=secondaryaccent]--{
+                k[ball color=tertiaryaccent],
+                l[ball color=tertiaryaccent]
+            },
+            g[ball color=secondaryaccent]--{
+                m[ball color=tertiaryaccent],
+                n[ball color=tertiaryaccent]
+            }
+        }
+    }
+};
+\end{tikzpicture}

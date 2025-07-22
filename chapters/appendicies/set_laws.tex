@@ -1,0 +1,100 @@
+\subsection*{Sets: Concepts and Laws\footnote{Originally created by Vasily C. Cateforis for Set Theory and Logic at SUNY Postdam based on the text {\em Set Theory with Applications} by Lin \& Lin}
+}
+
+\noindent
+\rule{\textwidth}{0.1pt}
+
+\noindent
+In the tables on the following pages:
+\begin{enumerate}
+	\item[(a)] $A$, $B$, $C$, $X$, $\Gamma$, and $A_\gamma$, for each $\gamma\in\Gamma$ are all sets.
+	\item[(b)] \familySet is a set of sets.
+	\item[(c)] \uniSet is the universal set (i.e. a set containing all the elements under consideration).
+	\item[(d)] $p(x)$ is a statement about the variable $x$.
+\end{enumerate}
+
+\clearpage
+
+\subsubsection*{Concepts:}
+
+\setlength{\extrarowheight}{5pt}
+
+\noindent
+\begin{tabular}{p{0.2\linewidth}|p{0.5\linewidth}|p{0.2\linewidth}}
+\parbox{1in}{\centering Symbols}  &\parbox{3.5in}{\centering Meaning (Definition or Statement in English)} &\parbox{1in}{\centering Abbreviation} \tabularnewline \hline
+1. $x\in A$ & $x$ is an element of the set $A$ & \parbox{1in}{\centering ---} \tabularnewline
+2. $x\not\in A$ & $x$ is not an element of the set $A$ &  \parbox{1in}{\centering ---} \tabularnewline
+3. $\left\{x\in A\, |\, p(x)\right\}$ & the set of all $x$ in $A$ such that $p(x)$ is true & \parbox{1in}{\centering ---} \tabularnewline
+4. $\left\{x\, |\, p(x)\right\}$ & the set of all $x$ in \uniSet such that $p(x)$ is true & \parbox{1in}{\centering ---} \tabularnewline
+5. $\varnothing$ & the empty set $\equiv$ the set with no elements & \parbox{1in}{\centering ---} \tabularnewline
+6. $A\subseteq B$ & $A$ is a subset of $B$ $\equiv$ $\forall x\ (x\in A) \rightarrow (x\in B)$ &Def. $\subseteq$\tabularnewline
+7. $A = B$ & $A$ is equal to $B$ $\equiv$ $\forall x\ (x\in A) \leftrightarrow (x\in B)$ \par $\equiv$ $(A\subseteq B)\land(B\subseteq A)$& Def. $=$\tabularnewline
+8. $A\subset B$ & $A$ is a proper subset of $B$ $\equiv$ $(A\subseteq B)\land (A \not= B)$ & Def. $\subset$\tabularnewline
+9. $\powerSet(A)$ & the power set of $A$ $\equiv$ the set of all subsets of $A$\par $\equiv$ $\left\{X\, |\, X\subseteq A\right\}$ & Def. of Power Set\tabularnewline
+10. $A\cup B$ & $A$ union $B$ $\equiv$ $\left\{x\, |\, (x\in A) \lor (x\in B)\right\}$ & Def. $\cup$ \tabularnewline
+11. $A\cap B$ & $A$ intersection $B$ $\equiv$ $\left\{x\, |\, (x\in A) \land (x\in B)\right\}$ & Def. $\cap$ \tabularnewline
+12. $A-B$ & $A$ minus $B$ $\equiv$ $\left\{x\, |\, (x\in A) \land (x\not\in B)\right\}$& Def. $-$ \tabularnewline
+13. $\overline{A}$ & the compliment of $A$ $\equiv$ $\left\{x\, |\, x\not\in A\right\}$, sometimes\par denoted $A^\prime$ or $A^c$ & Def. Comp. \tabularnewline
+14. $\left\{A_\gamma\, |\, \gamma\in\Gamma\right\}$ & the family of sets $A_\gamma$ indexed by the set $\Gamma$ & \parbox{1in}{\centering ---} \tabularnewline 
+15. $\displaystyle\bigcup_{\gamma\in\Gamma}A_\gamma$ 
+	& the union of the sets $A_\gamma$ indexed by the set $\Gamma$\par $\equiv$ 
+	$\left\{x\, |\, \exists \gamma\in\Gamma\  \left(x\in A_\gamma\right)\right\}$ 
+	& \parbox{1in}{\centering ---} \tabularnewline
+16. $\displaystyle\bigcap_{\gamma\in\Gamma}A_\gamma$ 
+	& the intersection of the sets $A_\gamma$ indexed by the set $\Gamma$\par $\equiv$ 
+	$\left\{x\, |\, \forall \gamma\in\Gamma\ \left(x\in A_\gamma\right)\right\}$ 
+	& \parbox{1in}{\centering ---} \tabularnewline
+17. $\displaystyle\bigcup_{A\in\familySet}A$ 
+	& the union of the sets $A$ in the family \familySet\par $\equiv$ 
+	$\left\{x\, |\, \exists A\in\familySet\ \left(x\in A\right)\right\}$ 
+	& \parbox{1in}{\centering ---} \tabularnewline
+18. $\displaystyle\bigcap_{A\in\familySet}A$ 
+	& the intersection of the sets $A$ in the family \familySet\par $\equiv$ 
+	$\left\{x\, |\, \forall A\in\familySet\ \left(x\in A\right)\right\}$ 
+	& \parbox{1in}{\centering ---} \tabularnewline
+	&&\tabularnewline\hline
+\end{tabular}
+
+\clearpage
+
+\subsubsection*{Laws:}
+\noindent
+\begin{tabular}{p{0.4\linewidth}|p{0.3\linewidth}}
+\centering Symbols &\centering Name \tabularnewline\hline
+1a. $\forall A\ \varnothing\subseteq A$ and\par 1b. $\forall A\ A\subseteq A$ &  \parbox{1in}{\centering ---} \tabularnewline
+
+2. $A\subseteq B\, \land\, B\subseteq C\, \Rightarrow\, A\subseteq C$ &  Transitivity of $\subseteq$ \tabularnewline
+
+3a. $A\cup \varnothing\, =\, A$ and\par 3b. $A\cap\uniSet\, =\, A$ & Identity Laws \tabularnewline
+
+4a. $A\cap\varnothing\, =\, \varnothing$ and\par 4b. $A\cup\uniSet\, =\, \uniSet$ & Domination Laws \tabularnewline
+
+5a. $A\cap A\, =\, A$ and\par 5b. $A\cup A\, =\, A$& Idempotency Laws\tabularnewline
+
+6a. $A\cup B\, =\, B\cup A$ and\par 6b. $A\cap B\, =\, B\cap A$ & Commutativity Laws \tabularnewline
+
+7a. $A\cup(B \cup C)\, =\, (A\cup B) \cup C$ and \par 
+7b. $A\cap(B \cap C)\, =\, (A\cap B) \cap C$& Associativity Laws \tabularnewline
+
+8. $A\subseteq A\cup B\ \land\ B\subseteq A\cup B$ & Addition Laws \tabularnewline
+
+9. $A\cap B\subseteq A\ \land\ A\cap B\subseteq B$ & Simplification Laws\tabularnewline
+
+10a. $A\cap(B\cup C)\, =\, (A\cap B)\cup(A\cap C)$ \par
+10b. $A\cup(B\cap C)\, =\, (A\cup B)\cap(A\cup C)$ & Distributive Laws \tabularnewline
+
+11. $A-B\, =\, A\cap \overline{B}$ &  \parbox{1in}{\centering ---} \tabularnewline
+
+12. $\overline{\left(\overline{A}\right)}\, =\, A$ & Double Compliment \tabularnewline
+
+13a. $\overline{\varnothing}\, =\, \uniSet$ and\par 13b. $\overline{\uniSet}\, =\, \varnothing$ & \parbox{1in}{\centering ---} \tabularnewline
+
+14a. $A\cap\overline{A}\, =\, \varnothing$ and\par 14b. $A\cup\overline{A}\, =\, \uniSet$ & Inverse Laws \tabularnewline
+
+15a. $\overline{\left(A\cap B\right)}\, =\, \overline{A}\cup\overline{B}$ and \par
+15b. $\overline{\left(A\cup B\right)}\, =\, \overline{A}\cap\overline{B}$ & DeMorgan's Laws\tabularnewline
+
+16. $A\subseteq B\, \Leftrightarrow \overline{B}\subseteq\overline{A}$ & Contrapositive Law \tabularnewline
+
+17a. $A\cup(A\cap B)\, =\, A$ and\par 17b. $A\cap(A\cup B)\, =\, A$ & Absorbtion Laws \tabularnewline
+\end{tabular}
