@@ -1,0 +1,36 @@
+\begin{tikzpicture}[
+    every node/.style={vertex},
+    every edge/.style={draw,edges}
+]
+\begin{scope}
+% nodes
+    \node (a) at (0,0) {\(A\)};
+    \node (b) [below=of a] {\(B\)};
+    \node (c) [right=of b] {\(C\)};
+% edges
+    \path (a) edge (b) edge[bend left] (c);
+    \path (b) edge (c);
+    \path (c) edge[loop right] (c);
+\end{scope}
+    \node[shade=none,text width=2cm] (P) [above right=of c,yshift=-0.75cm] {\Huge \(+\)};
+\begin{scope}[xshift=6cm]
+% nodes
+    \node (a) at (0,0) {\(A\)};
+    \node (b) [below=of a] {\(B\)};
+    \node (c) [right=of b] {\(C\)};
+% edges    
+    \path (a) edge[bend right] (c);
+    \path (a) edge[loop above] (a);
+\end{scope}
+    \node[shade=none,text width=2cm] (E) [above right=of c,yshift=-0.75cm] {\Huge \(=\)};
+\begin{scope}[xshift=12cm]
+% nodes
+    \node (a) at (0,0) {\(A\)};
+    \node (b) [below=of a] {\(B\)};
+    \node (c) [right=of b] {\(C\)};
+% edges    
+    % \path (a) edge (c);
+    % \path (a) edge (b);
+    % \path (b) edge (c);
+\end{scope}
+\end{tikzpicture}

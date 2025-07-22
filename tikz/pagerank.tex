@@ -1,0 +1,21 @@
+\begin{tikzpicture}[
+    every node/.style={inner sep=2pt,align=center},
+    every edge/.style={edges,draw,every loop/.style={->}},
+    scale=0.8,transform shape
+]
+% Sites
+    \node[text width=1in,] (a) at (0,0) {Alice's Restaurant};
+    \node[text width=0.5in,] (b) [below right=of a] {Bob's Burger};
+    \node[text width=1in,] (f) [below left=of a] {Frying Dutchman};
+    \node (e) [below right =of f] {Elzar's};
+% Links
+    \path[->] (a) edge[bend left] (b)
+        edge[bend right] (f);
+    \path[->] (b) edge[bend left] (a);
+    \path[->] (e) edge (a)
+        edge[loop right] (e);
+    \path[->] (f) edge (a)
+        edge[bend angle=10,bend right] (b)
+        edge[bend right] (e)
+        edge[loop left] (f);
+\end{tikzpicture}

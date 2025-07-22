@@ -1,0 +1,16 @@
+\begin{tikzpicture}[scale=0.6,transform shape]
+    \graph[
+        tree layout,
+        grow'=right,
+        edges={edges,rounded corners,every loop/.style={->},shorten >=5pt},
+        nodes={vertex},
+        sibling distance = 3cm,
+        level distance = 3cm
+    ]{
+        A->[bend left] B,
+        B<-[bend left] A,
+        A--[loop above] A,
+        A-> C,
+        C-> B,
+    };
+\end{tikzpicture}

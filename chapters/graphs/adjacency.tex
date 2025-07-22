@@ -1,83 +1,34 @@
-\begin{defn}[Adjacency Matrix]
+\begin{defn}[Adjacency Matrix]\index{matrix}\index{adjacency matrix}
     An \emph{adjacency matrix} for a graph is a two dimensional array \(A\) in which \(a_{ij}\) is the number of edges that we may traverse from vertex \(i\) to vertex \(j\).
 \end{defn}
 
-% \begin{practice}[sidebyside]{Euler Circuits}
-
-% \end{practice}
-
-% \begin{practice}[sidebyside]{Euler Trails}
-% \begin{center}
-%     \begin{tikzpicture}
-%         \graph[
-%             tree layout,
-%             grow'=right,
-%             edges={edges,rounded corners},
-%             nodes={vertex},
-%             sibling distance = 1.5cm,
-%             level distance = 1.5cm
-%         ]{
-%             A--{C,B,A};
-%             D--{E};
-%             D --[bend angle=45,bend left] A;
-%             E--B;
-%             B -- D;
-%             C -- B;
-%         };
-%     \end{tikzpicture}
-% \end{center}
-% \end{practice}
-
-\begin{expository}[sidebyside]{Small Adjacency Example}
+\begin{practiceprob}
+Fill in the entries of the adjacency matrix for the given graph.
+\begin{sides}[lefthand width=0.4\linewidth]
 \begin{center}
-    \begin{tikzpicture}
-        \graph[
-            tree layout,
-            grow'=right,
-            edges={edges,rounded corners},
-            nodes={vertex},
-            sibling distance = 3cm,
-            level distance = 3cm
-        ]{
-            A--[bend left] B,
-            B--[bend left] A,
-            A-- C,
-            C-- B,
-            % C -- {B,D};
-        };
-    \end{tikzpicture}
+    %\inputtikz{adj_matrix1}
+    \includegraphics[scale=0.24,alt={}]{images/created/adj_matrix1.png}
 \end{center}
 \tcblower
 \[
 \begin{blockarray}{cccc}
     & A & B & C \\
 \begin{block}{c(ccc)}
-    A & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
-    B & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
-    C & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
+    A & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    B & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    C & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
 \end{block}
 \end{blockarray}
  \]
+\end{sides}
+\end{practiceprob}
 
-\end{expository}
-
-\begin{practice}[sidebyside]{Another Small-ish Example}
+\begin{practiceprob}
+Fill in the entries of the adjacency matrix for the given graph.
+\begin{sides}[lefthand width=0.4\linewidth]
 \begin{center}
-    \begin{tikzpicture}
-        \graph[
-            tree layout,
-            grow'=right,
-            edges={edges,rounded corners},
-            nodes={vertex},
-            sibling distance = 1.75cm,
-            level distance = 2cm
-        ]{
-            A--{C,B,A},
-            B -- D,
-            C -- {B,D},
-            C --[loop above] C,
-        };
-    \end{tikzpicture}
+    %\inputtikz{adj_matrix2}
+    \includegraphics[scale=0.24,alt={}]{images/created/adj_matrix2.png}
 \end{center}
 \tcblower
 
@@ -85,34 +36,22 @@
 \begin{blockarray}{ccccc}
     & A & B & C & D \\
 \begin{block}{c(cccc)}
-    A & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
-    B & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
-    C & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
-    D & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
+    A & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    B & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    C & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
+    D & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
 \end{block}
 \end{blockarray}
  \]
+\end{sides}
+\end{practiceprob}
 
-\end{practice}
-
-\begin{practice}[sidebyside]{Directed Graph Example}
+\begin{practiceprob}
+Fill in the entries of the adjacency matrix for the given graph.
+\begin{sides}[lefthand width=0.4\linewidth]
 \begin{center}
-    \begin{tikzpicture}
-        \graph[
-            layered layout,
-            grow'=right,
-            edges={edges,rounded corners,every loop/.style={->}},
-            nodes={vertex},
-            sibling distance = 1.75cm,
-            level distance = 2cm,
-        ]{
-            A->{C,B,A},
-            B -> C,
-            C ->[loop above] C,
-            D[desired at={(1,0)}] ->[bend right] E[desired at={(1,1)}],
-            E ->[bend right] D,
-        };
-    \end{tikzpicture}
+    %\inputtikz{adj_matrix_directed}
+    \includegraphics[scale=0.24,alt={}]{images/created/adj_matrix_directed.png}
 \end{center}
 \tcblower
 
@@ -120,71 +59,33 @@
 \begin{blockarray}{cccccc}
     & A & B & C & D & E\\
 \begin{block}{c(ccccc)}
-    A & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}}\\
-    B & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}}\\
-    C & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}}\\
-    D & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}}\\
-    E & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} & \phantom{\rule{1cm}{1cm}} \\
+    A & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    B & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    C & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    D & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}}\\
+    E & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} & \phantom{\rule{1cm}{0.6cm}} \\
 \end{block}
 \end{blockarray}
  \]
-
-\end{practice}
+\end{sides}
+\end{practiceprob}
 
 \clearpage
 
-\begin{expository}{Matrix Arithmetic}
-We add matrices term by term:
+\begin{exposition}{Matrix Arithmetic}\index{matrix arithmetic}
+We add and subtract matrices term by term:
 \begin{center}
-    \begin{tikzpicture}
-    % Product
-        \node at (0,0){\(
-            \begin{pmatrix*}[r]
-                1 & 2 \\
-                0 & 3 
-            \end{pmatrix*}+
-            \begin{pmatrix*}[r]
-                1 & 7\\
-                0 & 2
-            \end{pmatrix*}=
-            \begin{pmatrix*}[r]
-                1+1 & 2+7 \\
-                0+0 & 3+2 \\
-            \end{pmatrix*}
-        \)};
-    % Labels
-        \draw[secondaryaccent,ultra thick] (-2.7,0.3) circle (7pt) node (a){};
-        \draw[secondaryaccent,ultra thick] (-1,0.3) circle (7pt) node (b){};
-        \draw[->,secondaryaccent,ultra thick,shorten >=3pt,shorten <=3pt] 
-            (a) to[bend angle=60,bend left] node[pos=0.5,above] {+} (b);
-    \end{tikzpicture}
+    %\inputtikz{matrix_add}
+    \includegraphics[scale=0.24,alt={}]{images/created/matrix_add.png}
 \end{center}
-We multiply matrices combining rows with columns:
+We multiply matrices by combining rows with columns:
 \begin{center}
-    \begin{tikzpicture}
-    % Product
-        \node at (0,0){\(
-            \begin{pmatrix*}[r]
-                1 & 2 \\
-                0 & 3 
-            \end{pmatrix*}\ 
-            \begin{pmatrix*}[r]
-                1 & 0 & 7\\
-                0 & -1 & 2
-            \end{pmatrix*}=
-            \begin{pmatrix*}[r]
-                1\cdot 1+2\cdot 0 & 1\cdot 0+2\cdot -1 & 1\cdot 7+2\cdot 2\\
-                0\cdot 1+3\cdot 0 & 0\cdot 0+3\cdot -1 & 0\cdot 7+3\cdot 2\\
-            \end{pmatrix*}
-        \)};
-    % Labels
-        \draw[->,secondaryaccent,ultra thick] (-5.7,0.8) -- +(1,0);
-        \draw[->,secondaryaccent,ultra thick] (-4.35,0.7) -- +(0,-1.3);
-    \end{tikzpicture}
+    %\inputtikz{matrix_mult}
+    \includegraphics[scale=0.24,alt={}]{images/created/matrix_mult.png}
 \end{center}
-\end{expository}
+\end{exposition}
 
-\begin{practice}{Matrix Arithmetic}
+\begin{practiceprob}\index{identity matrix}\index{inverse matrix}\index{matrix!identity}\index{matrix!inverse}
 Find the sum, difference, and product of the following matrices where possible.
 \begin{equation*}
     A=\begin{pmatrix*}[r]
@@ -201,228 +102,109 @@ Find the sum, difference, and product of the following matrices where possible.
     \end{pmatrix*}
 \end{equation*}
 \begin{enumerate}
-    \setlength\itemsep{2.4\baselineskip}
+    \setlength\itemsep{2.3\baselineskip}
     \item \(A+B=\)
     \item \(B-A=\)
     \item \(AB=\)
     \item \(AI=\)
     \item \(AC=\)
     \item \(CA=\)
-    \item \(C+B=\)\vspace{2.4\baselineskip}
+    \item \(C+B=\)\vspace{2.3\baselineskip}
 \end{enumerate}
 
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{expository}[sidebyside,lefthand width=0.2\textwidth]{Counting Walks}
-\begin{center}
-    \begin{tikzpicture}[scale=0.6,transform shape]
-        \graph[
-            tree layout,
-            grow'=right,
-            edges={edges,rounded corners},
-            nodes={vertex},
-            sibling distance = 3cm,
-            level distance = 3cm
-        ]{
-            A--[bend left] B,
-            B--[bend left] A,
-            A--C,
-            C--B,
-            % C -- {B,D};
-        };
-    \end{tikzpicture}
-\end{center}
-\[
+\begin{practiceprob}
+Multiplying an adjacency matrix by itself allows us to count the number of walks from one vertex to another of a given length.  Sketch a graph corresponding to the given adjacency matrix.\vspace{1\baselineskip}\newline
+\(\displaystyle
     A=\begin{pmatrix*}[r]
         0 & 2 & 1\\
         2 & 0 & 1\\
         1 & 1 & 0
     \end{pmatrix*}
-\]
-
-\tcblower
+\)\vspace{1\baselineskip}
 \begin{enumerate}
-    \item Walks of length 1:\vspace{5\baselineskip}
-    \item Walks of length 2:\vspace{5\baselineskip}
-    \item Walks of length 3:\vspace{5\baselineskip}
+    \item How does \(A\) on its own give walks of length 1?\vspace{3\baselineskip}
+    \item Find \(A^2\) and compare it to walks of length 2.\vspace{3\baselineskip}
+    \item Find \(A^3\) and compare it to walks of length 3.\vspace{3\baselineskip}
 \end{enumerate}
 
-\end{expository}
+\end{practiceprob}
 
-\begin{practice}[sidebyside,lefthand width=0.2\textwidth]{Counting Walks}
-\begin{center}
-    \begin{tikzpicture}[scale=0.6,transform shape]
-        \graph[
-            tree layout,
-            grow'=right,
-            edges={edges,rounded corners,every loop/.style={->},shorten >=5pt},
-            nodes={vertex},
-            sibling distance = 3cm,
-            level distance = 3cm
-        ]{
-            A->[bend left] B,
-            B<-[bend left] A,
-            A--[loop above] A,
-            A-> C,
-            C-> B,
-        };
-    \end{tikzpicture}
-\end{center}
-\[
+\begin{practiceprob}
+Sketch a graph corresponding to the given adjacency matrix.\vspace{1\baselineskip}\newline
+\(\displaystyle
     A=\begin{pmatrix*}[r]
         1 & 2 & 1\\
         0 & 0 & 0\\
         0 & 1 & 0
     \end{pmatrix*}
-\]
-
-\tcblower
+\)\vspace{1\baselineskip}
 \begin{enumerate}
-    \item Walks of length 1:\vspace{5\baselineskip}
-    \item Walks of length 2:\vspace{5\baselineskip}
-    \item Walks of length 3:\vspace{5\baselineskip}
+    \item Walks of length 2:\vspace{3\baselineskip}
+    \item Walks of length 3:\vspace{3\baselineskip}
+    \item Walks of length 4:\vspace{3\baselineskip}
 \end{enumerate}
 
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{expository}{Concatenating (``Adding'') Graphs}
+\begin{exposition} By matching up and ``gluing'' together corresponding vertices we can \emph{concatenate} or  add graphs.  The adjacency matrix for the new graph is equal to the sum of the matrices for the graphs that were concatenated.
+\begin{figure}[H]
+    \centering
+    %\inputtikz{graph_adding1}
+    \includegraphics[scale=0.24,alt={}]{images/created/graph_adding1.png}
+    \begin{equation*}
+        \begin{pmatrix*}[r]
+            0&1&0\\
+            1&0&1\\
+            0&1&0\\
+        \end{pmatrix*}
+            +
+        \begin{pmatrix*}[r]
+            0&0&1\\
+            0&0&0\\
+            1&0&0\\
+        \end{pmatrix*}
+            =
+        \begin{pmatrix*}[r]
+            0&1&1\\
+            1&0&1\\
+            1&1&0\\
+        \end{pmatrix*}
+    \end{equation*}
+    \caption{Concatenating Graphs and Their Adjacency Matrices}
+    \label{fig:matrix_concat}
+\end{figure}
+
+\end{exposition}
+
+\begin{practiceprob}
+Write adjacency matrices for each of the initial graphs and then add them to get the matrix for the concatenation of the graphs.
 \begin{center}
-    \begin{tikzpicture}[
-        every node/.style={vertex},
-        every edge/.style={draw,edges}
-    ]
-    \begin{scope}
-    % nodes
-        \node (a) at (0,0) {\(A\)};
-        \node (b) [below=of a] {\(B\)};
-        \node (c) [right=of b] {\(C\)};
-    % edges
-        \path (a) edge (b);
-        \path (b) edge (c);
-    \end{scope}
-        \node[shade=none,text width=2cm] (P) [above right=of c,yshift=-0.75cm] {\Huge \(+\)};
-    \begin{scope}[xshift=6cm]
-    % nodes
-        \node (a) at (0,0) {\(A\)};
-        \node (b) [below=of a] {\(B\)};
-        \node (c) [right=of b] {\(C\)};
-    % edges    
-        \path (a) edge (c);
-    \end{scope}
-        \node[shade=none,text width=2cm] (E) [above right=of c,yshift=-0.75cm] {\Huge \(=\)};
-    \begin{scope}[xshift=12cm]
-    % nodes
-        \node (a) at (0,0) {\(A\)};
-        \node (b) [below=of a] {\(B\)};
-        \node (c) [right=of b] {\(C\)};
-    % edges    
-        \path (a) edge (c);
-        \path (a) edge (b);
-        \path (b) edge (c);
-    \end{scope}
-    \end{tikzpicture}
+    %\inputtikz{graph_adding2}
+    \includegraphics[scale=0.24,alt={}]{images/created/graph_adding2.png}
 \end{center}
 
-\tcblower
-
-\begin{equation*}
-    \begin{pmatrix*}[r]
-        0&1&0\\
-        1&0&1\\
-        0&1&0\\
-    \end{pmatrix*}
-        +
-    \begin{pmatrix*}[r]
-        0&0&1\\
-        0&0&0\\
-        1&0&0\\
-    \end{pmatrix*}
-        =
-    \begin{pmatrix*}[r]
-        0&1&1\\
-        1&0&1\\
-        1&1&0\\
-    \end{pmatrix*}
-\end{equation*}
-\end{expository}
-
-\begin{practice}{Concatenating Graphs}
-\begin{center}
-    \begin{tikzpicture}[
-        every node/.style={vertex},
-        every edge/.style={draw,edges}
-    ]
-    \begin{scope}
-    % nodes
-        \node (a) at (0,0) {\(A\)};
-        \node (b) [below=of a] {\(B\)};
-        \node (c) [right=of b] {\(C\)};
-    % edges
-        \path (a) edge (b) edge[bend left] (c);
-        \path (b) edge (c);
-        \path (c) edge[loop right] (c);
-    \end{scope}
-        \node[shade=none,text width=2cm] (P) [above right=of c,yshift=-0.75cm] {\Huge \(+\)};
-    \begin{scope}[xshift=6cm]
-    % nodes
-        \node (a) at (0,0) {\(A\)};
-        \node (b) [below=of a] {\(B\)};
-        \node (c) [right=of b] {\(C\)};
-    % edges    
-        \path (a) edge[bend right] (c);
-        \path (a) edge[loop above] (a);
-    \end{scope}
-        \node[shade=none,text width=2cm] (E) [above right=of c,yshift=-0.75cm] {\Huge \(=\)};
-    \begin{scope}[xshift=12cm]
-    % nodes
-        \node (a) at (0,0) {\(A\)};
-        \node (b) [below=of a] {\(B\)};
-        \node (c) [right=of b] {\(C\)};
-    % edges    
-        % \path (a) edge (c);
-        % \path (a) edge (b);
-        % \path (b) edge (c);
-    \end{scope}
-    \end{tikzpicture}
-\end{center}
-
-\tcblower
-
-\vspace{20\baselineskip}
+\vspace{16\baselineskip}
 
 
-\end{practice}
+\end{practiceprob}
 
 \clearpage
 
-\begin{expository}{Directed Graphs, Adjacency Matrices, and Websites}
-\begin{center}
-    \begin{tikzpicture}[
-        every node/.style={inner sep=2pt,align=center},
-        every edge/.style={edges,draw,every loop/.style={->}},
-        scale=1,transform shape
-    ]
-    % Sites
-        \node[text width=1in,] (a) at (0,0) {Alice's Restaurant};
-        \node[text width=0.5in,] (b) [below right=of a] {Bob's Burger};
-        \node[text width=1in,] (f) [below left=of a] {Frying Dutchman};
-        \node (e) [below right =of f] {Elzar's};
-    % Links
-        \path[->] (a) edge[bend left] (b)
-            edge[bend right] (f);
-        \path[->] (b) edge[bend left] (a);
-        \path[->] (e) edge (a)
-            edge[loop right] (e);
-        \path[->] (f) edge (a)
-            edge[bend angle=10,bend right] (b)
-            edge[bend right] (e)
-            edge[loop left] (f);
-    \end{tikzpicture}
-\end{center}
+\begin{exposition}
+We can use graphs and matrices to model networks and make predictions about movement through the networks.
+\begin{figure}[H]
+    \centering
+    %\inputtikz{pagerank}
+    \includegraphics[scale=0.24,alt={}]{images/created/pagerank.png}
+    \caption{A Very Tiny Network}
+    \label{fig:tiny_network}
+\end{figure}
 \begin{equation*}
     L=
     \begin{blockarray}{ccccc}
@@ -447,20 +229,18 @@ Find the sum, difference, and product of the following matrices where possible.
 import numpy as np
 from numpy import linalg as LA
 
-# matrix of links/probabilities
+# adj. matrix of links/probabilities
 L = np.array([[0,0.5,0,0.5],[1,0,0,0],[0.5,0,0.5,0],[0.25,0.25,0.25,0.25]])
 
-# Initial position vector
-P=np.array([1,0,0,0])
-
-distance = 1
+P=np.array([1,0,0,0]) # Initial position vector
+distance = 1 # Distance from one step to the next
 i = 0
 while distance>0.001 and i<100:
-    # Multiply by L to represent making a random click
+# Multiply by L to represent making a random click
     temp_P=P@L
-    # Compare the position vectors
+# Compare the position vectors
     distance = LA.norm(temp_P-P)
-    # Update
+# Update
     P=temp_P
     i+=1
 print(P)
@@ -476,5 +256,5 @@ Starting at the website for Alice's Restaurant and then randomly clicking around
     % \(dL+(1-d)J\) is the link matrix combined with another matrix to add random jumps, \(J\) is all ones
     % Look in classes/code/PageRank.ipynb for example from Imperial College example.
     
-\end{expository}
+\end{exposition}
 

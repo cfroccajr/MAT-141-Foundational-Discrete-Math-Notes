@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \graph[
+        layered layout,
+        grow'=right,
+        edges={edges,rounded corners,every loop/.style={->}},
+        nodes={vertex},
+        sibling distance = 1.75cm,
+        level distance = 2cm,
+    ]{
+        A->{C,B,A},
+        B -> C,
+        C ->[loop above] C,
+        D[desired at={(1,0)}] ->[bend right] E[desired at={(1,1)}],
+        E ->[bend right] D,
+    };
+\end{tikzpicture}

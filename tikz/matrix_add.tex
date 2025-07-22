@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+% Product
+    \node at (0,0){\(
+        \begin{pmatrix*}[r]
+            1 & 2 \\
+            0 & 3 
+        \end{pmatrix*}+
+        \begin{pmatrix*}[r]
+            1 & 7\\
+            0 & 2
+        \end{pmatrix*}=
+        \begin{pmatrix*}[r]
+            1+1 & 2+7 \\
+            0+0 & 3+2 \\
+        \end{pmatrix*}
+    \)};
+% Labels
+    \draw[secondaryaccent,ultra thick] (-2.7,0.3) circle (7pt) node (a){};
+    \draw[secondaryaccent,ultra thick] (-1,0.3) circle (7pt) node (b){};
+    \draw[->,secondaryaccent,ultra thick,shorten >=3pt,shorten <=3pt] 
+        (a) to[bend angle=60,bend left] node[pos=0.5,above] {+} (b);
+\end{tikzpicture}

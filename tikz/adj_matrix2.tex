@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \graph[
+        tree layout,
+        grow'=right,
+        edges={edges,rounded corners},
+        nodes={vertex},
+        sibling distance = 1.75cm,
+        level distance = 2cm
+    ]{
+        A--{C,B,A},
+        B -- D,
+        C -- {B,D},
+        C --[loop above] C,
+    };
+\end{tikzpicture}
