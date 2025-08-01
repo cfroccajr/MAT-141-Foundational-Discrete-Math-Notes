@@ -1,0 +1,111 @@
+
+
+% Logic example 1
+\begin{exposition}
+    \footnote{This example and the others in this section are borrowed or adapted from Grimaldi \cite{grimaldi1994discrete} or Rosen \cite{rosen2006discrete}.}
+    \index{valid argument}\index{premise}\index{conclusion}\index{hypothesis}
+    Consider the following argument:
+    \begin{align}
+        &p\rightarrow r \label{eq:premise11}\\
+        &\sim p\rightarrow q\label{eq:premise12}\\
+        &q\rightarrow s\label{eq:premise13}\\ \cline{1-2}
+        &\therefore \sim r\rightarrow s\label{eq:conclusion1}
+    \end{align}
+    Expressions \ref{eq:premise11}, \ref{eq:premise12}, and \ref{eq:premise13} are called \emph{premises} (or \emph{hypotheses}), they are what we are assuming to be true.  Expression \ref{eq:conclusion1} is the \emph{conclusion}, we are claiming that it is a logical necessity given the premises.  Our goal now is to explain why the conclusion necessarily follows from the premise.  One way to do this by laying out our proof in two columns.
+    \begin{align}
+        &\text{Steps} &&\text{Justifications}\\
+        &p\rightarrow r && \text{Premise}\label{eq:arg11}\\
+        &\sim r\rightarrow \sim p && \text{Contrapositive and \ref{eq:arg11}} \label{eq:arg12}\\
+        &\sim p \rightarrow q && \text{Premise}\label{eq:arg13}\\
+        &\sim r \rightarrow q && \text{Transitivity, \ref{eq:arg12}, \& \ref{eq:arg13}}\label{eq:arg14}\\
+        &q \rightarrow s && \text{Premise}\label{eq:arg15}\\ \cline{1-4}
+        &\therefore \sim r \rightarrow s && \text{Transitivity, \ref{eq:arg14}, \& \ref{eq:arg15}}\label{eq:arg16}
+    \end{align}
+    Thus we can see that using ideas previously discussed we can assemble and remix statements to arrive at a conclusion.  Note, this could have been done using a truth table and looking at critical rows or using Venn diagrams; however, with four statements a truth table would have had sixteen rows or we need a Venn diagram with four overlapping sets with up to sixteen regions to consider.
+\end{exposition}
+
+\clearpage
+
+\begin{practiceprob} Below is a proof that this is a valid argument:
+    \begin{align}
+        &(\sim p\vee \sim q) \rightarrow (r\wedge s)\\
+        &r\rightarrow t\\
+        & \sim t\\\cline{1-2}
+        &\therefore p
+    \end{align}
+    Before looking at the proof, what are the premises in this argument?\vspace{4\baselineskip}\newline And, what is the conclusion in the argument?\vspace{4\baselineskip}\newline Now, fill in the missing justifications in the proof, for each justification you need to include one of the valid argument forms from Exposition \ref{exp:arguments} on page \pageref{exp:arguments}.
+
+    \noindent
+    Proof:
+    \begin{align}
+        &\text{Steps} &&\text{Justifications}\\[\baselineskip]
+        & r \rightarrow t && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{3-4}
+        & \sim t && \\ \cline{3-4}
+        & \sim r &&\\ \cline{3-4}
+        & \sim r \vee \sim s &&\\ \cline{3-4}
+        & \sim(r\wedge s) &&\\ \cline{3-4}
+        &(\sim p\vee \sim q) \rightarrow (r\wedge s)&&\\ \cline{3-4}
+        & p\wedge q &&\\ \cline{1-4} 
+        &\therefore p
+    \end{align}    
+\end{practiceprob}
+
+\clearpage
+
+\begin{practiceprob} Here is another valid argument:
+    \begin{align}
+        &\sim p\wedge q\\
+        &r\rightarrow p\\
+        &\sim r\rightarrow s\\
+        & s\rightarrow t\\\cline{1-2}
+        &\therefore t
+    \end{align}
+    Below you need to try and fill in both the steps and justifications for a proof.  Before looking at the proof, what are the premises in this argument?\vspace{4\baselineskip}\newline And, what is the conclusion in the argument?\vspace{4\baselineskip}\newline Now, fill in the steps and justifications for the proof, for each justification you need to include one of the valid argument forms from Exposition \ref{exp:arguments} on page \pageref{exp:arguments}.
+
+    \noindent
+    Proof:
+    \begin{align}
+        &\text{Steps} &&\text{Justifications}\\[\baselineskip]
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4} 
+        &\therefore t
+    \end{align}    
+\end{practiceprob}
+
+\clearpage
+
+
+% "If you send me an e-mail message, then I will finish writing the
+% program," "If you do not send me an e-mail message, then I will go to sleep early,"
+% "If I go to sleep early, then I will wake up feeling refreshed" lead to the conclusion "If I do not finish
+% writing the program, then I will wake up feeling refreshed."
+
+
+\begin{practiceprob} For this last example the argument is given in sentences:
+    \begin{enumerate}
+    \setlength\itemsep{1.5\baselineskip}
+        \item ``If you send me an e-mail message, then I will finish writing the program.''
+        \item ``If you do not send me an e-mail message, then I will go to sleep early.''
+        \item ``If I go to sleep early, then I will wake up feeling refreshed.''
+        \item \(\therefore\) ``If I do not finish writing the program, then I will wake up feeling refreshed.''
+    \end{enumerate}
+    Below you need to try and fill in both the steps and justifications for a proof.  But first identify the individual component statements which make up each implication and give them a name like \(p\) or \(q\) (try to make it meaningful). Then identify the premises and conclusion in this argument?\vspace{6\baselineskip}\newline Finally, fill in the steps and justifications for the proof, for each justification you need to include one of the valid argument forms from Exposition \ref{exp:arguments} on page \pageref{exp:arguments}.
+
+    \noindent
+    Proof:
+    \begin{align}
+        &\text{Steps} &&\text{Justifications}\\[\baselineskip]
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
+        &\therefore 
+    \end{align}
+    \vspace{2\baselineskip}
+\end{practiceprob}

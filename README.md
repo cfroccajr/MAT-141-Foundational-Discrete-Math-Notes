@@ -2,21 +2,17 @@
 ## To Do/Status:
 Finished basic compilation of notes including logic and sets references in the appendix.  Still need to:
 - Need to add all the alt text material for the last chapter or so
-- "proving" logical statements
 - circuits material (see Circuit Tests project on Overleaf)
 - probability reference ?
 - writing math recommendations (not the full packet?)
 - Create header specifically for this text with appropriate updates
-- add Grimaldi and Rosen exampels?
 - Add practice exams at the end of chapters
-- Add Grimaldi, Rosen, Lin & Lin to Bibliography
 - Extend Preface
-- Remove subsections from table of contents or add more subsection headers???
 - Look for additional places to add index entries
 - Find way to add "infinite loop" to index
 - Where "appropriate" add ```\pageref{}``` for image refernces that may need lots of page flipping
 - Look for places that should have ```\cleardoublepage``` instead of ```\clearpage```
-- Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf 
+- Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
 
 ## TikZ Image Creation:
 - Put every TikZ image in its own file
@@ -32,7 +28,7 @@ Finished basic compilation of notes including logic and sets references in the a
       \input{tikz/#1.tex}%
     }
 ```
-- Use ```for file in *.pdf; do magick -density 300 "$file" "${file%.pdf}.png"; done``` in terminal window to convert pdf images to png
+- Use imagemagick with the command ```for file in *.pdf; do magick -density 300 "$file" "${file%.pdf}.png"; done``` in terminal window to convert pdf images to png
 - Copy png to Overleaf and input like so ```\includegraphics[scale=0.24,alt={...}]{images/created/*.png}```
 - Note that as part of the image conversion process the png is larger, but when potentially converting to HTML for posting online png is preferable to pdf and for accessability so Acrobate recognizes it is an image.
 
