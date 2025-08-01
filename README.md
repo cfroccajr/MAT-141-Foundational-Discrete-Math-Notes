@@ -14,7 +14,7 @@ Finished basic compilation of notes including logic and sets references in the a
 - Look for places that should have ```\cleardoublepage``` instead of ```\clearpage```
 - Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
 - Add questions on identifying a sequence formula given part of the sequence
-  - Repeat n n times ($a(n) = floor(\sqrt{2n} + 1/2)$)
+  - Repeat n n times: $a_n = floor(\sqrt{2n} + 1/2)$
   - geometric example
   - arithmetic example
   - basic-ish formula like $(-1)^n/(n(n+1))$
