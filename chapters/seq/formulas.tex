@@ -231,10 +231,9 @@ In order to apply theorem \ref{thm:distinct_roots} to the Fibonacci Sequence in 
     \[x=\frac{1\pm\sqrt{5}}{2}\] and by theorem \ref{thm:distinct_roots}
     \[F_n=C\left(\frac{1+\sqrt{5}}{2}\right)^n+D\left(\frac{1-\sqrt{5}}{2}\right)^n,\]
 for some \(C\) and \(D\).  We can use \(F_0\) and \(F_1\) to set up a system of two equations and two unknowns in order to solve for \(C\) and \(D\),
-    \begin{align*}
-        F_0&=C+D=1\ \text{and}\\
-        F_1&=C\left(\frac{1+\sqrt{5}}{2}\right)+D\left(\frac{1-\sqrt{5}}{2}\right)=1.
-    \end{align*}
+    \begin{equation*}
+        F_0=C+D=1\ \text{and}\ F_1=C\left(\frac{1+\sqrt{5}}{2}\right)+D\left(\frac{1-\sqrt{5}}{2}\right)=1.
+    \end{equation*}
 Using these we get
     \[C=\frac{1}{\sqrt{5}}\left(\frac{1+\sqrt{5}}{2}\right)\ \text{and}\ D=-\frac{1}{\sqrt{5}}\left(\frac{1-\sqrt{5}}{2}\right).\]
 Therefore the closed formula for the Fibonacci sequence is
@@ -246,8 +245,8 @@ Therefore the closed formula for the Fibonacci sequence is
         \[L=\lim_{n\rightarrow\infty}\frac{F_{n+1}}{F_n}.\]
     For large values of \(n\), 
         \[L\approx\frac{F_{n+1}}{F_n}=\frac{F_n+F_{n-1}}{F_n}=1+\frac{F_{n-1}}{F_n}\approx 1+\frac{1}{L}.\]
-    But then, \(L=1+1/L\) or \(L^2-L-1=0\), which, as before. gives \[L=\frac{1\pm\sqrt{5}}{2}.\]
-    Finally, this line of thinking gives us rough justification for the characteristic polynomial in theorem \ref{thm:distinct_roots}.
+    But then, \(L=1+1/L\) or \(L^2-L-1=0\), which, as before. gives \(L=\left(1\pm\sqrt{5}\right)/2\).
+    Finally, this line of thinking gives us a very rough justification for the characteristic polynomial in theorem \ref{thm:distinct_roots}.
 \end{note}
 
 

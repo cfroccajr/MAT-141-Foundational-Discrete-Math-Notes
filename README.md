@@ -13,6 +13,14 @@ Finished basic compilation of notes including logic and sets references in the a
 - Where "appropriate" add ```\pageref{}``` for image refernces that may need lots of page flipping
 - Look for places that should have ```\cleardoublepage``` instead of ```\clearpage```
 - Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
+- Add questions on identifying a sequence formula given part of the sequence
+- Add example of relation where \(\theta \sim \phi\) if and only if \(\theta-\phi\in\mathbb{Q}\)
+- Redo graphics for composing functions so that the names of the functions are not in the domains/codomains (around page 74)
+- - Repeat n n times
+  - geometric example
+  - arithmetic example
+  - basic-ish formula like \((-1)^n/(n(n+1))\)
+  - \(a_n = 3^n - 2\) or \(a_n=a_{n-1}+6*3^{n-2})
 
 ## TikZ Image Creation:
 - Put every TikZ image in its own file

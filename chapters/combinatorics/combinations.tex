@@ -222,10 +222,10 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
 
 % \clearpage
 
-\begin{defn}[Combinations with Replacement]\label{def:comb_rep}\index{combinations with replacement}
-    If we have to make \(k\) choices from \(n\) options, order does not matter, and we can select the same option more than once, then this is a \emph{combination with replacement}.  the number of ways we can do this is:
-    \[\binom{n+k-1}{n}=\binom{n+k-1}{k-1}.\]
-\end{defn}
+\begin{thm}[Combinations with Repetition]\label{thm:comb_rep}\index{combinations with repetition}
+    If we have to make \(r\) choices from \(n\) options, order does not matter, and we are allowed to select the same option more than once, then this is a \emph{combination with repetition}.  the number of ways we can do this is:
+    \[\binom{r+n-1}{n-1}=\binom{r+n-1}{r}.\]
+\end{thm}
 
 \begin{exposition}
     Suppose you program a machine that scoops ice cream.  It can only follow two commands, scoop to take a scoop of whatever ice cream it is above and move to move to the next flavor.  Assuming you get three scoops of ice cream and there are five flavors, the commands for the robot could look like:
@@ -244,12 +244,12 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
 
     \begin{itemize}
         \item Why are there only four move commands if there are five flavors?
-        \item If \(n=3\) is the number of scoops and \(k=5\) is the number of flavors, why does it make since to use \(n+k-1=7\) like in definition \ref{def:comb_rep}?
+        \item If \(r=3\) is the number of scoops and \(n=5\) is the number of flavors, why does it make since to use \(r+n-1=7\) like in definition \ref{thm:comb_rep}?
     \end{itemize}
 
     One way of looking at this is that 
     \[
-        \binom{n+k-1}{n}=\binom{7}{3}=35
+        \binom{r+n-1}{r}=\binom{7}{3}=35
     \]
     is the number of ways we can place the three scoop commands in the seven lines of code, and then put the move commands on the remaining empty lines:
     \begin{minted}{python}
@@ -268,7 +268,7 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
 % \clearpage
 
 \begin{exposition}
-    Another way to think of definition \ref{def:comb_rep} is to ask in how many ways could you divide a row of identical objects into individual groups (we allow some groups to be empty).  For example we can split a group of 10 zombies into 4 smaller groups like so
+    Another way to think of definition \ref{thm:comb_rep} is to ask in how many ways could you divide a row of identical objects into individual groups (we allow some groups to be empty).  For example we can split a group of 10 zombies into 4 smaller groups like so
     \begin{center}
         % \inputtikz{zombie_walls1}
         \includegraphics[scale=0.24,alt={zombies bound by walls}]{images/created/zombie_walls1.png}
@@ -284,7 +284,7 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
     where the first and last groups are empty; \(0+4+6+0=10\).  Which again we can think of as 0 zombies before the first wall, 4 total before the second, and 10 total before the third, and also 10 altogether.
 
     Either way we need to arrange our 10 zombies and 3 walls in a row to get our 4 groupings.  Thus the total number of possible choices is
-    \[\binom{n+k-1}{n}=\binom{10+4-1}{10}=\binom{13}{10}=286.\]
+    \[\binom{r+n-1}{r}=\binom{10+4-1}{10}=\binom{13}{10}=286.\]
 \end{exposition}
 
 \begin{practiceprob}{Book Shelves}
@@ -310,7 +310,7 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
 \end{practiceprob}
 
 \begin{practiceprob}
-Noting that \(0\leq k\leq j\leq i\leq 9\), why does this code print ``Discrete Rules!!!" 220 times? (Hint: There are ten numbers to move through and three variables to assign.)
+Look at the code below and note that \(0\leq k\leq j\leq i\leq 9\), why does this code print ``Discrete Rules!!!" 220 times? (Hint: There are ten numbers to move through and three variables to assign.)
 
 \begin{minted}{python}
 count=1
