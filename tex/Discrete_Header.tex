@@ -1,0 +1,209 @@
+% Bibliography and Index Commands
+    \usepackage[english]{babel}
+    \usepackage[style=numeric]{biblatex}
+    \usepackage{imakeidx}
+    \addbibresource{tex/Discrete.bib}
+    \makeindex[columns=2,intoc,columnseprule]
+
+%%%% Graphics and Image Packages %%%%
+    \usepackage[table]{xcolor}
+    \usepackage{graphicx,tikz,pgfplots}
+    \pgfplotsset{compat=newest}
+    \usetikzlibrary{calc}
+    \usetikzlibrary{automata,positioning}
+    \usetikzlibrary{graphs.standard,graphs,graphdrawing,trees,quotes}
+    \usegdlibrary{trees,layered,force,circular}
+    \usepackage{wrapfig}
+    \usetikzlibrary{shapes}    \usetikzlibrary{decorations.pathmorphing,decorations.pathreplacing,decorations.shapes,decorations.text}    
+    \tikzset{>=stealth}
+    % this tells LaTeX to look in this directory 
+    % if it doesn't find the images else where
+    \graphicspath{{images/}{images/created/}{tikz/}}
+    \usepackage{caption}
+    \usepackage{subcaption}
+
+%%%% Hyper reference package information %%%%
+    \usepackage[
+            pdfauthor={Chuck Rocca},
+            pdfproducer={Latex with hyperref},
+            pdflang={en-US},
+            citecolor=blue!70!black,
+            linkcolor=blue!70!black,
+            colorlinks=true,
+            urlcolor=blue!70!black
+        ]{hyperref}
+
+%%%% Packages for formatting tables
+    \usepackage{multicol,tabularx,colortbl}
+    \usepackage{blkarray}
+
+%%%% General Utility Packages %%%%
+    \usepackage{amsmath,amsthm,amssymb,mathrsfs,xfrac}
+    \usepackage{mathtools}
+    \usepackage{bbding}
+    \usepackage{calc,ifthen}
+    \usepackage{titling}
+    \usepackage{minted}
+    \usepackage{fdsymbol}
+    \usepackage{enumitem}
+    \usepackage{csquotes}
+    \usepackage{yfonts}
+
+
+%%%% Layout Commands %%%%
+    \usepackage{geometry}
+    \geometry{
+        inner=1in,
+        outer=0.5in,
+        top=1in,
+        bottom=0.75in
+    }
+    \pagestyle{myheadings}
+    \renewcommand{\chaptermark}[1]{ \markboth{#1}{} }
+    \renewcommand{\sectionmark}[1]{ \markright{#1}{} }
+    \usepackage{titlepic}
+
+
+%%%% Document Colors
+    % \colorlet{Mycolor1}{green!10!orange}
+    % \definecolor{Mycolor2}{HTML}{00F9DE}
+    \colorlet{accent}{blue!70!black}
+    \colorlet{secondaryaccent}{red!50!black}
+    \colorlet{tertiaryaccent}{green!50!black}
+    \colorlet{background}{accent!5}
+    \colorlet{S_background}{secondaryaccent!5}
+    \colorlet{T_background}{tertiaryaccent!5}
+    \definecolor{safety}{HTML}{D6C01A}
+
+% New Commands and Theorem Environments
+
+% Rewritten emphasis command
+    \DeclareTextFontCommand{\emph}{\em\bfseries\color{secondaryaccent}}
+
+% Misc. New Symbols/Commands
+    \newcommand{\accentcheckmark}{\textcolor{accent}{\CheckmarkBold}}
+    \newcommand{\accentXbrush}{\textcolor{secondaryaccent}{\XSolidBrush}}
+    \newcommand{\accentbox}{\textcolor{tertiaryaccent}{\Large\(\Box\)}}
+    \newcommand{\redheart}{\textcolor{secondaryaccent}{\varheartsuit}}
+    \newcommand{\reddiamond}{\textcolor{secondaryaccent}{\vardiamondsuit}}
+
+% Upgraded Math Commands
+    \newcommand{\disp}{\displaystyle}
+    \newcommand{\dlim}[2]{\disp\lim_{#1\rightarrow #2}}
+    \newcommand{\lfrac}[2]{\mbox{\large\(\frac{#1}{#2}\)}}
+    \newcommand{\Lfrac}[2]{\mbox{\Large\(\frac{#1}{#2}\)}}
+    \newcommand\uniSet{\mbox{$\mathscr{U}\ $}}
+    \newcommand\powerSet{\mbox{$\mathscr{P}$}}
+    \newcommand\familySet{\mbox{$\mathscr{F}\ $}}
+    \renewcommand\overline[1]{\mbox{$ #1^{c}$}}
+    
+% Number Symbols:
+    \newcommand{\bbN}{\mbox{$\mathbb{N}$}} % Natural Numbers
+    \newcommand{\bbZ}{\mbox{$\mathbb{Z}$}} % Integers
+    \newcommand{\bbQ}{\mbox{$\mathbb{Q}$}} % Rational Numbers
+    \newcommand{\bbR}{\mbox{$\mathbb{R}$}} % Real Numbers
+    \newcommand{\bbC}{\mbox{$\mathbb{C}$}} % Complex Numbers
+
+% Theorem like environments
+    \theoremstyle{plain}% default
+        \newtheorem{thm}{Theorem}
+        \newtheorem*{thm*}{Theorem}
+        \newtheorem{lem}[thm]{Lemma}
+        \newtheorem{prop}[thm]{Proposition}
+        \newtheorem*{cor}{Corollary}
+        \newtheorem{claim}[thm]{Claim}
+        \newtheorem*{claim*}{Claim}
+        \newtheorem{conj}[thm]{Conjecture}
+        \newtheorem*{conj*}{Conjecture}
+
+    \theoremstyle{definition}
+        \newtheorem{defn}{Definition}
+        \newtheorem{axiom}{Axiom}
+        \newtheorem{exmp}{Example}
+        \newtheorem{exer}{Exercises}
+        \newtheorem*{defn*}{Definition}
+        \newtheorem*{axiom*}{Axiom}
+        \newtheorem*{exmp*}{Example}
+        \newtheorem*{exer*}{Exercises}
+        \newtheorem{practiceprob}{Practice Problem}
+        \newtheorem{exposition}{Exposition}
+    
+    \theoremstyle{remark}
+        \newtheorem*{rem}{Remark}
+        \newtheorem{note}{Note}
+        \newtheorem*{note*}{Note}
+        \newtheorem{case}{\bfseries Case}[thm]
+        \renewcommand{\thecase}{\arabic{case}}
+        \newtheorem*{reflection}{\bfseries Reflection}
+
+    % Theorem like environment numbering
+        \numberwithin{thm}{chapter}
+        \numberwithin{note}{chapter}
+        \numberwithin{defn}{chapter}
+        \numberwithin{axiom}{chapter}
+        \numberwithin{exmp}{chapter}
+        \numberwithin{exer}{chapter}
+        \numberwithin{practiceprob}{chapter}
+        \numberwithin{exposition}{chapter}
+
+%%%% Tcolorbox Materials %%%%
+
+    \usepackage[breakable]{tcolorbox}
+    \tcbuselibrary{theorems}
+    \tcbuselibrary{skins}
+    \tcbuselibrary{breakable}
+    \tcbset{
+        probstyle/.style={
+           colframe=secondaryaccent,
+           colback=white,
+           opacityback=1,
+           before skip=10pt,
+           after skip=10pt,
+        },
+    }
+    \tcolorboxenvironment{practiceprob}{probstyle}    
+    \tcbset{
+        exposstyle/.style={
+           colframe=accent,
+           colback=white,
+           opacityback=1,
+           before skip=10pt,
+           after skip=10pt,
+        },
+    }
+    \tcolorboxenvironment{exposition}{exposstyle}
+    \newtcolorbox{sides}[1][]{
+        sidebyside,
+        sidebyside align=top,
+        colback=white,
+        frame empty,
+        #1,
+    }
+    \tcbset{
+        thmstyle/.style={
+           % breakable,
+           colframe=tertiaryaccent,
+           colback=white,
+           opacityback=1,
+           before skip=10pt,
+           after skip=10pt,
+        },
+    }
+% tcolorbox styling for theorem like environments
+    \tcolorboxenvironment{thm}{thmstyle}
+    \tcolorboxenvironment{lem}{thmstyle}
+    \tcolorboxenvironment{prop}{thmstyle}
+    \tcolorboxenvironment{cor}{thmstyle}
+    \tcolorboxenvironment{defn}{thmstyle}
+    \tcolorboxenvironment{axiom}{thmstyle}
+    \tcolorboxenvironment{claim}{thmstyle}
+    \tcolorboxenvironment{conj}{thmstyle}
+    \tcolorboxenvironment{note}{thmstyle}
+    \tcolorboxenvironment{proof}{% `proof' from `amsthm'
+        blanker,breakable,left=5mm,right=5mm,
+        before skip=10pt,after skip=10pt,
+        borderline west={2pt}{0pt}{accent},
+        borderline east={2pt}{0pt}{accent},
+        before upper={\parindent0pt\parskip0pt}
+    }
+

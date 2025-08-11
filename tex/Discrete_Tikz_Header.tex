@@ -1,0 +1,63 @@
+% Externalization Commands and Packages
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz/]
+% input command code based on 
+% https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
+% modified so that the tikz files are in the tikz folder where the exertanlized
+% pictures are kept.
+\newcommand{\inputtikz}[1]{%
+  \tikzsetnextfilename{#1}%
+  \input{tikz/#1.tex}%
+}
+
+%%%% TikZ Styling and Such %%%%
+    \tikzset{
+        backline/.style={
+            line width=3pt,color=white,shorten <=3pt,shorten >=6pt,line cap=round
+        }
+    }
+    \tikzset{
+        frontline/.style={
+            color=black,shorten <=0pt,shorten >=0pt,thick,line cap=rect
+        }
+    }
+    \tikzset{
+        doublestruck/.style = {
+            postaction={draw,frontline},backline
+        }
+    }
+    \tikzset{
+        vertex/.style={
+            shade,
+            ball color=white,
+            circle,
+            line width=1
+        }
+    }
+    \tikzset{
+        SolidVertex/.style={
+            shade,shading=ball,
+            circle,
+            ball color=black!80!white,
+            minimum size=3pt
+        }
+    }
+    \tikzset{
+        edges/.style={
+            line width=1.5,
+            every loop/.style={-},
+            shorten <= 1.5pt,
+            shorten >= 1.5pt,
+        }
+    }
+    \tikzset{pics/card/.style n args={2}{
+        code = {
+            \draw[rounded corners=2.5pt,thick] (0,0) rectangle (2.5,3.5)
+                node[pos=0.5,scale=4,font=\bfseries]{#1};
+            \node[anchor=north west,scale=2] at (0,3.5) {#2};
+            \node[anchor=north west,scale=2,rotate=180] at (2.5,0) {#2};
+        }
+    }}
+
+%%% This file containeds TikZ Pics made by combining other pictures
+    \input{images/GRU_Image_Sets}

@@ -5,7 +5,6 @@ Finished basic compilation of notes including logic and sets references in the a
 - circuits material (see Circuit Tests project on Overleaf)
 - probability reference ?
 - writing math recommendations (not the full packet?)
-- Create header specifically for this text with appropriate updates
 - Add practice exams at the end of chapters
 - Extend Preface
 - Look for additional places to add index entries
