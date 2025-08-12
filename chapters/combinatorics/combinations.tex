@@ -6,39 +6,42 @@
 \begin{defn}[Permutations]\index{permutation}
     \emph{Permutations} represent the number of ways to select \(k\) object from \(n\) options when \emph{order does matter} and are calculated like so:
         \[_nP_k=\frac{n!}{(n-k)!}=n\cdot(n-1)\cdot(n-2)\cdots(n-k+1).\]
+    We can derive this like so:\vspace{0.2\textheight}
 \end{defn}
 
 \begin{defn}[Combinations]\index{combination}
     \emph{Combinations} represent the number of ways to select \(k\) object from \(n\) options when \emph{order does not matter} and are calculated like so:
         \[_nC_k=\binom{n}{k}=\frac{n!}{k!(n-k)!}=\frac{n\cdot(n-1)\cdot(n-2)\cdots(n-k+1)}{k\cdot(k-1)\cdot(k-2)\cdots2\cdot1}.\]
     This is sometimes also called a \emph{binomial coefficients} because we either choose an option or not.
+    We can derive this like so:\vspace{0.2\textheight}
 \end{defn}
+
+\clearpage
 
 \begin{practiceprob}{Basic Calculations}
     Translate each of the following into a mathematical expression and then complete the calculation.
     \begin{enumerate}
-    \setlength{\itemsep}{20pt}
+    \setlength{\itemsep}{70pt}
         \item Pick 5 out of 7 distinct objects when order matters:
         \item Arrange 6 distinct objects:
         \item Pick 3 out of 5 distinct objects when order doesn't matter:
         \item Pick 10 out of 15 distinct objects when order matters:
         \item Arrange 17 distinct objects:
-        \item Pick 7 out of 10 distinct objects when order doesn't matter:\vspace{35pt}
+        \item Pick 7 out of 10 distinct objects when order doesn't matter:\vspace{70pt}
     \end{enumerate}
 \end{practiceprob}
 
 \begin{exposition}\index{deck of cards}\index{suit}\index{rank}
-Below is a standard deck of cards with four suits and thirteen ranks per suit.
-\begin{figure}[H]
-    \centering
-    % \inputtikz{deck_of_cards}
-    \includegraphics[scale=0.24,alt={deck of cards with four suits and thirteen ranks per suit}]{images/created/deck_of_cards.png}
-    \caption{Standard Deck of Cards}
-    \label{fig:card-deck}
-\end{figure}
-\end{exposition}
+    Below is a standard deck of cards with four suits and thirteen ranks per suit.
+    \begin{figure}[H]
+        \centering
+        % \inputtikz{deck_of_cards}
+        \includegraphics[scale=0.24,alt={deck of cards with four suits and thirteen ranks per suit}]{images/created/deck_of_cards.png}
+        \caption{Standard Deck of Cards}
+        \label{fig:card-deck}
+    \end{figure}
 
-\begin{exposition}
+    \noindent
     If we deal 5 cards from a standard deck, there are 3744 full houses like:
     \begin{figure}[H]
         \centering
@@ -90,7 +93,7 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
 
 % \clearpage
 
-\begin{exposition}{Three of a Kind Done the Wrong}
+\begin{exposition}[Three of a Kind Done the Wrong]
     Now we want to know how many ways we can make a three of a kind, looking it up the answer is 54912, but why?
     \begin{figure}[H]
         \centering
@@ -112,9 +115,11 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
                 &=61152\ \text{\accentXbrush}
         \end{align*}
     \end{sides}
+    So, what did we do wrong?
+    \vspace{5\baselineskip}
 \end{exposition}
 
-\begin{practiceprob}{Three of a Kind Done the Right}
+\begin{practiceprob}[Three of a Kind Done the Right]
     Let's look at figure \ref{fig:three-kind} again, and lets make a better plan to show there are 54912 possible three of a kinds. First \emph{make a plan} and second calculate.
     \begin{sides}[lefthand width=0.5\textwidth]
         \begin{enumerate}
@@ -129,7 +134,7 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
     \end{sides}
 \end{practiceprob}
 
-\begin{practiceprob}{Two Pair}
+\begin{practiceprob}
     There are 123552 different ways to be dealt two pair.
     \begin{figure}[H]
         \centering
@@ -152,7 +157,7 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
     \end{sides}
 \end{practiceprob}
 
-\begin{practiceprob}{At Least One Red Card}
+\begin{practiceprob}
     There are 2533180 different ways to be dealt a hand with at least one red card.
     \begin{figure}[H]
         \centering
@@ -161,13 +166,13 @@ Below is a standard deck of cards with four suits and thirteen ranks per suit.
         \caption{One or More Red Cards}
         \label{fig:more-reds}
     \end{figure}
-    We can use combinations to see why.  First \emph{make a plan} and second calculate.
+    We can use combinations to see why.  First \emph{make a plan} and second calculate. (This one is tricky.)
     \begin{sides}[lefthand width=0.5\textwidth]
         \begin{enumerate}
-        \setlength\itemsep{22pt}
+        \setlength\itemsep{2pt}
             \item 
             \item
-            \item\phantom{stuff}\vspace{22pt}
+            \item\phantom{stuff}\vspace{2pt}
         \end{enumerate}
         \tcblower
     \end{sides}

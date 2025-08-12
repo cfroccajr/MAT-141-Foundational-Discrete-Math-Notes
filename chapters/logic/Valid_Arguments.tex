@@ -13,7 +13,7 @@
     \end{align}
     Expressions \ref{eq:premise11}, \ref{eq:premise12}, and \ref{eq:premise13} are called \emph{premises} (or \emph{hypotheses}), they are what we are assuming to be true.  Expression \ref{eq:conclusion1} is the \emph{conclusion}, we are claiming that it is a logical necessity given the premises.  Our goal now is to explain why the conclusion necessarily follows from the premise.  One way to do this by laying out our proof in two columns.
     \begin{align}
-        &\text{Steps} &&\text{Justifications}\\
+        &\text{\underline{Steps}} &&\text{\underline{Justifications}}\nonumber\\
         &p\rightarrow r && \text{Premise}\label{eq:arg11}\\
         &\sim r\rightarrow \sim p && \text{Contrapositive and \ref{eq:arg11}} \label{eq:arg12}\\
         &\sim p \rightarrow q && \text{Premise}\label{eq:arg13}\\
@@ -21,7 +21,7 @@
         &q \rightarrow s && \text{Premise}\label{eq:arg15}\\ \cline{1-4}
         &\therefore \sim r \rightarrow s && \text{Transitivity, \ref{eq:arg14}, \& \ref{eq:arg15}}\label{eq:arg16}
     \end{align}
-    Thus we can see that using ideas previously discussed we can assemble and remix statements to arrive at a conclusion.  Note, this could have been done using a truth table and looking at critical rows or using Venn diagrams; however, with four statements a truth table would have had sixteen rows or we need a Venn diagram with four overlapping sets with up to sixteen regions to consider.
+    Thus we can see that using ideas previously discussed we can assemble and remix statements to arrive at a conclusion.  Note, this could have been done using a truth table and looking at critical rows or using Venn diagrams; however, with four statements a truth table would have had sixteen rows or we'd need a Venn diagram with four overlapping sets with up to sixteen regions to consider.
 \end{exposition}
 
 \clearpage
@@ -38,13 +38,14 @@
     \noindent
     Proof:
     \begin{align}
-        &\text{Steps} &&\text{Justifications}\\[\baselineskip]
+        &\text{\underline{Steps}} &&\text{\underline{Justifications}}\nonumber \\
         & r \rightarrow t && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{3-4}
         & \sim t && \\ \cline{3-4}
         & \sim r &&\\ \cline{3-4}
         & \sim r \vee \sim s &&\\ \cline{3-4}
         & \sim(r\wedge s) &&\\ \cline{3-4}
         &(\sim p\vee \sim q) \rightarrow (r\wedge s)&&\\ \cline{3-4}
+        &\sim(\sim p \vee \sim q)&&\\ \cline{3-4}
         & p\wedge q &&\\ \cline{1-4} 
         &\therefore p
     \end{align}    
@@ -65,7 +66,7 @@
     \noindent
     Proof:
     \begin{align}
-        &\text{Steps} &&\text{Justifications}\\[\baselineskip]
+        &\text{\underline{Steps}} &&\text{\underline{Justifications}}\nonumber \\
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
@@ -99,7 +100,8 @@
     \noindent
     Proof:
     \begin{align}
-        &\text{Steps} &&\text{Justifications}\\[\baselineskip]
+        &\text{\underline{Steps}} &&\text{\underline{Justifications}}\nonumber\\
+        & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
@@ -107,5 +109,4 @@
         & \phantom{\sim r \rightarrow \sim t} && \phantom{Step (??) and Step (??) and Some Logical Law}\\ \cline{1-4}
         &\therefore 
     \end{align}
-    \vspace{2\baselineskip}
 \end{practiceprob}

@@ -15,7 +15,7 @@
     \begin{enumerate}
         \setlength{\itemsep}{3\baselineskip}
         \item For which images is the statement \emph{``If it is raining, then the grass is wet'' (\(R\rightarrow G\))} false?
-        \item Why is it false in those cases?
+        \item Why is the statement false in those cases?
         \item In what situations must it then be true?
     \end{enumerate}\vspace{2\baselineskip}
     Use the same sort of reasoning to try and fill in the following \emph{truth table}\index{truth table}.
@@ -60,7 +60,7 @@
     \((Q\rightarrow P) \equiv (\sim P \rightarrow \sim Q)\), 
     and \(\sim (P\rightarrow Q) \equiv (P \wedge \sim Q)\).
     
-    Further we can say \(P\rightarrow t\) and \(c\rightarrow Q\) are \emph{vacuously true}\index{vacuously true} because their negations are always false:
+    We also say \(P\rightarrow t\) and \(c\rightarrow Q\) are \emph{vacuously true}\index{vacuously true} because their negations are always false:
         \[\sim (P\rightarrow t) \equiv (P \wedge c) \equiv c\ \text{and}\ \sim (c\rightarrow Q) \equiv (c \wedge \sim Q) \equiv c.\]
 \end{exposition}
 
@@ -71,7 +71,7 @@
         % \inputtikz{dive_bomb}
         \includegraphics[scale=0.24,alt={Four images with or without an umbrella or a zombie in a plane},width=0.85\linewidth]{images/created/dive_bomb.png}
     \end{center}
-    What if we also assume that it is true that ``I am carrying an umbrella,''
+    What if, together with the original statement, we assume that it is true that ``I am carrying an umbrella,''
     which picture(s) do we look at then \answerbox, are there zombies dive bombing me \answerbox?\vspace{\baselineskip}
 
     \noindent%
@@ -103,21 +103,25 @@
             \end{array}
         \] &
     \emph{Converse Error}\index{converse error}:
+    \textcolor{secondaryaccent}{
         \[
             \begin{array}{ll}
                 P\rightarrow Q  \\
                 Q \\\hline
                 \therefore\ P
             \end{array}
-        \] &
+        \]
+    }&
     \emph{Inverse Error}\index{inverse error}:
+    \textcolor{secondaryaccent}{
         \[
             \begin{array}{ll}
                 P\rightarrow Q  \\
                 \sim P \\\hline
                 \therefore\ \sim Q
             \end{array}
-        \] \tabularnewline
+        \]
+    }\tabularnewline
     \emph{Disjunctive\newline Syllogism}\index{disjunctive syllogism}:
         \[
             \begin{array}{ll}
@@ -160,7 +164,7 @@
             F & F & F &  \\
         \end{array}
     \]
-    Where as this table shows that Converse Error is an invalid argument since in one of the critical rows the premises are true while the conclusion is false.
+    Where as, this table shows that the Converse Error is an invalid argument since in one of the critical rows the premises are true while the conclusion is false.
     \[
         \begin{array}{*{3}{>\centering m{0.1\linewidth}|}l}
             P & Q & P\rightarrow Q & \\ \cline{1-3}\rowcolor{tertiaryaccent!60}

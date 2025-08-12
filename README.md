@@ -14,6 +14,7 @@ Still need to:
 - Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
 - Redo graphics for composing functions so that the names of the functions are not in the domains/codomains (around page 78)
     - The TikZ fi8les have been updated but the png images need to be created.
+- Look for and reformat nested tables, i.e. don't use tables to make columns
 
 ## TikZ Image Creation:
 - Put every TikZ image in its own file
