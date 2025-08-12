@@ -13,8 +13,11 @@ Still need to:
 - Look for places that should have ```\cleardoublepage``` instead of ```\clearpage```
 - Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
 - Redo graphics for composing functions so that the names of the functions are not in the domains/codomains (around page 78)
-    - The TikZ fi8les have been updated but the png images need to be created.
+    - The TikZ files have been updated but the png images need to be created.
 - Look for and reformat nested tables, i.e. don't use tables to make columns
+- Look for graphs that should have doublestruck lines and sort that
+- Look at graphic for matrix multiplication and sort that out.  Maybe just use the matrices and leave space for students to draw their own arrows as we go over it in class.
+- Create for for submitting issues but also directions for using Github for that purpose
 
 ## TikZ Image Creation:
 - Put every TikZ image in its own file
