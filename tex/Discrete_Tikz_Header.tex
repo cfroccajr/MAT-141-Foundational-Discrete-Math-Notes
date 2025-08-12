@@ -1,19 +1,9 @@
-% Externalization Commands and Packages
-\usetikzlibrary{external}
-\tikzexternalize[prefix=tikz/]
-% input command code based on 
-% https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
-% modified so that the tikz files are in the tikz folder where the exertanlized
-% pictures are kept.
-\newcommand{\inputtikz}[1]{%
-  \tikzsetnextfilename{#1}%
-  \input{tikz/#1.tex}%
-}
+
 
 %%%% TikZ Styling and Such %%%%
     \tikzset{
         backline/.style={
-            line width=3pt,color=white,shorten <=3pt,shorten >=6pt,line cap=round
+            line width=3pt,color=white,shorten <=0pt,shorten >=0pt,line cap=round
         }
     }
     \tikzset{
@@ -61,3 +51,5 @@
 
 %%% This file containeds TikZ Pics made by combining other pictures
     \input{images/GRU_Image_Sets}
+
+

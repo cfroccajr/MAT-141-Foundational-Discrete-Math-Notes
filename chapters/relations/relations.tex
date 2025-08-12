@@ -78,7 +78,7 @@
     \begin{equation*}
         \forall x,y\in\bbZ: x\, M_7\,y\ \text{if and only if}\ \exists q\in\bbZ: (x-y)=7q.
     \end{equation*}
-    Rewrite \(M_7\) in set notation and list five ordered pairs of integers in \(M_7\).  Then try to show that \(M_7\) is reflexive, symmetric and transitive, i.e. it is an equivalence relation.
+    Rewrite \(M_7\) in set builder notation and list five ordered pairs of integers in \(M_7\).  Then try to show that \(M_7\) is reflexive, symmetric and transitive, i.e. it is an equivalence relation.
     \vspace{0.3\textheight}
 \end{practiceprob}\index{relation!reflexive}\index{relation!symmetric}\index{relation!transitive}\index{relation!equivalence relation}
 
@@ -87,7 +87,7 @@
     \begin{equation*}
         \forall x,y\in\bbZ: x\, L\, y\ \text{if and only if}\ x< y
     \end{equation*}
-    Rewrite \(L\) in set notation and list five ordered pairs of integers in \(L\).  Try to show that \(L\) is antisymmetric and transitive, then give examples showing that it is not reflexive or symmetric and so is not an equivalence relation.
+    Rewrite \(L\) in set builder notation and list five ordered pairs of integers in \(L\).  Try to show that \(L\) is antisymmetric and transitive, then give examples showing that it is not reflexive or symmetric and so is not an equivalence relation.
     \vspace{0.3\textheight}
 \end{practiceprob}
 
@@ -98,7 +98,7 @@
     \begin{equation*}
         \forall x,y\in\bbZ: x\, L^\prime\, y\ \text{if and only if}\ x\leq y
     \end{equation*}
-    Rewrite \(L^\prime\) in set notation and list five ordered pairs of integers in \(L^\prime\). (Try to list some that were not in \(L\).)  Try to show that \(L^\prime\) is reflexive, antisymmetric, and transitive, then give examples showing that it is not symmetric and so is not an equivalence relation.  Relations like \(L^\prime\) are called \emph{partial-ordering}.
+    Rewrite \(L^\prime\) in set builder notation and list five ordered pairs of integers in \(L^\prime\). (Try to list some that were not in \(L\).)  Try to show that \(L^\prime\) is reflexive, antisymmetric, and transitive, then give examples showing that it is not symmetric and so is not an equivalence relation.  Relations like \(L^\prime\) are called \emph{partial-ordering}.
     \vspace{0.3\textheight}
 \end{practiceprob}\index{relation!partial-ordering}
 
@@ -107,7 +107,7 @@
     \begin{equation*}
         \forall x,y\in\bbZ: x\, D\, y\ \text{if and only if}\ x=2y
     \end{equation*}
-    Rewrite \(D\) in set notation and list five ordered pairs of integers in \(D\).  Try to show that \(D\) is antisymmetric, then give examples showing that it is not reflexive, symmetric, or transitive and so is not an equivalence relation.
+    Rewrite \(D\) in set builder notation and list five ordered pairs of integers in \(D\).  Try to show that \(D\) is antisymmetric, then give examples showing that it is not reflexive, symmetric, or transitive and so is not an equivalence relation.
     \vspace{0.3\textheight}
 \end{practiceprob}
 
@@ -118,16 +118,27 @@
     \begin{equation*}
         \forall x,y\in\bbR: x\, B_\epsilon\, y\ \text{if and only if}\ |x-y|<\epsilon
     \end{equation*}
-    Rewrite \(B_\epsilon\) in set notation and list five ordered pairs of real number in \(B_\epsilon\) in the case when \(\epsilon=0.5\), i.e. \(B_{0.5}\).  Try to show that \(B_{0.5}\) is reflexive and symmetric, then give examples showing that it is not transitive and so is not an equivalence relation.
+    Rewrite \(B_\epsilon\) in set builder notation and list five ordered pairs of real number in \(B_\epsilon\) in the case when \(\epsilon=0.5\), i.e. \(B_{0.5}\).  Try to show that \(B_{0.5}\) is reflexive and symmetric, then give examples showing that it is not transitive and so is not an equivalence relation.
     \vspace{0.3\textheight}
 \end{practiceprob}
+
+\begin{practiceprob}\label{prob:rational_rel}
+    Consider the relation \(Q\) defined by:
+    \begin{equation*}
+        \forall x,y\in\bbR: x\, Q\, y\ \text{if and only if}\ x-y\in\bbQ
+    \end{equation*}
+    Rewrite \(Q\) in set builder notation and list five ordered pairs of real number in \(Q\).  Try to show that \(Q\) is an equivalence relation.
+    \vspace{0.3\textheight}
+\end{practiceprob}
+
+\clearpage
 
 \begin{practiceprob}
     Consider the relation \(W\) defined by:
     \begin{quote}
         Two words, \(x\) and \(y\), are in \(W\) if and only if they begin and end with the same letters
     \end{quote}
-    For example \((their,tear)\in W\), but \((there,tear)\not\in W\).  Try to write \(W\) in set notation and list five ordered pairs of words in \(W\) and five pairs not in \(W\).  Try to show that \(W\) is reflexive, symmetric, and transitive, i.e. that it is an equivalence relation.
+    For example \((their,tear)\in W\), but \((there,tear)\not\in W\).  Try to write \(W\) in set builder notation and list five ordered pairs of words in \(W\) and five pairs not in \(W\).  Try to show that \(W\) is reflexive, symmetric, and transitive, i.e. that it is an equivalence relation.
     \vspace{0.3\textheight}
 \end{practiceprob}
 
@@ -301,6 +312,23 @@
     \end{align}
     The idea of equivalence modulo \(n\) plays an important role in many areas of Math and Computer Science. Modular calculations are built into most programming languages with commands such as \verb|%, mod, fmod, rem|, and  \verb|remainder|.
 \end{practiceprob}
+
+\clearpage
+
+\begin{practiceprob}
+    Earlier in Problem \ref{prob:rational_rel} on page \pageref{prob:rational_rel}, we said \(x\) and \(y\) are related by \(Q\) if and only if \(x-y\in\bbQ\) and showed that it was an equivalence relation.  List five distinct equivalence classes in \(Q\).
+    \begin{itemize}
+        \item \(C_1\) = \vspace{2\baselineskip}
+        \item \(C_2\) = \vspace{2\baselineskip}
+        \item \(C_3\) = \vspace{2\baselineskip}
+        \item \(C_4\) = \vspace{2\baselineskip}
+        \item \(C_5\) = \vspace{2\baselineskip}
+    \end{itemize}
+    Do you think it is possible to list all the equivalence classes for this relation? Why or Why Not?
+    \vspace{10\baselineskip}
+\end{practiceprob}
+
+\clearpage
 
 \begin{practiceprob}
 The graph represents an, admittedly boring, equivalence relation.  What are the four equivalence classes?

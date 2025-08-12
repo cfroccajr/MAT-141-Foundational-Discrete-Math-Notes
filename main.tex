@@ -4,6 +4,19 @@
 \input{tex/Discrete_Tikz_Header}
 
 
+% Externalization Commands and Packages
+\usetikzlibrary{external}
+\tikzexternalize[prefix=tikz/]
+% input command code based on 
+% https://tex.stackexchange.com/questions/482557/how-to-externalize-tikz-pictures
+% modified so that the tikz files are in the tikz folder where the exertanlized
+% pictures are kept.
+\newcommand{\inputtikz}[1]{%
+  \tikzsetnextfilename{#1}%
+  \input{tikz/#1.tex}%
+}
+
+
 %%% The following spacing command is clunky and needs to be replaced as does the use of \vspace
     \newcommand{\answerbox}[1][1in]{
         \phantom{\rule{0pt}{20pt}}\rule{#1}{0.2pt}
@@ -25,6 +38,7 @@
 \tableofcontents
 
 \chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
     \input{chapters/preface}
 \cleardoublepage
 
