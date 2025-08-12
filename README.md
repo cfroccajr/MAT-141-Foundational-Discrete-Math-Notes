@@ -1,7 +1,10 @@
 # Notes on Discrete Mathematics at WCSU
 ## To Do/Status:
-Finished basic compilation of notes including logic and sets references in the appendix.  Still need to:
+Still need to:
 - Need to add all the alt text material for the last chapter or so
+    - Added alt text to all the \includegraphics that had a blank alt={}
+    - Need to check for \includegraphics missing alt altogether
+    - Need to update alt texts to be more meaningful
 - circuits material (see Circuit Tests project on Overleaf)
 - probability reference ?
 - Look for additional places to add index entries
@@ -9,7 +12,7 @@ Finished basic compilation of notes including logic and sets references in the a
 - Where "appropriate" add ```\pageref{}``` for image refernces that may need lots of page flipping
 - Look for places that should have ```\cleardoublepage``` instead of ```\clearpage```
 - Explore web publication with https://tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf
-- Redo graphics for composing functions so that the names of the functions are not in the domains/codomains (around page 76)
+- Redo graphics for composing functions so that the names of the functions are not in the domains/codomains (around page 78)
     - The TikZ fi8les have been updated but the png images need to be created.
 
 ## TikZ Image Creation:
@@ -27,7 +30,7 @@ Finished basic compilation of notes including logic and sets references in the a
     }
 ```
 - Use imagemagick with the command ```for file in *.pdf; do magick -density 300 "$file" "${file%.pdf}.png"; done``` in terminal window to convert pdf images to png
-- Copy png to Overleaf and input like so ```\includegraphics[scale=0.24,alt={...}]{images/created/*.png}```
-- Note that as part of the image conversion process the png is larger, but when potentially converting to HTML for posting online png is preferable to pdf and for accessability so Acrobate recognizes it is an image.
+- Copy png to Overleaf images/created and input like so ```\includegraphics[scale=0.24,alt={...}]{images/created/*.png}```
+- Note that as part of the image conversion process the png is larger, but when potentially converting to HTML for posting online png is preferable to pdf and for accessability so Acrobat recognizes it is an image.
 
 ## Other Stuff ...
