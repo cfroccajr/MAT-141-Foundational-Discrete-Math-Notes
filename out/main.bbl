@@ -1,0 +1,231 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{epp2019discrete}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=c366fe4891e6ccb7cad9c7e098bde2a2}{%
+           family={Epp},
+           familyi={E\bibinitperiod},
+           given={Susanna\bibnamedelima Samuels},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cengage Learning}%
+      }
+      \strng{namehash}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{fullhash}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{fullhashraw}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{bibnamehash}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{authorbibnamehash}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{authornamehash}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{authorfullhash}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \strng{authorfullhashraw}{c366fe4891e6ccb7cad9c7e098bde2a2}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fifth}
+      \field{title}{Discrete Mathematics with Applications}
+      \field{year}{2019}
+    \endentry
+    \entry{grimaldi1994discrete}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=5e9d0de1b0e1dbea702b9eac5cbeaec1}{%
+           family={Grimaldi},
+           familyi={G\bibinitperiod},
+           given={Ralph\bibnamedelima P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{fullhash}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{fullhashraw}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{bibnamehash}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{authorbibnamehash}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{authornamehash}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{authorfullhash}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \strng{authorfullhashraw}{5e9d0de1b0e1dbea702b9eac5cbeaec1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{title}{Discrete and Combinatorial Mathematics}
+      \field{year}{1994}
+    \endentry
+    \entry{OEIS}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=6393f998c5344ccb18062c696cecd966}{%
+           family={Inc.},
+           familyi={I\bibinitperiod},
+           given={OEIS\bibnamedelima Foundation},
+           giveni={O\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{6393f998c5344ccb18062c696cecd966}
+      \strng{fullhash}{6393f998c5344ccb18062c696cecd966}
+      \strng{fullhashraw}{6393f998c5344ccb18062c696cecd966}
+      \strng{bibnamehash}{6393f998c5344ccb18062c696cecd966}
+      \strng{authorbibnamehash}{6393f998c5344ccb18062c696cecd966}
+      \strng{authornamehash}{6393f998c5344ccb18062c696cecd966}
+      \strng{authorfullhash}{6393f998c5344ccb18062c696cecd966}
+      \strng{authorfullhashraw}{6393f998c5344ccb18062c696cecd966}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The On-Line Encyclopedia of Integer Sequences}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://oeis.org
+      \endverb
+      \verb{url}
+      \verb https://oeis.org
+      \endverb
+    \endentry
+    \entry{lin1985set}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=17cc57750cc56b93f70af792109fcc6b}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={S.Y.T.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=aadbc77e75f336bfac864530cc174e35}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Y.F.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Book Publishers}%
+      }
+      \strng{namehash}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{fullhash}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{fullhashraw}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{bibnamehash}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{authorbibnamehash}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{authornamehash}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{authorfullhash}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \strng{authorfullhashraw}{dc7518123bfdbaece97cdd1bbc55c10f}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Set Theory with Applications}
+      \field{year}{1985}
+      \true{nocite}
+    \endentry
+    \entry{rosen2006discrete}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=14f2d77753239cec73d02582771b7311}{%
+           family={Rosen},
+           familyi={R\bibinitperiod},
+           given={K.H.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill Higher Education}%
+      }
+      \strng{namehash}{14f2d77753239cec73d02582771b7311}
+      \strng{fullhash}{14f2d77753239cec73d02582771b7311}
+      \strng{fullhashraw}{14f2d77753239cec73d02582771b7311}
+      \strng{bibnamehash}{14f2d77753239cec73d02582771b7311}
+      \strng{authorbibnamehash}{14f2d77753239cec73d02582771b7311}
+      \strng{authornamehash}{14f2d77753239cec73d02582771b7311}
+      \strng{authorfullhash}{14f2d77753239cec73d02582771b7311}
+      \strng{authorfullhashraw}{14f2d77753239cec73d02582771b7311}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{6th}
+      \field{title}{Discrete Mathematics and Its Applications}
+      \field{year}{2006}
+    \endentry
+    \entry{mathworldset}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=635fc6d649d76d1b685fd0c4b4961ea7}{%
+           family={Stover},
+           familyi={S\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {From MathWorld--A Wolfram Web Resource}%
+      }
+      \strng{namehash}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{fullhash}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{fullhashraw}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{bibnamehash}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{authorbibnamehash}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{authornamehash}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{authorfullhash}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \strng{authorfullhashraw}{635fc6d649d76d1b685fd0c4b4961ea7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Set}
+      \verb{urlraw}
+      \verb https://mathworld.wolfram.com/Set.html
+      \endverb
+      \verb{url}
+      \verb https://mathworld.wolfram.com/Set.html
+      \endverb
+    \endentry
+    \entry{mathworldalg}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=819197bfeff32a3f58d49b2a3eb0a580}{%
+           family={Weisstein},
+           familyi={W\bibinitperiod},
+           given={Eric\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {From MathWorld--A Wolfram Web Resource}%
+      }
+      \strng{namehash}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{fullhash}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{fullhashraw}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{bibnamehash}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{authorbibnamehash}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{authornamehash}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{authorfullhash}{819197bfeff32a3f58d49b2a3eb0a580}
+      \strng{authorfullhashraw}{819197bfeff32a3f58d49b2a3eb0a580}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algorithm}
+      \verb{urlraw}
+      \verb https://mathworld.wolfram.com/Algorithm.html
+      \endverb
+      \verb{url}
+      \verb https://mathworld.wolfram.com/Algorithm.html
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

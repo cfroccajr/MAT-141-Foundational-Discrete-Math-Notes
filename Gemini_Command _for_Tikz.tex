@@ -1,0 +1,121 @@
+for f in *.tex; do
+  cat << EOF > ../temp_tikz.tex
+\documentclass[tikz,border=2pt]{standalone}
+\input{../tex/Discrete_Header}
+\begin{document}
+\input{$f}
+\end{document}
+EOF
+
+  lualatex -interaction=nonstopmode --shell-escape \
+    --output-directory=../generated_images \
+    --jobname="${f%.tex}" \
+    ../temp_tikz.tex
+done
+
+
+for f in *.tex; do
+  lualatex -interaction=nonstopmode --shell-escape \
+    --output-directory=../generated_images \
+    --jobname="${f%.tex}" \
+    "\def\TargetFile{$f}\input{../tikz_shell.tex}"
+  magick -density 300 ../generated_images/"${f%.tex}.pdf" ../generated_images/"${f%.tex}.png"
+done
+rm -f ../generated_images/*.{aux,log,idx,xml,bcf,out}
+
+Gemini's Batch File Version
+
+#!/bin/bash
+
+# Exit on severe errors
+set -e
+
+OUTPUT_DIR="../generated_images"
+WRAPPER_FILE="../wrapper.tex"
+
+# Ensure output directory exists
+mkdir -p "$OUTPUT_DIR"
+
+# Verify wrapper file exists
+if [ ! -f "$WRAPPER_FILE" ]; then
+  echo "Error: Wrapper file '$WRAPPER_FILE' not found!"
+  exit 1
+fi
+
+echo "Starting compilation and conversion..."
+
+# Process each .tex file
+for f in *.tex; do
+  # Skip loop if no .tex files are found
+  [ -e "$f" ] || continue
+
+  BASENAME="${f%.tex}"
+  echo "Processing: $f -> ${BASENAME}.pdf & ${BASENAME}.png"
+
+  # 1. Compile TeX to PDF
+  lualatex -interaction=nonstopmode --shell-escape \
+    --output-directory="$OUTPUT_DIR" \
+    --jobname="$BASENAME" \
+    "\def\TargetFile{$f}\input{$WRAPPER_FILE}" > /dev/null
+
+  # 2. Convert PDF to PNG (300 DPI)
+  magick -density 300 "$OUTPUT_DIR/${BASENAME}.pdf" "$OUTPUT_DIR/${BASENAME}.png"
+
+  # 3. Clean up intermediate TeX auxiliary files
+  rm -f "$OUTPUT_DIR/${BASENAME}".{aux,log,dpth,md5}
+done
+
+echo "Done! All images saved to $OUTPUT_DIR"
+
+
+
+
+Gemini's Sinlge File Version
+
+#!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# 1. Check if a filename was provided
+if [ -z "$1" ]; then
+  echo "Usage: ./build_single_tikz.sh <filename.tex>"
+  exit 1
+fi
+
+INPUT_FILE="$1"
+OUTPUT_DIR="../generated_images"
+WRAPPER_FILE="../wrapper.tex"
+
+# 2. Check if the target .tex file exists
+if [ ! -f "$INPUT_FILE" ]; then
+  echo "Error: File '$INPUT_FILE' does not exist."
+  exit 1
+fi
+
+# 3. Check if wrapper file exists
+if [ ! -f "$WRAPPER_FILE" ]; then
+  echo "Error: Wrapper file '$WRAPPER_FILE' not found!"
+  exit 1
+fi
+
+# Ensure output directory exists
+mkdir -p "$OUTPUT_DIR"
+
+BASENAME=$(basename "${INPUT_FILE%.tex}")
+
+echo "Processing: $INPUT_FILE -> ${BASENAME}.pdf & ${BASENAME}.png"
+
+# 1. Compile TeX to PDF
+lualatex -interaction=nonstopmode --shell-escape \
+  --output-directory="$OUTPUT_DIR" \
+  --jobname="$BASENAME" \
+  "\def\TargetFile{$INPUT_FILE}\input{$WRAPPER_FILE}" > /dev/null
+
+# 2. Convert PDF to PNG (300 DPI)
+magick -density 300 "$OUTPUT_DIR/${BASENAME}.pdf" "$OUTPUT_DIR/${BASENAME}.png"
+
+# 3. Clean up intermediate TeX auxiliary files
+rm -f "$OUTPUT_DIR/${BASENAME}".{aux,log,dpth,md5}
+
+echo "Done! Output saved to $OUTPUT_DIR/${BASENAME}.png"

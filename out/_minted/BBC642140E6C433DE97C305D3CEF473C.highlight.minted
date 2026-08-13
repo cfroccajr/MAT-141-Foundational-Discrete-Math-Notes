@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{serving}\PYG{p}{([}\PYG{n}{s}\PYG{p}{,}\PYG{n}{s}\PYG{p}{,}\PYG{n}{\PYGZus{}}\PYG{p}{,}\PYG{n}{\PYGZus{}}\PYG{p}{,}\PYG{n}{s}\PYG{p}{,}\PYG{n}{\PYGZus{}}\PYG{p}{,}\PYG{n}{\PYGZus{}}\PYG{p}{]):}
+        \PYG{n}{scoop} \PYG{n}{ice} \PYG{n}{cream}
+        \PYG{n}{scoop} \PYG{n}{ice} \PYG{n}{cream}
+        \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+        \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+        \PYG{n}{scoop} \PYG{n}{ice} \PYG{n}{cream}
+        \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+        \PYG{n}{\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}\PYGZus{}}
+        \PYG{k}{return} \PYG{n}{ice} \PYG{n}{cream}
+\end{MintedVerbatim}
