@@ -1,9 +1,16 @@
 \begin{defn}[Predicates]
     A \emph{predicate}\index{predicate} is a statement containing a finite number of variables. The predicate becomes true or false based on the value of the variables.
 \end{defn}
+
+\begin{sides}
+    Test
+\tcblower
+    Test
+\end{sides}
+
 \begin{exposition}[Sample Predicates]
 Find values for the variables which make the predicates true or false.
-\begin{sides}
+% \begin{sides}
     \begin{itemize}
     \setlength{\itemsep}{18pt}
         \item \(P(x): x\in\bbZ \wedge x>5\)
@@ -12,42 +19,42 @@ Find values for the variables which make the predicates true or false.
         \item \(\forall a,b\in\bbZ: G(a,b) \rightarrow G(a^3,b^3)\)
         \item \(S(n,m): n^2>m\)
     \end{itemize}
-\tcblower
-    \begin{itemize}
-    \setlength{\itemsep}{18pt}
-        \item \(\exists n\in\bbZ: S(n,25)\)
-        \item \(\forall n\in\bbZ: S(n,0)\)
-        \item \(\exists n\in\bbZ: \sim S(n,0)\)
-        \item \(\forall a,b\in R: G(a,b)\leftrightarrow S(a,b)\)
-        \item \(\forall n\in\bbN\ \exists a,b,c\in\bbZ: a^n+b^n=c^n\)
-    \end{itemize}
-\end{sides}    
+% \tcblower
+%     \begin{itemize}
+%     \setlength{\itemsep}{18pt}
+%         \item \(\exists n\in\bbZ: S(n,25)\)
+%         \item \(\forall n\in\bbZ: S(n,0)\)
+%         \item \(\exists n\in\bbZ: \sim S(n,0)\)
+%         \item \(\forall a,b\in R: G(a,b)\leftrightarrow S(a,b)\)
+%         \item \(\forall n\in\bbN\ \exists a,b,c\in\bbZ: a^n+b^n=c^n\)
+%     \end{itemize}
+% \end{sides}    
 \end{exposition}
 
-\begin{practiceprob}[Shapes, Colors, and Zombies, Oh My!!]
-Use figure \ref{fig:Tarski} on page \pageref{fig:Tarski} to identify when these predicates are true or false.
-\begin{sides}
-    \begin{itemize}
-    \setlength{\itemsep}{18pt}
-        \item \(C(x):\) \(x\) is a consonant
-        \item \(V(x):\) \(x\) is a vowel
-        \item \(Z(x):\) \(x\) is a zombie
-        \item \(S(x):\) \(x\) is a stick figure
-        \item \(N(x):\) \(x\) is a brain
-        \item \(R(x):\) \(x\) is \textcolor{red!60!black}{\bfseries\em red}
-    \end{itemize}
-    \tcblower
-    \begin{itemize}
-    \setlength{\itemsep}{18pt}
-        \item \(B(x):\) \(x\) is \textcolor{blue!50!black}{\em\bfseries blue}
-        \item \(G(x):\) \(x\) is \textcolor{green!60!black}{\bfseries\em green}
-        \item \(P(x):\) \(x\) is a pentagon (5-sides)
-        \item \(H(x):\) \(x\) is a heptagon (7-sides)
-        \item \(W(x,y):\) \(x\) is in the same row as \(y\)
-        \item \(L(x,y):\) \(x\) is in the same column as \(y\)
-    \end{itemize}
-\end{sides}
-\end{practiceprob}
+% \begin{practiceprob}[Shapes, Colors, and Zombies, Oh My!!]
+% Use figure \ref{fig:Tarski} on page \pageref{fig:Tarski} to identify when these predicates are true or false.
+% \begin{sides}
+%     \begin{itemize}
+%     \setlength{\itemsep}{18pt}
+%         \item \(C(x):\) \(x\) is a consonant
+%         \item \(V(x):\) \(x\) is a vowel
+%         \item \(Z(x):\) \(x\) is a zombie
+%         \item \(S(x):\) \(x\) is a stick figure
+%         \item \(N(x):\) \(x\) is a brain
+%         \item \(R(x):\) \(x\) is \textcolor{red!60!black}{\bfseries\em red}
+%     \end{itemize}
+%     \tcblower
+%     \begin{itemize}
+%     \setlength{\itemsep}{18pt}
+%         \item \(B(x):\) \(x\) is \textcolor{blue!50!black}{\em\bfseries blue}
+%         \item \(G(x):\) \(x\) is \textcolor{green!60!black}{\bfseries\em green}
+%         \item \(P(x):\) \(x\) is a pentagon (5-sides)
+%         \item \(H(x):\) \(x\) is a heptagon (7-sides)
+%         \item \(W(x,y):\) \(x\) is in the same row as \(y\)
+%         \item \(L(x,y):\) \(x\) is in the same column as \(y\)
+%     \end{itemize}
+% \end{sides}
+% \end{practiceprob}
 
 \clearpage
 
@@ -76,10 +83,6 @@ are all true if we pick the right value of \(x\).
     \caption{Venn Diagram of \(T_V\) and \(T_P\)}
     \label{fig:VP_Venn}
 \end{figure}
-
-
-
-
 
 \noindent
 The predicates like \[W(x,y):\, x\ \text{is in the same row as}\ y\]
