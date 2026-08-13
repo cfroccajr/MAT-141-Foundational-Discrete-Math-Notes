@@ -36,7 +36,7 @@
 
 
 \begin{practiceprob}[Relating Statements to Sets]
-    For each region of the Venn Diagram, write down which picture from practice problem \ref{mainimages} belongs in that region.
+    For each region of the \emph{Venn Diagram}, write down which picture from practice problem \ref{mainimages} belongs in that region.
     \begin{center}
         % \inputtikz{venn_zombies}
         \includegraphics[scale=0.24,alt={Blank Venn diagram for organizing the previous images into three overlapping sets.},width=0.65\linewidth]{images/created/venn_zombies.png}        
@@ -80,22 +80,22 @@
     A \emph{tautology}\index{tautology} is a statement that is always true and a \emph{contradiction}\index{contradiction} is a statement that is always false.  For example, in the figures in practice problem \ref{mainimages}, ``the grass is green'' is a tautology since it is always true, ``there is a zombie'' is a contradiction since it is always false.
 \end{defn}
 
-\begin{practiceprob}[True or False]
+\begin{practiceprob}[True or False]\label{pracprob:tautologies}
     For which pictures in practice problem \ref{mainimages} are the following sentences true?
     \begin{enumerate}
     \setlength{\itemsep}{10pt}
-        \item ``The grass is green.'' 
-        \item ``There is a zombie.'' 
+        % \item ``The grass is green.'' 
+        % \item ``There is a zombie.'' 
         \item ``The grass is green'' \(\vee\) ``I have an umbrella.'' 
-        % \item ``The grass is green'' \(\wedge\) ``I have an umbrella.'' 
-        % \item ``There is a zombie'' \(\vee\) ``I have an umbrella.'' 
+        \item ``The grass is green'' \(\wedge\) ``I have an umbrella.'' 
+        \item ``There is a zombie'' \(\vee\) ``I have an umbrella.'' 
         \item ``There is a zombie'' \(\wedge\) ``I have an umbrella.'' 
         \item ``There is a zombie'' \(\vee\) ``the grass is green.'' 
         \item ``There is a zombie'' \(\wedge\) ``the grass is green.'' 
     \end{enumerate}    
 \end{practiceprob}
 
-\begin{exposition}{Some ``Basic'' Logical Rules}
+\begin{exposition}{Some ``Basic'' Logical Rules}\label{expo:logicrules}
 So far we have identified the following ways to put together statements using \(\wedge\), \(\vee\), and \(\sim\):
 \begin{itemize}
     \setlength{\itemsep}{25pt}
@@ -152,3 +152,9 @@ So far we have identified the following ways to put together statements using \(
 \index{laws!inverse}
 \index{laws!domination}
 \end{exposition}
+
+\begin{practiceprob}
+    Which statements in practice problem \ref{pracprob:tautologies} represent which laws in exposition \ref{expo:logicrules}?
+
+    \vspace{1.75in}
+\end{practiceprob}
