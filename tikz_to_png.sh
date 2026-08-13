@@ -2,9 +2,9 @@ for f in tikz/*.tex; do
   BASENAME=$(basename "$f" .tex)
   echo "$BASENAME"
   lualatex -interaction=nonstopmode --shell-escape \
-    --output-directory=generated_images \
+    --output-directory=images/created \
     --jobname="$BASENAME" \
     "\def\TargetFile{$f}\input{tikz_shell.tex}"
-  magick -density 300 generated_images/"${BASENAME}.pdf" generated_images/"${BASENAME}.png"
-  rm -f generated_images/*.{aux,log,idx,xml,bcf,out,pdf}
+  magick -density 300 images/created/"${BASENAME}.pdf" images/created/"${BASENAME}.png"
+  rm -f images/created/*.{aux,log,idx,xml,bcf,out,pdf}
 done

@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{linalg} \PYG{k}{as} \PYG{n}{LA}
+
+\PYG{c+c1}{\PYGZsh{} adj. matrix of links/probabilities}
+\PYG{n}{L} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{0.5}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{0.5}\PYG{p}{],[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{],[}\PYG{l+m+mf}{0.5}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mf}{0.5}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{],[}\PYG{l+m+mf}{0.25}\PYG{p}{,}\PYG{l+m+mf}{0.25}\PYG{p}{,}\PYG{l+m+mf}{0.25}\PYG{p}{,}\PYG{l+m+mf}{0.25}\PYG{p}{]])}
+
+\PYG{n}{P}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{])} \PYG{c+c1}{\PYGZsh{} Initial position vector}
+\PYG{n}{distance} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{c+c1}{\PYGZsh{} Distance from one step to the next}
+\PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{k}{while} \PYG{n}{distance}\PYG{o}{\PYGZgt{}}\PYG{l+m+mf}{0.001} \PYG{o+ow}{and} \PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{100}\PYG{p}{:}
+\PYG{c+c1}{\PYGZsh{} Multiply by L to represent making a random click}
+    \PYG{n}{temp\PYGZus{}P}\PYG{o}{=}\PYG{n}{P}\PYG{n+nd}{@L}
+\PYG{c+c1}{\PYGZsh{} Compare the position vectors}
+    \PYG{n}{distance} \PYG{o}{=} \PYG{n}{LA}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n}{temp\PYGZus{}P}\PYG{o}{\PYGZhy{}}\PYG{n}{P}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Update}
+    \PYG{n}{P}\PYG{o}{=}\PYG{n}{temp\PYGZus{}P}
+    \PYG{n}{i}\PYG{o}{+=}\PYG{l+m+mi}{1}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{P}\PYG{p}{)}
+\end{MintedVerbatim}

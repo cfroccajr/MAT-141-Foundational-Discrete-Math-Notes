@@ -1,0 +1,11 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+    \PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{serving}\PYG{p}{([}\PYG{n}{m}\PYG{p}{,}\PYG{n}{m}\PYG{p}{,}\PYG{n}{s}\PYG{p}{,}\PYG{n}{m}\PYG{p}{,}\PYG{n}{s}\PYG{p}{,}\PYG{n}{m}\PYG{p}{,}\PYG{n}{s}\PYG{p}{]):}
+        \PYG{n}{move} \PYG{n}{arm}
+        \PYG{n}{move} \PYG{n}{arm}
+        \PYG{n}{scoop} \PYG{n}{ice} \PYG{n}{cream}
+        \PYG{n}{move} \PYG{n}{arm}
+        \PYG{n}{scoop} \PYG{n}{ice} \PYG{n}{cream}
+        \PYG{n}{move} \PYG{n}{arm}
+        \PYG{n}{scoop} \PYG{n}{ice} \PYG{n}{cream}
+        \PYG{k}{return} \PYG{n}{ice} \PYG{n}{cream}
+\end{MintedVerbatim}
