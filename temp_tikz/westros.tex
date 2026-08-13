@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1.33,transform shape]
+% westeros
+    \node[anchor=south west] at (0,0) {\includegraphics[height=7cm]{images/westeros copy.png}};
+% castles
+    \foreach \cx/\cy in 
+    {2/5.25,2.4/4.5,2.5/6.25,0.9/3.2,0.9/2.5,1.7
+        /2.9,2.7/3.4,2.5/2.1,1.4/1.4,3/1.5,3.25/0.5,3.4/3.1}{
+            \node at (\cx,\cy) {\includegraphics[width=0.67cm]{images/winterfell.png}};
+    }
+% ravens
+    \foreach \r in {1,...,21}{
+        \pgfmathparse{2.5*rnd}\let\x=\pgfmathresult;
+        \pgfmathparse{5.25*rnd}\let\y=\pgfmathresult;
+        \node at (0.7+\x,0.25+\y) {\includegraphics[width=0.25cm]{images/Raven_PNG_Vector_Clipart_Picture.png}};
+    }
+% helper grid
+    % \draw[gray,thin] (0,0) grid (4,7);
+    % \draw[gray,thin,step=0.5,dashed] (0,0) grid (4,7);
+\node[anchor=south west,scale=0.5] at (0.1,0) {\tiny (Ravens and Castles not to scale.)};
+\end{tikzpicture}
