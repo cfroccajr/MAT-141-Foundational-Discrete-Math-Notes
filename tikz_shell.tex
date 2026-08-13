@@ -1,14 +1,8 @@
-for f in *.tex; do
-  cat << EOF > ../temp_tikz.tex
 \documentclass[tikz,border=2pt]{standalone}
-\input{../tex/Discrete_Header}
+\input{tex/Discrete_Header}
+\input{tex/Discrete_Tikz_Header}
+\newcounter{n}
+\setcounter{n}{1}
 \begin{document}
-\input{$f}
+  \input{\TargetFile}
 \end{document}
-EOF
-
-  lualatex -interaction=nonstopmode --shell-escape \
-    --output-directory=../generated_images \
-    --jobname="${f%.tex}" \
-    ../temp_tikz.tex
-done
