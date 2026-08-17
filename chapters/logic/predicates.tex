@@ -1,5 +1,5 @@
-\begin{defn}[Predicates]
-    A \emph{predicate}\index{predicate} is a statement containing a finite number of variables. The predicate becomes true or false based on the value of the variables.
+\begin{defn}[Predicates and Quantifiers]
+    A \emph{predicate}\index{predicate} is a statement containing a finite number of variables. The predicate becomes true or false based on the value of the variables.  The variables may be specific values or elements of a set.  If a predicate is always true, or always false, this may be indicated with the \emph{universal quantifier, \(\forall\)}, which is read ``for all''.  If it is true for selected values we use the \emph{existential quantifier, \(\exists\)}, which is read as ``there exists''.
 \end{defn}
 
 
@@ -7,29 +7,30 @@
 Find values for the variables which make the predicates true or false.
 \begin{sides}
     \begin{enumerate}
-    \setlength{\itemsep}{50pt}
+    \setlength{\itemsep}{40pt}
         \item \(P(x): x\in\bbZ \wedge x>5\)
         \item \(Q(x): x\in\bbR \wedge x>5\)
         \item \(G(a,b):  a>b\)
+        \item \(\forall a,b\in\bbZ: G(a,b) \rightarrow G(a^2,b^2)\)
         \item \(\forall a,b\in\bbZ: G(a,b) \rightarrow G(a^3,b^3)\)
         \item \(S(n,m): n^2>m\)
         \item \(\exists n\in\bbZ: S(n,25)\)
-        \item \(\forall n\in\bbZ: S(n,0)\)
     \end{enumerate}
 \tcblower
-    \begin{enumerate}[resume]
-    \setlength{\itemsep}{50pt}
+    \begin{enumerate}[start=8]
+    \setlength{\itemsep}{40pt}
+        \item \(\forall n\in\bbZ: S(n,0)\)
+        \item \(\exists n\in\bbZ: \sim S(n,0)\)
         \item \(\exists n\in\bbZ: S(n,m)\)
         \item \(\forall m\in\bbZ\ \exists n\in\bbZ: S(n,m)\)
         \item \(\exists n\in\bbZ: \sim S(n,0)\)
         \item \(\forall a,b\in \bbR: G(a,b)\leftrightarrow S(a,b)\)
         \item \(\forall n\in\bbN\ \exists a,b,c\in\bbN: a^n+b^n=c^n\)
     \end{enumerate}
-    \vspace{50pt}
+    \vspace{40pt}
 \end{sides}
 \end{practiceprob}
 
-\clearpage
 
 \begin{practiceprob}[Shapes, Colors, and Zombies, Oh My!!]
 Use figure \ref{fig:Tarski} on page \pageref{fig:Tarski} to identify when these predicates are true or false.
@@ -137,8 +138,8 @@ we read it as
 \end{center} Is this true or false? How can we see it in the Venn diagram in figure \ref{fig:VP_Venn}?\vspace{3\baselineskip}
 
 \noindent
-In addition to using them one at a time we can combine them like this 
-    \[\forall x\,  \exists y: C(x)\rightarrow L(x,y)\] 
+In addition to using them one at a time we can combine quantifiers like so 
+    \[\forall x\,  \exists y: C(x)\rightarrow L(x,y),\] 
 which we read as 
 \begin{center}
     \textit{``every consonant shares a column with some letter,''}
@@ -150,7 +151,7 @@ which we read as
 
 \clearpage
 
-\begin{practiceprob}[Tarski's Zombies]
+\begin{practiceprob}[Tarski's Zombies]\label{prob:tarski_zombies}
 % Exercises
 Referring to figure \ref{fig:Tarski}, which of the following predicates are true and which are false?  Try to write each in plain English and negate the false predicates.
 \begin{enumerate}
@@ -171,3 +172,26 @@ Finally, look at figure \ref{fig:Tarski} and construct three quantified statemen
 \end{itemize}
 \end{practiceprob}
 
+\begin{exposition}[A Couple Comments on Quantifiers]
+
+    As we have seen in the examples above the negation of a universal quantifier is an existential and vice versa:
+    \[\sim\left(\forall x:P(x)\rightarrow Q(x)\right) \equiv \exists x: P(x) \wedge \sim Q(x).\]
+    With that in mind, what is the negation of ``There exists a green vowel which is also a consonant?''\vspace{40pt}
+    
+    How would we write each of these symbolically? \vspace{40pt}
+    
+    Referring to figure \ref{fig:Tarski} on \pageref{fig:Tarski}, why is the original statement always false and the negation \emph{vacuously true}?\vspace{40pt}
+
+    
+    The ways in which we represent ideas with quantifiers are not unique.  Here are some examples of equivalent statements from practice problem \ref{prob:tarski_zombies} which use the predicates for figure \ref{fig:Tarski} on page \pageref{fig:Tarski}.
+    \begin{itemize}
+        \item \(\displaystyle\forall x: H(x)\rightarrow C(x)\) can be written \[\forall x\in T_H: C(x).\]
+        \item \(\displaystyle\exists x: V(x)\wedge R(x)\) can be written \[\exists x\in T_V: R(x).\]
+        \item \(\displaystyle\forall x\, \exists y: C(x)\rightarrow V(y)\wedge L(x,y)\) is equivalent to 
+            \[\forall x: C(x)\rightarrow \exists y: V(y)\wedge L(x,y).\]
+        \item \(\displaystyle\exists y\in T_N, \forall x\in T_Z: W(x,y)\) is the same as 
+            \[\exists y: N(y) \wedge \forall x: Z(x)\rightarrow W(x,y)\] and 
+            \[\exists y \forall x: N(y) \wedge Z(x) \rightarrow W(x,y).\]
+    \end{itemize}
+    When looking at these and similar examples it is helpful to think of \emph{for all} statements as frequently relating to inclusion or equivalence and \emph{there exists} statements as overlap.  Try making some of these types of statements either with you examples from practice problem \ref{prob:tarski_zombies} or using the Venn Diagram in figure \ref{fig:vennimplication} on page \pageref{fig:vennimplication}.
+\end{exposition}
